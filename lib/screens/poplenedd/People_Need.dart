@@ -78,130 +78,122 @@ Widget _tabSection(BuildContext context) {
     child: Column(
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
-        Container(
-          child: const TabBar(
-              labelColor: Fixcolors.greenacccet,
-              unselectedLabelColor: Colors.black,
-              indicatorColor: Fixcolors.greenacccet,
-              indicatorWeight: 3.5,
-              tabs: [
+        const TabBar(
+            labelColor: Fixcolors.greenacccet,
+            unselectedLabelColor: Colors.black,
+            indicatorColor: Fixcolors.greenacccet,
+            indicatorWeight: 3.5,
+            tabs: [
 
-            Tab(text: "All",),
-            Tab(text: "Top Ads"),
-            Tab(text: "Regular Ads"),
-          ]),
-        ),
-        Container(
+          Tab(text: "All",),
+          Tab(text: "Top Ads"),
+          Tab(text: "Regular Ads"),
+        ]),
+        SizedBox(
           //Add this to give height
           height: MediaQuery.of(context).size.height * 0.75,
           child: TabBarView(children: [
-            Container(
-              child:  SizedBox(
-                child: GridView.builder(
-                  itemCount: productimage.length,
-                  shrinkWrap: true,
-                  physics: const ScrollPhysics(),
-                  gridDelegate:
-                  const SliverGridDelegateWithFixedCrossAxisCount(
-                      crossAxisCount: 2),
-                  itemBuilder: (context, index) {
-                    return Card(
-                      child: Column(
-                        children: [
-                          Container(
-                              alignment: Alignment.topRight,
-                              height: 90,
-                              width: 140,
-                              margin: const EdgeInsets.all(10),
+            SizedBox(
+              child: GridView.builder(
+                itemCount: productimage.length,
+                shrinkWrap: true,
+                physics: const ScrollPhysics(),
+                gridDelegate:
+                const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2),
+                itemBuilder: (context, index) {
+                  return Card(
+                    child: Column(
+                      children: [
+                        Container(
+                            alignment: Alignment.topRight,
+                            height: 90,
+                            width: 140,
+                            margin: const EdgeInsets.all(10),
+                            decoration: BoxDecoration(
+                                color: Colors.grey,
+                                image: DecorationImage(
+                                    image:
+                                    AssetImage(productimage[index]),
+                                    fit: BoxFit.fill),
+                                borderRadius: const BorderRadius.all(
+                                    Radius.circular(10))),
+                            child: Stack(
+                              children: [
+                                Container(
+                                  height: 20,
+                                  width: 20,
+                                  padding: const EdgeInsets.all(3),
+                                  child: Image.asset(Images.likeimage),
+                                )
+                              ],
+                            )),
+                        Row(
+                          mainAxisAlignment:
+                          MainAxisAlignment.spaceEvenly,
+                          children: [
+                            textlist(
+                                text: product2name[index],
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14),
+                            const SizedBox(
+                              width: 4,
+                            ),
+                            textlist(
+                                text: prizename[index],
+                                fontWeight: FontWeight.w500,
+                                color: Fixcolors.green,
+                                fontSize: 10),
+                          ],
+                        ),
+                        Row(
+                          mainAxisAlignment:
+                          MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Container(
+                              height: 35,
+                              margin:
+                              const EdgeInsets.only(left: 2, right: 45),
                               decoration: BoxDecoration(
-                                  color: Colors.grey,
-                                  image: DecorationImage(
-                                      image:
-                                      AssetImage(productimage[index]),
-                                      fit: BoxFit.fill),
-                                  borderRadius: const BorderRadius.all(
-                                      Radius.circular(10))),
-                              child: Stack(
-                                children: [
-                                  Container(
-                                    height: 20,
-                                    width: 20,
-                                    padding: const EdgeInsets.all(3),
-                                    child: Image.asset(Images.likeimage),
-                                  )
-                                ],
-                              )),
-                          Row(
-                            mainAxisAlignment:
-                            MainAxisAlignment.spaceEvenly,
-                            children: [
-                              textlist(
-                                  text: product2name[index],
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 14),
-                              const SizedBox(
-                                width: 4,
-                              ),
-                              textlist(
-                                  text: prizename[index],
-                                  fontWeight: FontWeight.w500,
                                   color: Fixcolors.green,
-                                  fontSize: 10),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment:
-                            MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Container(
-                                height: 35,
-                                margin:
-                                const EdgeInsets.only(left: 2, right: 45),
-                                decoration: BoxDecoration(
-                                    color: Fixcolors.green,
-                                    borderRadius:
-                                    BorderRadius.circular(6)),
-                                child: Row(
-                                  children: [
-                                    SizedBox(
-                                      width: 50,
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 0, bottom: 9, top: 9),
-                                        child: Image.asset(
-                                          Images.shareimage,
-                                        ),
+                                  borderRadius:
+                                  BorderRadius.circular(6)),
+                              child: Row(
+                                children: [
+                                  SizedBox(
+                                    width: 50,
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(
+                                          left: 0, bottom: 9, top: 9),
+                                      child: Image.asset(
+                                        Images.shareimage,
                                       ),
                                     ),
-                                    Container(
-                                      padding: const EdgeInsets.only(right: 13),
-                                      child: const Text(
-                                        "Share",
-                                        style: TextStyle(
-                                            color: Colors.white),
-                                      ),
+                                  ),
+                                  Container(
+                                    padding: const EdgeInsets.only(right: 13),
+                                    child: const Text(
+                                      "Share",
+                                      style: TextStyle(
+                                          color: Colors.white),
                                     ),
-                                  ],
-                                ),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
-                          const SizedBox(
-                            height: 5,
-                          )
-                        ],
-                      ),
-                    );
-                  },
-                ),
-              )
+                            ),
+                          ],
+                        ),
+                        const SizedBox(
+                          height: 5,
+                        )
+                      ],
+                    ),
+                  );
+                },
+              ),
             ),
-            Container(
-              child: const Text("Top Ads"),
-            ),
-            Container(
-              child: const Text("Regular Ads"),
-            ),
+            const Text("Top Ads"),
+            const Text("Regular Ads"),
           ]),
         ),
       ],

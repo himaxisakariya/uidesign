@@ -15,10 +15,10 @@ class _HomeePageState extends State<HomeePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Country->State->City'),
+        title: const Text('Country->State->City'),
       ),
       body: Padding(
-          padding: EdgeInsets.all(15.0),
+          padding: const EdgeInsets.all(15.0),
           child: Column(
             children: [
               CountryStateCityPicker(
@@ -27,7 +27,7 @@ class _HomeePageState extends State<HomeePage> {
                 city: city,
                // textFieldInputBorder: UnderlineInputBorder(),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
 
               Text("${country.text}, ${state.text}, ${city.text}")
             ],

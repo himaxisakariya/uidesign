@@ -78,7 +78,7 @@ class _ProfilepageState extends State<Profilepage> {
           ),
           Expanded(
             child: Align(
-              alignment:  Alignment(-1.4,4.0),
+              alignment:  const Alignment(-1.4,4.0),
               child: Container(
                   decoration: const BoxDecoration(
                     shape: BoxShape.circle,

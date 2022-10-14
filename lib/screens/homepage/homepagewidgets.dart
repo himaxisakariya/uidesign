@@ -248,11 +248,11 @@ class navigationbars extends StatefulWidget {
 class navigationbarsState extends State<navigationbars> {
   @override
   Widget build(BuildContext context) {
-    var _bottomNavIndex = 0;
+    var bottomNavIndex = 0;
     bool select = true;
     return  AnimatedBottomNavigationBar.builder(
       //notchSmoothness: NotchSmoothness.verySmoothEdge,
-      activeIndex: _bottomNavIndex,
+      activeIndex: bottomNavIndex,
       gapLocation: GapLocation.center,
       itemCount: 4,
       tabBuilder: (index, isActive) {
@@ -277,7 +277,7 @@ class navigationbarsState extends State<navigationbars> {
       onTap: (index) {
         setState(() {
           select = !select;
-          _bottomNavIndex = index;
+          bottomNavIndex = index;
           Navigator.push(context, MaterialPageRoute(
             builder: (context) {
               return pages[index];

@@ -1,4 +1,3 @@
-import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:uidesign/constant/Fixcolors.dart';
@@ -526,7 +525,7 @@ class _HomePageState extends State<HomePage> {
           onPressed: () {
             Navigator.push(context, MaterialPageRoute(
               builder: (context) {
-                return Post_ads();
+                return const Post_ads();
               },
             ));
           },
@@ -538,6 +537,6 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        bottomNavigationBar: navigationbars());
+        bottomNavigationBar: const navigationbars());
   }
 }
