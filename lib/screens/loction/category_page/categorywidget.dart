@@ -1,0 +1,52 @@
+import 'package:uidesign/constant/Image.dart';
+import 'package:uidesign/constant/String.dart';
+List categoryname = [
+    (Stringvalue.category1),
+    (Stringvalue.category2),
+    (Stringvalue.category3),
+    (Stringvalue.category4),
+    (Stringvalue.category5),
+    (Stringvalue.category6),
+    (Stringvalue.category7),
+    (Stringvalue.category8),
+    (Stringvalue.category9),
+    (Stringvalue.category10),
+    (Stringvalue.category11),
+    (Stringvalue.category12),
+    (Stringvalue.category13),
+    (Stringvalue.category14),
+    (Stringvalue.category15),
+    (Stringvalue.category6),
+  ];
+  List<String> categoryimage = [
+    (Images.category1),
+    (Images.category2),
+    (Images.category3),
+    (Images.category4),
+    (Images.category5),
+    (Images.category6),
+    (Images.category7),
+    (Images.category8),
+    (Images.category9),
+    (Images.category10),
+    (Images.category11),
+    (Images.category12),
+    (Images.category13),
+    (Images.category14),
+    (Images.category15),
+    (Images.category6),
+  ];
+
+  List<String> subcategory = [
+    (Stringvalue.subcate1),
+    (Stringvalue.subcate2),
+    (Stringvalue.subcate3),
+    (Stringvalue.subcate4),
+    (Stringvalue.subcate5),
+    (Stringvalue.subcate6),
+    (Stringvalue.subcate7),
+    (Stringvalue.subcate8),
+    (Stringvalue.subcate9),
+    (Stringvalue.subcate10),
+    (Stringvalue.subcate11),
+  ];
