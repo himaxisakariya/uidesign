@@ -72,5 +72,10 @@ class Images {
   static const watch  = 'images/watch.jpeg';
   static const menu = 'images/menu.png';
   static const profileedit = 'images/profileedit.png';
+  static const profile1 = 'images/profile1.png';
+  static const profile2 = 'images/profile2.png';
+  static const profile3 = 'images/profile3.png';
+  static const profile4 = 'images/profile4.png';
+  static const profilearrow = 'images/profilearrow.png';
 }
 

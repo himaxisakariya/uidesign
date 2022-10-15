@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:uidesign/constant/Fixcolors.dart';
+import 'package:uidesign/constant/widget/floatingactionbutton.dart';
+import 'package:uidesign/screens/postAd/post_ads.dart';
 
 class Likepage extends StatefulWidget {
   const Likepage({Key? key}) : super(key: key);
@@ -19,6 +21,23 @@ class _LikepageState extends State<Likepage> {
     return Scaffold(
       appBar: AppBar(title: const Text("Likepage"),backgroundColor: Fixcolors.green,),
       body: const Center(child: Text("Like Page")),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(
+              builder: (context) {
+                return const Post_ads();
+              },
+            ));
+          },
+          backgroundColor: Fixcolors.green,
+          child: const Icon(
+            size: 40,
+            Icons.add,
+            color: Fixcolors.white,
+          ),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        bottomNavigationBar: const navigationbars()
     );
   }
 }

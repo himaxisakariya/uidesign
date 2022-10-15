@@ -140,7 +140,7 @@ Widget _tabSection(BuildContext context) {
                               width: 4,
                             ),
                             textlist(
-                                text: prizename[index],
+                                text: price[index],
                                 fontWeight: FontWeight.w500,
                                 color: Fixcolors.green,
                                 fontSize: 10),

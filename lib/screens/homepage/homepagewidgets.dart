@@ -1,4 +1,3 @@
-import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:uidesign/constant/Fixcolors.dart';
@@ -7,14 +6,10 @@ import 'package:uidesign/constant/String.dart';
 import 'package:uidesign/constant/widget/listtile.dart';
 import 'package:uidesign/screens/Help/Help_page.dart';
 import 'package:uidesign/screens/drawerpage/incresedisk.dart';
-import 'package:uidesign/screens/homepage/home_page.dart';
-import 'package:uidesign/screens/like/likepage.dart';
 import 'package:uidesign/screens/loction/category_page/category_page.dart';
 import 'package:uidesign/screens/login/loginpage.dart';
-import 'package:uidesign/screens/message/message_page.dart';
-import 'package:uidesign/screens/poplenedd/People_Need.dart';
+import 'package:uidesign/screens/peopleneed/People_Need.dart';
 import 'package:uidesign/screens/postAd/post_ads.dart';
-import 'package:uidesign/screens/profile/profile_page.dart';
 
 
 
@@ -179,112 +174,19 @@ draweropen(BuildContext context) {
 }
 List bottomimage = [(Images.home),(Images.heart),(Images.email2),(Images.person2)];
 
-List productimage = [
-  (Images.thirdimage),
-  (Images.fourimages),
-  (Images.fiveimage),
-  (Images.fiveimages),
-  (Images.watch),
-  (Images.iphoneimage)
-];
-List<Widget> pages = [
-  const HomePage(),
-  const Likepage(),
-  const Messagepage(),
-  const Profilepage(),
-];
-List icon = [
-  (Stringvalue.hotel),
-  (Stringvalue.car),
-  (Stringvalue.phone),
-  (Stringvalue.more)
+List productimage = [(Images.thirdimage), (Images.fourimages), (Images.fiveimage), (Images.fiveimages), (Images.watch), (Images.iphoneimage)];
+
+List icon = [(Stringvalue.hotel), (Stringvalue.car), (Stringvalue.phone), (Stringvalue.more)];
+
+List iconname = [(Images.realstate), (Images.carimage), (Images.phoneimage), (Images.fourimage)];
+
+List image = [(Images.firstimage), (Images.secondimage), (Images.iphoneimage), (Images.secondimage)];
+
+List price = [(Stringvalue.prize), (Stringvalue.prize2), (Stringvalue.prize), (Stringvalue.prize2), (Stringvalue.watchprice), (Stringvalue.iphoneprice)
 ];
 
-List iconname = [
-  (Images.realstate),
-  (Images.carimage),
-  (Images.phoneimage),
-  (Images.fourimage)
+List productname = [(Stringvalue.bmw2021), (Stringvalue.imaccomputer), (Stringvalue.iphone), (Stringvalue.imaccomputer)
 ];
+List product2name = [(Stringvalue.canonlens), (Stringvalue.microwave), (Stringvalue.wallet), (Stringvalue.ring), (Stringvalue.watch), (Stringvalue.iphone)];
 
-List image = [
-  (Images.firstimage),
-  (Images.secondimage),
-  (Images.iphoneimage),
-  (Images.secondimage)
-];
 
-List prizename = [
-  (Stringvalue.prize),
-  (Stringvalue.prize2),
-  (Stringvalue.prize),
-  (Stringvalue.prize2),
-  (Stringvalue.watchprice),
-  (Stringvalue.iphoneprice)
-];
-
-List productname = [
-  (Stringvalue.bmw2021),
-  (Stringvalue.imaccomputer),
-  (Stringvalue.iphone),
-  (Stringvalue.imaccomputer)
-];
-List product2name = [
-  (Stringvalue.canonlens),
-  (Stringvalue.microwave),
-  (Stringvalue.wallet),
-  (Stringvalue.ring),
-  (Stringvalue.watch),
-  (Stringvalue.iphone)
-];
-
-class navigationbars extends StatefulWidget {
-  const navigationbars({Key? key}) : super(key: key);
-
-  @override
-  State<navigationbars> createState() => navigationbarsState();
-}
-
-class navigationbarsState extends State<navigationbars> {
-  @override
-  Widget build(BuildContext context) {
-    var bottomNavIndex = 0;
-    bool select = true;
-    return  AnimatedBottomNavigationBar.builder(
-      //notchSmoothness: NotchSmoothness.verySmoothEdge,
-      activeIndex: bottomNavIndex,
-      gapLocation: GapLocation.center,
-      itemCount: 4,
-      tabBuilder: (index, isActive) {
-        return Container(
-          height: 27,
-          width: 27,
-          margin:
-          const EdgeInsets.only(top: 7, left: 9, bottom: 8, right: 12),
-          alignment: Alignment.center,
-          child: Padding(
-              padding: const EdgeInsets.all(8),
-              child: select == false
-                  ? Image.asset(
-                bottomimage[index],color: Colors.grey,
-              )
-                  : Image.asset(
-                bottomimage[index],
-                color: Fixcolors.green,
-              )),
-        );
-      },
-      onTap: (index) {
-        setState(() {
-          select = !select;
-          bottomNavIndex = index;
-          Navigator.push(context, MaterialPageRoute(
-            builder: (context) {
-              return pages[index];
-            },
-          ));
-        });
-      },
-    );
-  }
-}

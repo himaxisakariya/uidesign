@@ -450,11 +450,6 @@ Future<void> payment(BuildContext context) async {
                   style: const ButtonStyle(
                       backgroundColor:
                           MaterialStatePropertyAll(Fixcolors.green)),
-                  // onPressed: () {
-                  //   Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  //     return const Post_ads();
-                  //   },));
-                  // },
                   child: Text("Post my first ad now",
                       style: GoogleFonts.poppins(
                           textStyle: const TextStyle(

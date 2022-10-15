@@ -4,7 +4,7 @@ import 'package:uidesign/screens/splash.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp( MaterialApp(
+  runApp(  const MaterialApp(
     home: SplashScrren(),
     debugShowCheckedModeBanner: false,
   ));

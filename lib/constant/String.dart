@@ -220,4 +220,12 @@ to active this feature""";
   static const String watchprice = '\$250';
   static const String iphoneprice = '\$500';
   static const String profile = 'Profile';
+  static const String profilename = 'William Dominy';
+  static const String profilestorage  = 'Video Storgae: 1 GB of 1 GB';
+  static const String myads = 'My Ads';
+  static const String profile1 = 'Post something for sale today';
+  static const String profile2 = 'Record it with your phone';
+  static const String profile3 = 'Take a photo of it';
+  static const String profile4 = 'Meet buyers';
+  static const String profile5 = 'Make Money';
 }

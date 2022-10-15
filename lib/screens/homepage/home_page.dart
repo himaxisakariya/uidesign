@@ -8,6 +8,7 @@ import 'package:uidesign/screens/loction/loction_page.dart';
 import 'package:uidesign/screens/notification/notification_page.dart';
 import 'package:uidesign/screens/postAd/post_ads.dart';
 import '../../constant/String.dart';
+import '../../constant/widget/floatingactionbutton.dart';
 import '../welcompopup/welcome_popup.dart';
 
 class HomePage extends StatefulWidget {
@@ -330,7 +331,7 @@ class _HomePageState extends State<HomePage> {
                                       width: 10,
                                     ),
                                     textlist(
-                                        text: prizename[index],
+                                        text: price[index],
                                         fontWeight: FontWeight.w500,
                                         color: Fixcolors.green,
                                         fontSize: 10),
@@ -464,7 +465,7 @@ class _HomePageState extends State<HomePage> {
                                       width: 4,
                                     ),
                                     textlist(
-                                        text: prizename[index],
+                                        text: price[index],
                                         fontWeight: FontWeight.w500,
                                         color: Fixcolors.green,
                                         fontSize: 10),

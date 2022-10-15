@@ -5,6 +5,7 @@ import 'package:uidesign/constant/String.dart';
 import 'package:uidesign/screens/homepage/homepagewidgets.dart';
 import 'package:uidesign/screens/loction/category_page/categorywidget.dart';
 
+// ignore: camel_case_types
 class Category_Page extends StatefulWidget {
   const Category_Page({Key? key}) : super(key: key);
 
@@ -12,6 +13,7 @@ class Category_Page extends StatefulWidget {
   State<Category_Page> createState() => _Category_PageState();
 }
 
+// ignore: camel_case_types
 class _Category_PageState extends State<Category_Page> {
   final List<bool> s =
       List.generate(categoryname.length, (index) => false);
