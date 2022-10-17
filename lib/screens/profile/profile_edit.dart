@@ -24,9 +24,8 @@ class _Profile_EditState extends State<Profile_Edit> {
   PostAdsViewModel? postAddPageViewModel;
   Country _default = CountryPickerUtils.getCountryByPhoneCode('91');
   bool isSwitched = false;
-  bool Switched = true;
+  bool switched = true;
   final ImagePicker picker = ImagePicker();
-
 
   @override
   Widget build(BuildContext context) {
@@ -95,7 +94,7 @@ class _Profile_EditState extends State<Profile_Edit> {
                               ),
                               onTap: () {
                                 setState(() {
-                             imageoption(context);
+                                  imageoption(context);
                                 });
                               },
                             ),
@@ -346,10 +345,10 @@ class _Profile_EditState extends State<Profile_Edit> {
                       margin: const EdgeInsets.only(left: 90),
                       child: Switch(
                         activeColor: Fixcolors.green,
-                        value: Switched,
+                        value: switched,
                         onChanged: (value) {
                           setState(() {
-                            Switched = !Switched;
+                            switched = !switched;
                           });
                         },
                       ),
@@ -419,15 +418,16 @@ class _Profile_EditState extends State<Profile_Edit> {
         ),
       );
 }
+
 imageoption(BuildContext context) {
   final ImagePicker _picker = ImagePicker();
 
   return showModalBottomSheet(
     shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(25.0),
-          topRight: Radius.circular(25.0),
-        )),
+      topLeft: Radius.circular(25.0),
+      topRight: Radius.circular(25.0),
+    )),
     context: context,
     builder: (context) {
       return StatefulBuilder(
@@ -440,10 +440,8 @@ imageoption(BuildContext context) {
                 children: [
                   InkWell(
                     onTap: () async {
-                      await _picker.pickImage(
-                          source: ImageSource
-                              .camera);
                       Navigator.pop(context);
+                      await _picker.pickImage(source: ImageSource.camera);
                     },
                     child: const textlist(
                       text: Stringvalue.imagetake,
@@ -456,10 +454,7 @@ imageoption(BuildContext context) {
                   InkWell(
                     onTap: () async {
                       Navigator.pop(context);
-                      await _picker.pickImage(
-                          source: ImageSource
-                              .gallery);
-
+                      await _picker.pickImage(source: ImageSource.gallery);
                     },
                     child: const textlist(
                       text: Stringvalue.imagefile,
@@ -490,4 +485,3 @@ imageoption(BuildContext context) {
     },
   );
 }
-

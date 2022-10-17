@@ -1,7 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:uidesign/constant/Fixcolors.dart';
-import 'package:uidesign/constant/Image.dart';
 import 'package:uidesign/constant/String.dart';
 import 'package:uidesign/constant/widget/ebutton.dart';
 import 'package:uidesign/screens/drawerpage/incresedisk.dart';
@@ -16,6 +18,14 @@ class Sell_faster extends StatefulWidget {
 }
 
 class _Sell_fasterState extends State<Sell_faster> {
+  final Completer<GoogleMapController> _controller = Completer();
+
+  static const CameraPosition _kGooglePlex = CameraPosition(
+    target: LatLng(21.170240, 72.831062),
+    zoom: 14.4746,
+  );
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -116,7 +126,8 @@ class _Sell_fasterState extends State<Sell_faster> {
                                     ),
                                   ),
                                   Container(
-                                    margin: const EdgeInsets.only(top: 15, bottom: 2),
+                                    margin: const EdgeInsets.only(
+                                        top: 15, bottom: 2),
                                     child: Text(
                                       "1 GB Storage Plan",
                                       style: GoogleFonts.poppins(
@@ -165,7 +176,8 @@ class _Sell_fasterState extends State<Sell_faster> {
                                     ),
                                   ),
                                   Container(
-                                    margin: const EdgeInsets.only(top: 15, bottom: 2),
+                                    margin: const EdgeInsets.only(
+                                        top: 15, bottom: 2),
                                     child: Text(
                                       "2 GB Storage Plan",
                                       style: GoogleFonts.poppins(
@@ -218,7 +230,8 @@ class _Sell_fasterState extends State<Sell_faster> {
                                     ),
                                   ),
                                   Container(
-                                    margin: const EdgeInsets.only(top: 15, bottom: 2),
+                                    margin: const EdgeInsets.only(
+                                        top: 15, bottom: 2),
                                     child: Text(
                                       "3 GB Storage Plan",
                                       style: GoogleFonts.poppins(
@@ -266,7 +279,8 @@ class _Sell_fasterState extends State<Sell_faster> {
                                     ),
                                   ),
                                   Container(
-                                    margin: const EdgeInsets.only(top: 15, bottom: 2),
+                                    margin: const EdgeInsets.only(
+                                        top: 15, bottom: 2),
                                     child: Text(
                                       "4 GB Storage Plan",
                                       style: GoogleFonts.poppins(
@@ -319,7 +333,8 @@ class _Sell_fasterState extends State<Sell_faster> {
                                     ),
                                   ),
                                   Container(
-                                    margin: const EdgeInsets.only(top: 15, bottom: 2),
+                                    margin: const EdgeInsets.only(
+                                        top: 15, bottom: 2),
                                     child: Text(
                                       "5 GB Storage Plan",
                                       style: GoogleFonts.poppins(
@@ -346,18 +361,30 @@ class _Sell_fasterState extends State<Sell_faster> {
                           fontWeight: FontWeight.w400,
                         ),
                       ),
-                      Container(
-                        padding: const EdgeInsets.only(
-                            left: 15, right: 5, bottom: 10, top: 10),
-                        child: Image.asset(Images.selllocation),
-                      ),
-                      InkWell(
-                        onTap: () async {},
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 15),
-                          child: SingleChildScrollView(
-                              scrollDirection: Axis.horizontal,
-                              child: Container()),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Card(
+                          child: Container(
+                            height: 250,
+                            width: double.infinity,
+                            margin: const EdgeInsets.all(10),
+                            decoration: const BoxDecoration(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(8))),
+                            child: GoogleMap(
+                              compassEnabled: true,
+                              myLocationEnabled: true,
+                              zoomGesturesEnabled: true,
+                              scrollGesturesEnabled: true,
+                              myLocationButtonEnabled: true,
+                              rotateGesturesEnabled: true,
+                              mapType: MapType.normal,
+                              initialCameraPosition: _kGooglePlex,
+                              onMapCreated: (GoogleMapController controller) {
+                                _controller.complete(controller);
+                              },
+                            ),
+                          ),
                         ),
                       ),
                       const SizedBox(

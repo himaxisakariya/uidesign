@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:uidesign/demo.dart';
 import 'package:uidesign/screens/splash.dart';
 
 

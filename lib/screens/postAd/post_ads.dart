@@ -140,14 +140,11 @@ class Post_adsState extends State<Post_ads> {
                             scrollDirection: Axis.horizontal,
                             child: Row(
                               children: [
-                                if (thumbnail != null)
                                   SizedBox(
                                     height: 95,
                                     width: 100,
                                     child: Image.file(File(thumbnail)),
-                                  )
-                                else
-                                  Container(),
+                                  ),
                                 DottedBorder(
                                   borderType: BorderType.RRect,
                                   radius: const Radius.circular(6),

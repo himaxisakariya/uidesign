@@ -1,16 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:uidesign/constant/Fixcolors.dart';
 import 'package:uidesign/constant/Image.dart';
 import 'package:uidesign/constant/String.dart';
-import 'package:uidesign/constant/widget/floatingactionbutton.dart';
-import 'package:uidesign/constant/widget/textfield.dart';
 import 'package:uidesign/screens/Registerpage/widgets.dart';
 import 'package:uidesign/screens/homepage/homepagewidgets.dart';
-import 'package:uidesign/screens/like/likepage.dart';
-import 'package:uidesign/screens/postAd/post_ads.dart';
 
 class Chat_Screen extends StatefulWidget {
   const Chat_Screen({Key? key}) : super(key: key);
@@ -255,7 +250,6 @@ class _Chat_ScreenState extends State<Chat_Screen> {
                                               IconButton(
                                                   onPressed: () async {
                                                     Navigator.pop(context);
-                                                    final XFile? image =
                                                     await _picker.pickImage(
                                                         source:
                                                         ImageSource.camera);
@@ -264,7 +258,6 @@ class _Chat_ScreenState extends State<Chat_Screen> {
                                               IconButton(
                                                   onPressed: () async {
                                                     Navigator.pop(context);
-                                                    final XFile? image =
                                                     await _picker.pickImage(
                                                         source:
                                                         ImageSource.gallery,);
