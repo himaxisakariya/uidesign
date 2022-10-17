@@ -230,7 +230,9 @@ class _Chat_ScreenState extends State<Chat_Screen> {
                       margin: const EdgeInsets.symmetric(horizontal: 10),
                       decoration:
                       BoxDecoration(
-                          borderRadius: BorderRadius.circular(5),
+                        border: Border.all(color: Colors.black,style: BorderStyle.solid,width: 1.0),
+                          color: Colors.transparent,
+                          //borderRadius: BorderRadius.circular(30),
                           ),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
