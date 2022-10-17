@@ -90,7 +90,7 @@ class _Profile_EditState extends State<Profile_Edit> {
                               child: Container(
                                 padding: const EdgeInsets.only(
                                     left: 85, top: 90, bottom: 0),
-                                child: Icon(Icons.add_a_photo,
+                                child: const Icon(Icons.add_a_photo,
                                     color: Fixcolors.black),
                               ),
                               onTap: () {
@@ -455,10 +455,11 @@ imageoption(BuildContext context) {
                   const Divider(),
                   InkWell(
                     onTap: () async {
+                      Navigator.pop(context);
                       await _picker.pickImage(
                           source: ImageSource
                               .gallery);
-                      Navigator.pop(context);
+
                     },
                     child: const textlist(
                       text: Stringvalue.imagefile,

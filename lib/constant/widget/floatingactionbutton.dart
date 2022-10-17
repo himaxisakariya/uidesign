@@ -4,8 +4,9 @@ import 'package:uidesign/constant/Fixcolors.dart';
 import 'package:uidesign/screens/homepage/home_page.dart';
 import 'package:uidesign/screens/homepage/homepagewidgets.dart';
 import 'package:uidesign/screens/like/likepage.dart';
-import 'package:uidesign/screens/message/message_page.dart';
 import 'package:uidesign/screens/profile/profile_page.dart';
+
+import '../../screens/message/message_page.dart';
 
 class navigationbars extends StatefulWidget {
   const navigationbars({Key? key}) : super(key: key);

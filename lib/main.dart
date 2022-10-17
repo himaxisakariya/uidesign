@@ -4,9 +4,9 @@ import 'package:uidesign/screens/splash.dart';
 
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
+ // WidgetsFlutterBinding.ensureInitialized();
   runApp(  const MaterialApp(
-    home: MyApp(),
+    home: SplashScrren(),
     debugShowCheckedModeBanner: false,
   ));
 }

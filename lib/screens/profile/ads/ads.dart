@@ -78,7 +78,7 @@ Widget _tabSection(BuildContext context) {
     child: Column(
       mainAxisSize: MainAxisSize.min,
       children: <Widget>[
-        const TabBar(
+         const TabBar(
             labelColor: Fixcolors.greenacccet,
             unselectedLabelColor: Colors.black,
             indicatorColor: Fixcolors.greenacccet,
@@ -114,13 +114,11 @@ Widget _tabSection(BuildContext context) {
                   ),
                 ),
               ),
-              Container(
-                child: const textlist(
-                  text: Stringvalue.sf,
-                  color: Fixcolors.green,
-                  fontSize: 15,
-                  fontWeight: FontWeight.w400,
-                ),
+              const textlist(
+                text: Stringvalue.sf,
+                color: Fixcolors.green,
+                fontSize: 15,
+                fontWeight: FontWeight.w400,
               ),
             ],
           ),
@@ -157,196 +155,203 @@ Widget _tabSection(BuildContext context) {
         SizedBox(
           //Add this to give height
           height: MediaQuery.of(context).size.height * 0.57,
-          child: TabBarView(children: [
-            SizedBox(
-              child: ListView.builder(
-                itemCount: productimage.length,
-                itemBuilder: (context, index) {
-                  return Card(
-                    child: Container(
-                      margin: const EdgeInsets.only(right: 10, bottom: 10),
-                      child: ListTile(
-                        leading: SizedBox(
-                          width: 120,
-                          child: Row(
-                            children: [
-                              Radio(
-                                value: 'product',
-                                groupValue: a,
-                                onChanged: (value) {
-                                  a = value.toString();
-                                },
+          child: TabBarView(
+              physics: const NeverScrollableScrollPhysics(),
+              children: [
+                SizedBox(
+                  child: ListView.builder(
+                    itemCount: productimage.length,
+                    itemBuilder: (context, index) {
+                      return Card(
+                        child: Container(
+                          margin: const EdgeInsets.only(right: 10, bottom: 10),
+                          child: ListTile(
+                            leading: SizedBox(
+                              width: 120,
+                              child: Row(
+                                children: [
+                                  Radio(
+                                    value: 'product',
+                                    groupValue: a,
+                                    onChanged: (value) {
+                                      a = value.toString();
+                                    },
+                                  ),
+                                  Container(
+                                    //alignment: Alignment.topRight,
+                                    width: 60,
+                                    decoration: BoxDecoration(
+                                        color: Colors.grey,
+                                        image: DecorationImage(
+                                            image:
+                                                AssetImage(productimage[index]),
+                                            fit: BoxFit.fill),
+                                        borderRadius: const BorderRadius.all(
+                                            Radius.circular(10))),
+                                  ),
+                                ],
                               ),
-                              Container(
-                                //alignment: Alignment.topRight,
-                                width: 60,
-                                decoration: BoxDecoration(
-                                    color: Colors.grey,
-                                    image: DecorationImage(
-                                        image: AssetImage(productimage[index]),
-                                        fit: BoxFit.fill),
-                                    borderRadius: const BorderRadius.all(
-                                        Radius.circular(10))),
-                              ),
-                            ],
-                          ),
-                        ),
-                        title: Container(
-                          margin: const EdgeInsets.only(left: 5),
-                          child: textlist(
-                            text: sellproduct[index],
-                            fontWeight: FontWeight.w400,
-                            fontSize: 15,
-                          ),
-                        ),
-                        subtitle: Column(
-                          children: [
-                            Row(
-                              children: const [
-                                Icon(Icons.location_on_sharp),
-                                textlist(
-                                  text: Stringvalue.rlocation,
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.w400,
-                                  color: Fixcolors.grey,
-                                )
-                              ],
                             ),
-                            Container(
-                                margin: const EdgeInsets.only(right: 110),
-                                child: textlist(
-                                  text: productprice[index],
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 12,
-                                  color: Colors.black,
-                                )),
-                            Row(
+                            title: Container(
+                              margin: const EdgeInsets.only(left: 5),
+                              child: textlist(
+                                text: sellproduct[index],
+                                fontWeight: FontWeight.w400,
+                                fontSize: 15,
+                              ),
+                            ),
+                            subtitle: Column(
                               children: [
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  children: [
-                                    Container(
-                                      height: 20,
-                                      decoration: BoxDecoration(
-                                          color: Fixcolors.green,
-                                          borderRadius:
-                                              BorderRadius.circular(6)),
-                                      child: Row(
-                                        children: [
-                                          const SizedBox(
-                                            width: 7,
-                                          ),
-                                          Container(
-                                            padding:
-                                                const EdgeInsets.only(right: 7),
-                                            child: const textlist(
-                                              text: Stringvalue.approved,
-                                              fontSize: 6,
-                                              fontWeight: FontWeight.w400,
-                                              color: Colors.white,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
+                                  children: const [
+                                    Icon(Icons.location_on_sharp),
+                                    textlist(
+                                      text: Stringvalue.rlocation,
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w400,
+                                      color: Fixcolors.grey,
+                                    )
                                   ],
                                 ),
-                                const SizedBox(
-                                  width: 5,
-                                ),
+                                Container(
+                                    margin: const EdgeInsets.only(right: 110),
+                                    child: textlist(
+                                      text: productprice[index],
+                                      fontWeight: FontWeight.w500,
+                                      fontSize: 12,
+                                      color: Colors.black,
+                                    )),
                                 Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
                                   children: [
-                                    Container(
-                                      height: 20,
-                                      decoration: BoxDecoration(
-                                          color: Fixcolors.grey,
-                                          borderRadius:
-                                              BorderRadius.circular(6)),
-                                      child: Row(
-                                        children: [
-                                          SizedBox(
-                                            width: 20,
-                                            child: Padding(
-                                              padding: const EdgeInsets.only(
-                                                  left: 0, bottom: 5, top: 5),
-                                              child: Image.asset(
-                                                Images.shareimage,
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Container(
+                                          height: 20,
+                                          decoration: BoxDecoration(
+                                              color: Fixcolors.green,
+                                              borderRadius:
+                                                  BorderRadius.circular(6)),
+                                          child: Row(
+                                            children: [
+                                              const SizedBox(
+                                                width: 7,
                                               ),
-                                            ),
-                                          ),
-                                          Container(
-                                            padding:
-                                                const EdgeInsets.only(right: 7),
-                                            child: const Text(
-                                              "Share",
-                                              style: TextStyle(
-                                                  color: Colors.white,
+                                              Container(
+                                                padding: const EdgeInsets.only(
+                                                    right: 7),
+                                                child: const textlist(
+                                                  text: Stringvalue.approved,
                                                   fontSize: 6,
-                                                  fontWeight: FontWeight.w400),
-                                            ),
+                                                  fontWeight: FontWeight.w400,
+                                                  color: Colors.white,
+                                                ),
+                                              ),
+                                            ],
                                           ),
-                                        ],
-                                      ),
+                                        ),
+                                      ],
+                                    ),
+                                    const SizedBox(
+                                      width: 5,
+                                    ),
+                                    Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceEvenly,
+                                      children: [
+                                        Container(
+                                          height: 20,
+                                          decoration: BoxDecoration(
+                                              color: Fixcolors.grey,
+                                              borderRadius:
+                                                  BorderRadius.circular(6)),
+                                          child: Row(
+                                            children: [
+                                              SizedBox(
+                                                width: 20,
+                                                child: Padding(
+                                                  padding:
+                                                      const EdgeInsets.only(
+                                                          left: 0,
+                                                          bottom: 5,
+                                                          top: 5),
+                                                  child: Image.asset(
+                                                    Images.shareimage,
+                                                  ),
+                                                ),
+                                              ),
+                                              Container(
+                                                padding: const EdgeInsets.only(
+                                                    right: 7),
+                                                child: const Text(
+                                                  "Share",
+                                                  style: TextStyle(
+                                                      color: Colors.white,
+                                                      fontSize: 6,
+                                                      fontWeight:
+                                                          FontWeight.w400),
+                                                ),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ],
                                 ),
                               ],
                             ),
-                          ],
+                          ),
                         ),
-                      ),
+                      );
+                    },
+                  ),
+                ),
+                Column(
+                  children: [
+                    Container(
+                      height: 100,
+                      width: 100,
+                      margin: const EdgeInsets.only(top: 100),
+                      child: Image.asset(Images.empty),
                     ),
-                  );
-                },
-              ),
-            ),
-            Column(
-              children: [
-                Container(
-                  height: 100,
-                  width: 100,
-                  margin: const EdgeInsets.only(top: 100),
-                  child: Image.asset(Images.empty),
+                    Container(
+                      margin: const EdgeInsets.all(10),
+                      child: const textlist(
+                        text: Stringvalue.emptytext,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    )
+                  ],
                 ),
-                Container(
-                  margin: const EdgeInsets.all(10),
-                  child: const textlist(
-                    text: Stringvalue.emptytext,
-                    fontSize: 15,
-                    fontWeight: FontWeight.w400,
-                  ),
-                )
-              ],
-            ),
-            Column(
-              children: [
-                Container(
-                  height: 100,
-                  width: 100,
-                  margin: const EdgeInsets.only(top: 100),
-                  child: Image.asset(Images.empty),
+                Column(
+                  children: [
+                    Container(
+                      height: 100,
+                      width: 100,
+                      margin: const EdgeInsets.only(top: 100),
+                      child: Image.asset(Images.empty),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.all(10),
+                      child: const textlist(
+                        text: Stringvalue.emptytext,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    )
+                  ],
                 ),
-                Container(
-                  margin: const EdgeInsets.all(10),
-                  child: const textlist(
-                    text: Stringvalue.emptytext,
-                    fontSize: 15,
-                    fontWeight: FontWeight.w400,
-                  ),
+                Column(
+                  children: const [
+                    Center(
+                      child: Text("Pending"),
+                    )
+                  ],
                 )
-              ],
-            ),
-            Column(
-              children: const [
-                Center(
-                  child: Text("Pending"),
-                )
-              ],
-            )
-          ]),
+              ]),
         ),
       ],
     ),

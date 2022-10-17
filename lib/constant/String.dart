@@ -261,4 +261,16 @@ account.""";
   static const String approved = 'Approved';
   static const String sf = """  Sell Faster - Select a listing
   or promote all""";
+  static const String message = 'Message';
+  static const String person = 'Mitcheal John';
+  static const String person1 = 'Jonthan Park';
+  static const String person2 = 'Alexandar Sara';
+  static const String person3 = 'John Smith';
+  static const String person4 = 'Jyothi shai';
+  static const String person5 = 'Mark wood';
+  static const String chat = """ There are many variations of passages of 
+  lpsum available, but the majority have suffered""";
+  static const String inbox = 'Inbox ';
+  static const String typehere = 'Type message here..';
+
 }

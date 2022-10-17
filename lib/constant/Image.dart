@@ -79,5 +79,9 @@ class Images {
   static const profilearrow = 'images/profilearrow.png';
   static const empty = 'images/empty.png';
   static const sellfaster = 'images/sellfaster.png';
+  static const  pr = 'images/pr.jpeg';
+  static const  pr1 = 'images/pr1.jpeg';
+  static const  pr2 = 'images/pr2.png';
+  static const  pr3 = 'images/pr3.jpeg';
 }
 
