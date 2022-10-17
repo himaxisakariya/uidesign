@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:uidesign/constant/Fixcolors.dart';
 import 'package:uidesign/constant/Image.dart';
@@ -12,11 +10,6 @@ class people_Need extends StatefulWidget {
 }
 
 class _people_NeedState extends State<people_Need> {
-  List<String> notifications = [
-    (Stringvalue.notification1),
-    (Stringvalue.notification2),
-    (Stringvalue.notification2)
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +54,7 @@ class _people_NeedState extends State<people_Need> {
               child: Flex(
                 direction: Axis.vertical,
                 children: [
-                    _tabSection(context),
+                  _tabSection(context),
                 ],
               ),
             ),
@@ -84,11 +77,12 @@ Widget _tabSection(BuildContext context) {
             indicatorColor: Fixcolors.greenacccet,
             indicatorWeight: 3.5,
             tabs: [
-
-          Tab(text: "All",),
-          Tab(text: "Top Ads"),
-          Tab(text: "Regular Ads"),
-        ]),
+              Tab(
+                text: "All",
+              ),
+              Tab(text: "Top Ads"),
+              Tab(text: "Regular Ads"),
+            ]),
         SizedBox(
           //Add this to give height
           height: MediaQuery.of(context).size.height * 0.75,
@@ -98,8 +92,7 @@ Widget _tabSection(BuildContext context) {
                 itemCount: productimage.length,
                 shrinkWrap: true,
                 physics: const ScrollPhysics(),
-                gridDelegate:
-                const SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2),
                 itemBuilder: (context, index) {
                   return Card(
@@ -113,8 +106,7 @@ Widget _tabSection(BuildContext context) {
                             decoration: BoxDecoration(
                                 color: Colors.grey,
                                 image: DecorationImage(
-                                    image:
-                                    AssetImage(productimage[index]),
+                                    image: AssetImage(productimage[index]),
                                     fit: BoxFit.fill),
                                 borderRadius: const BorderRadius.all(
                                     Radius.circular(10))),
@@ -129,8 +121,7 @@ Widget _tabSection(BuildContext context) {
                               ],
                             )),
                         Row(
-                          mainAxisAlignment:
-                          MainAxisAlignment.spaceEvenly,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             textlist(
                                 text: product2name[index],
@@ -147,17 +138,14 @@ Widget _tabSection(BuildContext context) {
                           ],
                         ),
                         Row(
-                          mainAxisAlignment:
-                          MainAxisAlignment.spaceEvenly,
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Container(
                               height: 35,
-                              margin:
-                              const EdgeInsets.only(left: 2, right: 45),
+                              margin: const EdgeInsets.only(left: 2, right: 45),
                               decoration: BoxDecoration(
                                   color: Fixcolors.green,
-                                  borderRadius:
-                                  BorderRadius.circular(6)),
+                                  borderRadius: BorderRadius.circular(6)),
                               child: Row(
                                 children: [
                                   SizedBox(
@@ -174,8 +162,7 @@ Widget _tabSection(BuildContext context) {
                                     padding: const EdgeInsets.only(right: 13),
                                     child: const Text(
                                       "Share",
-                                      style: TextStyle(
-                                          color: Colors.white),
+                                      style: TextStyle(color: Colors.white),
                                     ),
                                   ),
                                 ],
@@ -192,8 +179,42 @@ Widget _tabSection(BuildContext context) {
                 },
               ),
             ),
-            const Text("Top Ads"),
-            const Text("Regular Ads"),
+            Column(
+              children: [
+                Container(
+                  height: 100,
+                  width: 100,
+                  margin: const EdgeInsets.only(top: 100),
+                  child: Image.asset(Images.empty),
+                ),
+                Container(
+                  margin: const EdgeInsets.all(10),
+                  child: const textlist(
+                    text: Stringvalue.emptytext,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w400,
+                  ),
+                )
+              ],
+            ),
+            Column(
+              children: [
+                Container(
+                  height: 100,
+                  width: 100,
+                  margin: const EdgeInsets.only(top: 100),
+                  child: Image.asset(Images.empty),
+                ),
+                Container(
+                  margin: const EdgeInsets.all(10),
+                  child: const textlist(
+                    text: Stringvalue.emptytext,
+                    fontSize: 15,
+                    fontWeight: FontWeight.w400,
+                  ),
+                )
+              ],
+            ),
           ]),
         ),
       ],

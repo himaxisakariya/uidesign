@@ -471,12 +471,14 @@ TextEditingController city = TextEditingController();
                     ),
                     Container(
                       margin: const EdgeInsets.all(25),
-                      child: const ElevateButton(
+                      child:  ElevateButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
                         text: Stringvalue.usale8,
                         buttonColor: Fixcolors.green,
                         textColor: Fixcolors.white,
                       ),
-                      
                     ),
                     sizebox(),
                   ],
@@ -487,20 +489,3 @@ TextEditingController city = TextEditingController();
     );
   }
 }
-// Expanded(
-// flex: 1,
-// child: Container(
-// height: 50,
-// decoration: BoxDecoration(
-// borderRadius: BorderRadius.circular(8),
-// border: Border.all(color: Fixcolors.grey)),
-// child: Padding(
-// padding: const EdgeInsets.only(bottom: 25),
-// child: ListTile(
-// onTap: _openCountryPickerDialog,
-//
-// title: _buildDialogItem(_default),
-// ),
-// ),
-// ),
-// ),

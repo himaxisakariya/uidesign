@@ -515,7 +515,7 @@ customDialogBox(BuildContext context) {
                             fontWeight: FontWeight.w400,
                             fontSize: 13,
                           )),
-                          readonly: true,
+                          readonly: false,
                           filed: true,
                           fillcolor: Fixcolors.grey.withOpacity(0.2),
                         ),
@@ -528,13 +528,13 @@ customDialogBox(BuildContext context) {
                               margin: const EdgeInsets.only(top: 5, bottom: 5),
                               child: TextFields(
                                 hintText: Stringvalue.pay1,
-                                textInputType: TextInputType.number,
+                                textInputType: TextInputType.datetime,
                                 hintstyle: GoogleFonts.poppins(
                                     textStyle: const TextStyle(
                                   fontWeight: FontWeight.w400,
                                   fontSize: 13,
                                 )),
-                                readonly: true,
+                                readonly: false,
                                 filed: true,
                                 fillcolor: Fixcolors.grey.withOpacity(0.2),
                               ),
@@ -552,7 +552,7 @@ customDialogBox(BuildContext context) {
                                   fontWeight: FontWeight.w400,
                                   fontSize: 13,
                                 )),
-                                readonly: true,
+                                readonly: false,
                                 filed: true,
                                 fillcolor: Fixcolors.grey.withOpacity(0.2),
                               ),

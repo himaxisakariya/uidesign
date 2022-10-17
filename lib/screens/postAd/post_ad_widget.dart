@@ -9,10 +9,10 @@ import 'package:uidesign/screens/homepage/homepagewidgets.dart';
 import 'package:uidesign/screens/postAd/post_ads.dart';
 import 'package:video_thumbnail/video_thumbnail.dart';
 
-class PostAddPageViewModel {
+class PostAdsViewModel {
   final Post_adsState postAddPageState;
 
-  PostAddPageViewModel(this.postAddPageState);
+  PostAdsViewModel(this.postAddPageState);
 
   imageoption(BuildContext context) {
     return showModalBottomSheet(

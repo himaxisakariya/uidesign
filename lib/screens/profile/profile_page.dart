@@ -6,6 +6,7 @@ import 'package:uidesign/constant/String.dart';
 import 'package:uidesign/constant/widget/floatingactionbutton.dart';
 import 'package:uidesign/screens/homepage/homepagewidgets.dart';
 import 'package:uidesign/screens/postAd/post_ads.dart';
+import 'package:uidesign/screens/profile/ads/ads.dart';
 import 'package:uidesign/screens/profile/profile_edit.dart';
 
 class Profile_Page extends StatefulWidget {
@@ -99,7 +100,7 @@ class _Profile_PageState extends State<Profile_Page> {
                                 shape: BoxShape.circle,
                                 image: DecorationImage(
                                   image: NetworkImage(
-                                      'https://patientcaremedical.com/wp-content/uploads/2018/04/male-catheters.jpg'),
+                                      'https://patientcaremedical.com/wp-content/uploads/2018/04/male-catheters.jpg',),
                                 ),
                               ),
                             ))),
@@ -138,15 +139,22 @@ class _Profile_PageState extends State<Profile_Page> {
                 ),
                 Card(
                   margin: const EdgeInsets.all(10),
-                  child: Container(
-                    width: double.infinity,
-                    height: 20,
-                    margin: const EdgeInsets.all(10),
-                    child: const Text(
-                      Stringvalue.myads,
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                  child: InkWell(
+                    child: Container(
+                      width: double.infinity,
+                      height: 20,
+                      margin: const EdgeInsets.all(10),
+                      child: const Text(
+                        Stringvalue.myads,
+                        style:
+                            TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
+                      ),
                     ),
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return ads_page();
+                      },));
+                    },
                   ),
                 ),
                 Card(

@@ -228,4 +228,37 @@ to active this feature""";
   static const String profile3 = 'Take a photo of it';
   static const String profile4 = 'Meet buyers';
   static const String profile5 = 'Make Money';
+  static const String emptytext = """There isn’t anything here yet! Be the 
+first to post an ad to this category and 
+recieve 1GB of free storage space for your 
+account.""";
+  static const String emptytext1 = 'No Data Found !';
+  static const String edit1 = 'First Name';
+  static const String edit2  = 'Last Name';
+  static const String edit3 = 'Owner';
+  static const String edit4 = 'Click Here';
+  static const String address = 'Address';
+  static const String emailex = 'william@example.com';
+  static const String edit5 = """Send people directly to your website for only 
+\$0.99. Go for it""";
+  static const String payactive = 'Pay & active';
+  static const String edit6 = 'Website';
+  static const String edit7  = 'Website Url (optional)';
+  static const String edit8 = 'Public Profile';
+  static const String edit9 = 'Public Email';
+  static const String save = 'Save';
+  static const String file = 'File Manager';
+  static const String rads1 = 'Sell a Micrwave';
+  static const String rads2 = 'Sell a Oven';
+  static const String rads3 = 'Sell a Wallet';
+  static const String rads4 = 'Sell a Ring';
+  static const String rads5 = 'Sell a Watch';
+  static const String rads6 = 'Sell a iPhone';
+  static const String rlocation = '322,Park street,NY city';
+  static const String rprice = '\$200.00';
+  static const String rprice1 = '\$50.00';
+  static const String rprice2 = '\$750.00';
+  static const String approved = 'Approved';
+  static const String sf = """  Sell Faster - Select a listing
+  or promote all""";
 }

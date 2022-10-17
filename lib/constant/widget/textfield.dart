@@ -12,7 +12,6 @@ class TextFields extends StatelessWidget {
   final Border? border;
   final String? Function(String?)? validator;
   ValueChanged<String>? onFieldSubmitted;
-  bool obscureText = false;
   final TextStyle? hintstyle;
   final int? maxline;
 bool readonly = false;
@@ -29,7 +28,7 @@ final Color? fillcolor;
         this.border,
         int? width,
         this.validator,
-        this.onFieldSubmitted, this.hintstyle,this.maxline,this.suffixIcon,required this.readonly,required this.filed,this.fillcolor
+        this.onFieldSubmitted, this.hintstyle,this.maxline,this.suffixIcon,required this.readonly, required this.filed,this.fillcolor
       });
 
   @override
@@ -40,7 +39,7 @@ final Color? fillcolor;
         child: TextFormField(onFieldSubmitted: onFieldSubmitted,
           keyboardType: textInputType,
           controller: textEditingController,
-          validator: validator,obscureText: obscureText,
+          validator: validator,
           maxLines: maxline,
           readOnly:  readonly,
           decoration: InputDecoration(

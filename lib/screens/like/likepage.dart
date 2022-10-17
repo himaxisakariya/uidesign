@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:uidesign/constant/Fixcolors.dart';
+import 'package:uidesign/constant/Image.dart';
+import 'package:uidesign/constant/String.dart';
 import 'package:uidesign/constant/widget/floatingactionbutton.dart';
+import 'package:uidesign/screens/homepage/homepagewidgets.dart';
 import 'package:uidesign/screens/postAd/post_ads.dart';
 
 class Likepage extends StatefulWidget {
@@ -20,7 +23,26 @@ class _LikepageState extends State<Likepage> {
     ));
     return Scaffold(
       appBar: AppBar(title: const Text("Likepage"),backgroundColor: Fixcolors.green,),
-      body: const Center(child: Text("Like Page")),
+      body:  Center(
+        child: Column(
+          children: [
+            Container(
+              height: 100,
+              width: 100,
+              margin: const EdgeInsets.only(top: 100),
+              child: Image.asset(Images.empty),
+            ),
+            Container(
+              margin: const EdgeInsets.all(10),
+              child: const textlist(
+                text: Stringvalue.emptytext1,
+                fontSize: 16,
+                fontWeight: FontWeight.w500,
+              ),
+            )
+          ],
+        ),
+      ),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
             Navigator.push(context, MaterialPageRoute(

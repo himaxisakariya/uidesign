@@ -48,6 +48,7 @@ dependencies:
   country_state_city_pro: ^0.0.3
   path_provider:
   video_thumbnail:
+  flutter_switch: ^0.3.2
 
 dev_dependencies:
   flutter_test:

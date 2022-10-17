@@ -20,7 +20,7 @@ class Post_ads extends StatefulWidget {
 }
 
 class Post_adsState extends State<Post_ads> {
-  PostAddPageViewModel? postAddPageViewModel;
+  PostAdsViewModel? postAddPageViewModel;
   List<XFile> imgpath = [];
   List<XFile> videopaths = [];
   bool s = true;
@@ -29,7 +29,8 @@ class Post_adsState extends State<Post_ads> {
   late VideoPlayerController controller;
   String thumbnail = '';
   List<XFile> thumbnailpath = [];
-  play(){
+
+  play() {
     controller = VideoPlayerController.file(File(videopath))
       ..initialize().then((_) {
         setState(() {
@@ -37,15 +38,17 @@ class Post_adsState extends State<Post_ads> {
         });
       });
   }
+
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     play();
   }
-   @override
+
+  @override
   Widget build(BuildContext context) {
-    postAddPageViewModel ?? (postAddPageViewModel = PostAddPageViewModel(this));
+    postAddPageViewModel ?? (postAddPageViewModel = PostAdsViewModel(this));
     return Scaffold(
       backgroundColor: Fixcolors.green,
       body: Column(children: [
@@ -98,11 +101,16 @@ class Post_adsState extends State<Post_ads> {
                             fontWeight: FontWeight.w500,
                             color: Fixcolors.black,
                           ),
-                          trailing: SizedBox(height: 20,width: 20,child: Image.asset(Images.i),),
+                          trailing: SizedBox(
+                            height: 20,
+                            width: 20,
+                            child: Image.asset(Images.i),
+                          ),
                         ),
                       ),
                       const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 15,vertical: 5),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                         child: textlist(
                           text: Stringvalue.media1,
                           fontSize: 12,
@@ -111,7 +119,8 @@ class Post_adsState extends State<Post_ads> {
                         ),
                       ),
                       const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 15,vertical: 5),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                         child: textlist(
                           text: Stringvalue.media2,
                           fontSize: 11,
@@ -122,8 +131,7 @@ class Post_adsState extends State<Post_ads> {
                       InkWell(
                         onTap: () async {
                           setState(() {
-                            postAddPageViewModel!
-                                .videooption(context);
+                            postAddPageViewModel!.videooption(context);
                           });
                         },
                         child: Padding(
@@ -132,17 +140,21 @@ class Post_adsState extends State<Post_ads> {
                             scrollDirection: Axis.horizontal,
                             child: Row(
                               children: [
-                               if (thumbnail!= null) SizedBox(
-                                  height: 95,
-                                  width: 100,
-                                  child: Image.file(File(thumbnail)),
-                                ) else Container(),
+                                if (thumbnail != null)
+                                  SizedBox(
+                                    height: 95,
+                                    width: 100,
+                                    child: Image.file(File(thumbnail)),
+                                  )
+                                else
+                                  Container(),
                                 DottedBorder(
                                   borderType: BorderType.RRect,
                                   radius: const Radius.circular(6),
                                   color: Fixcolors.green,
                                   child: Container(
-                                    color: Fixcolors.greenacccet.withOpacity(0.1),
+                                    color:
+                                        Fixcolors.greenacccet.withOpacity(0.1),
                                     child: SizedBox(
                                       height: 100,
                                       width: 105,
@@ -150,13 +162,17 @@ class Post_adsState extends State<Post_ads> {
                                         Container(
                                           margin: const EdgeInsets.all(6),
                                           child: Padding(
-                                            padding: const EdgeInsets.only(left: 30,top: 20,right: 30,bottom: 7),
+                                            padding: const EdgeInsets.only(
+                                                left: 30,
+                                                top: 20,
+                                                right: 30,
+                                                bottom: 7),
                                             child: Image.asset(Images.video),
                                           ),
                                         ),
                                         const Padding(
-                                          padding:
-                                          EdgeInsets.only(left: 20, top: 65),
+                                          padding: EdgeInsets.only(
+                                              left: 20, top: 65),
                                           child: textlist(
                                             text: Stringvalue.addvideo,
                                             color: Fixcolors.green,
@@ -188,7 +204,8 @@ class Post_adsState extends State<Post_ads> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 15,vertical: 5),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                         child: textlist(
                           text: Stringvalue.media3,
                           fontSize: 12,
@@ -197,7 +214,8 @@ class Post_adsState extends State<Post_ads> {
                         ),
                       ),
                       const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 15,vertical: 5),
+                        padding:
+                            EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                         child: textlist(
                           text: Stringvalue.media4,
                           fontSize: 11,
@@ -208,8 +226,7 @@ class Post_adsState extends State<Post_ads> {
                       InkWell(
                         onTap: () async {
                           setState(() {
-                            postAddPageViewModel!
-                                .imageoption(context);
+                            postAddPageViewModel!.imageoption(context);
                           });
                         },
                         child: Padding(
@@ -257,7 +274,8 @@ class Post_adsState extends State<Post_ads> {
                                   radius: const Radius.circular(6),
                                   color: Fixcolors.green,
                                   child: Container(
-                                    color: Fixcolors.greenacccet.withOpacity(0.1),
+                                    color:
+                                        Fixcolors.greenacccet.withOpacity(0.1),
                                     child: SizedBox(
                                       height: 100,
                                       width: 105,
@@ -265,13 +283,17 @@ class Post_adsState extends State<Post_ads> {
                                         Container(
                                           margin: const EdgeInsets.all(6),
                                           child: Padding(
-                                            padding: const EdgeInsets.only(left: 30,top: 20,right: 30,bottom: 7),
+                                            padding: const EdgeInsets.only(
+                                                left: 30,
+                                                top: 20,
+                                                right: 30,
+                                                bottom: 7),
                                             child: Image.asset(Images.gallery),
                                           ),
                                         ),
                                         const Padding(
-                                          padding:
-                                          EdgeInsets.only(left: 20, top: 65),
+                                          padding: EdgeInsets.only(
+                                              left: 20, top: 65),
                                           child: textlist(
                                             text: Stringvalue.addimage,
                                             color: Fixcolors.green,
@@ -310,9 +332,11 @@ class Post_adsState extends State<Post_ads> {
               ),
               TextButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) {
-                    return const HomePage();
-                  },));
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) {
+                      return const HomePage();
+                    },
+                  ));
                 },
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -333,9 +357,11 @@ class Post_adsState extends State<Post_ads> {
               ),
               ElevateButton(
                 onPressed: () {
-                 Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
-                   return const ad_details();
-                 },));
+                  Navigator.pushReplacement(context, MaterialPageRoute(
+                    builder: (context) {
+                      return const ad_details();
+                    },
+                  ));
                 },
                 buttonColor: Fixcolors.green,
                 textSize: 16,
@@ -350,5 +376,4 @@ class Post_adsState extends State<Post_ads> {
       ]),
     );
   }
-
 }

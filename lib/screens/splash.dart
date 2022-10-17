@@ -20,7 +20,8 @@ class _SplashScrrenState extends State<SplashScrren> {
     super.initState();
     screen();
   }
-  Future screen()async{
+
+  Future screen() async {
     await Future.delayed(const Duration(seconds: 4));
     Navigator.pushReplacement(context, MaterialPageRoute(
       builder: (context) {
@@ -43,14 +44,22 @@ class _SplashScrrenState extends State<SplashScrren> {
         child: Center(
           child: Column(
             children: [
-              Image.asset(Images.splashscreen,width: 90,height: 80,fit: BoxFit.fill,),
-                  const SizedBox(height: 5,),
+              Image.asset(
+                Images.splashscreen,
+                width: 90,
+                height: 80,
+                fit: BoxFit.fill,
+              ),
+              const SizedBox(
+                height: 5,
+              ),
               Text(
-                    Stringvalue.splashTitle,
-                    style: GoogleFonts.poppins(
-                        textStyle: const TextStyle(
-                            fontWeight: FontWeight.w500, fontSize: 18)),
-                  ),],
+                Stringvalue.splashTitle,
+                style: GoogleFonts.poppins(
+                    textStyle: const TextStyle(
+                        fontWeight: FontWeight.w500, fontSize: 18)),
+              ),
+            ],
           ),
         ),
       ),

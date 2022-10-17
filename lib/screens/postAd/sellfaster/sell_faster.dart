@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:uidesign/constant/Fixcolors.dart';
 import 'package:uidesign/constant/Image.dart';
 import 'package:uidesign/constant/String.dart';
 import 'package:uidesign/constant/widget/ebutton.dart';
+import 'package:uidesign/screens/drawerpage/incresedisk.dart';
 import 'package:uidesign/screens/homepage/homepagewidgets.dart';
 import 'package:uidesign/screens/postAd/urgentsale/urgent_sale.dart';
 
@@ -79,10 +81,262 @@ class _Sell_fasterState extends State<Sell_faster> {
                           color: Fixcolors.green,
                         ),
                       ),
-                      Container(
-                        padding: const EdgeInsets.only(
-                            left: 10, right: 10, bottom: 10),
-                        child: Image.asset(Images.sellfastplan),
+                      Row(
+                        children: [
+                          InkWell(
+                            child: Container(
+                              margin: const EdgeInsets.only(
+                                  left: 40, top: 10, bottom: 10),
+                              height: 75,
+                              width: 130,
+                              decoration: BoxDecoration(
+                                gradient: const LinearGradient(
+                                    colors: [
+                                      Color(0xff50A0FD),
+                                      Colors.lightBlueAccent,
+                                      Color(0xff50A0FD)
+                                    ],
+                                    begin: Alignment.topRight,
+                                    end: Alignment.bottomLeft),
+                                borderRadius: BorderRadius.circular(13),
+                                color: const Color(0xff50A0FD),
+                              ),
+                              alignment: Alignment.center,
+                              child: Column(
+                                children: [
+                                  Container(
+                                    margin: const EdgeInsets.only(top: 4),
+                                    child: Text(
+                                      "\$ 3 ",
+                                      style: GoogleFonts.poppins(
+                                          textStyle: const TextStyle(
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 14,
+                                              color: Colors.white)),
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: const EdgeInsets.only(top: 15, bottom: 2),
+                                    child: Text(
+                                      "1 GB Storage Plan",
+                                      style: GoogleFonts.poppins(
+                                          textStyle: const TextStyle(
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 12,
+                                              color: Colors.white)),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            onTap: () {
+                              customDialogBox(context);
+                            },
+                          ),
+                          InkWell(
+                            child: Container(
+                              margin: const EdgeInsets.only(
+                                  left: 10, top: 10, bottom: 10, right: 20),
+                              height: 75,
+                              width: 130,
+                              decoration: BoxDecoration(
+                                gradient: const LinearGradient(
+                                    colors: [
+                                      Color(0xff9351FF),
+                                      Colors.deepPurple,
+                                      Color(0xff9351FF)
+                                    ],
+                                    begin: Alignment.topRight,
+                                    end: Alignment.bottomLeft),
+                                borderRadius: BorderRadius.circular(13),
+                              ),
+                              alignment: Alignment.center,
+                              child: Column(
+                                children: [
+                                  Container(
+                                    margin: const EdgeInsets.only(top: 4),
+                                    child: Text(
+                                      "\$ 2 ",
+                                      style: GoogleFonts.poppins(
+                                          textStyle: const TextStyle(
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 14,
+                                              color: Colors.white)),
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: const EdgeInsets.only(top: 15, bottom: 2),
+                                    child: Text(
+                                      "2 GB Storage Plan",
+                                      style: GoogleFonts.poppins(
+                                          textStyle: const TextStyle(
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 12,
+                                              color: Colors.white)),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            onTap: () {
+                              customDialogBox(context);
+                            },
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          InkWell(
+                            child: Container(
+                              margin: const EdgeInsets.only(
+                                  left: 40, top: 10, bottom: 10),
+                              height: 75,
+                              width: 130,
+                              decoration: BoxDecoration(
+                                gradient: const LinearGradient(
+                                    colors: [
+                                      Color(0xffFF7A89),
+                                      Colors.pinkAccent,
+                                      Color(0xffFF7A89)
+                                    ],
+                                    begin: Alignment.topRight,
+                                    end: Alignment.bottomLeft),
+                                borderRadius: BorderRadius.circular(13),
+                              ),
+                              alignment: Alignment.center,
+                              child: Column(
+                                children: [
+                                  Container(
+                                    margin: const EdgeInsets.only(top: 4),
+                                    child: Text(
+                                      "\$ 8 ",
+                                      style: GoogleFonts.poppins(
+                                          textStyle: const TextStyle(
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 14,
+                                              color: Colors.white)),
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: const EdgeInsets.only(top: 15, bottom: 2),
+                                    child: Text(
+                                      "3 GB Storage Plan",
+                                      style: GoogleFonts.poppins(
+                                          textStyle: const TextStyle(
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 12,
+                                              color: Colors.white)),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            onTap: () {
+                              customDialogBox(context);
+                            },
+                          ),
+                          InkWell(
+                            child: Container(
+                              margin: const EdgeInsets.only(
+                                  left: 10, top: 10, bottom: 10, right: 20),
+                              height: 75,
+                              width: 130,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(13),
+                                  gradient: const LinearGradient(
+                                      colors: [
+                                        Color(0xff2CDD68),
+                                        Colors.green,
+                                        Color(0xff2CDD68)
+                                      ],
+                                      begin: Alignment.topRight,
+                                      end: Alignment.bottomLeft)),
+                              alignment: Alignment.center,
+                              child: Column(
+                                children: [
+                                  Container(
+                                    margin: const EdgeInsets.only(top: 4),
+                                    child: Text(
+                                      "\$ 12 ",
+                                      style: GoogleFonts.poppins(
+                                          textStyle: const TextStyle(
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 14,
+                                              color: Colors.white)),
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: const EdgeInsets.only(top: 15, bottom: 2),
+                                    child: Text(
+                                      "4 GB Storage Plan",
+                                      style: GoogleFonts.poppins(
+                                          textStyle: const TextStyle(
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 12,
+                                              color: Colors.white)),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            onTap: () {
+                              customDialogBox(context);
+                            },
+                          )
+                        ],
+                      ),
+                      Row(
+                        children: [
+                          InkWell(
+                            child: Container(
+                              margin: const EdgeInsets.only(
+                                  left: 40, top: 10, bottom: 10),
+                              height: 75,
+                              width: 130,
+                              decoration: BoxDecoration(
+                                gradient: const LinearGradient(
+                                    colors: [
+                                      Color(0xffFFAA6C),
+                                      Colors.deepOrangeAccent,
+                                      Color(0xffFFAA6C)
+                                    ],
+                                    begin: Alignment.topRight,
+                                    end: Alignment.bottomLeft),
+                                borderRadius: BorderRadius.circular(13),
+                              ),
+                              alignment: Alignment.center,
+                              child: Column(
+                                children: [
+                                  Container(
+                                    margin: const EdgeInsets.only(top: 4),
+                                    child: Text(
+                                      "\$ 15 ",
+                                      style: GoogleFonts.poppins(
+                                          textStyle: const TextStyle(
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 14,
+                                              color: Colors.white)),
+                                    ),
+                                  ),
+                                  Container(
+                                    margin: const EdgeInsets.only(top: 15, bottom: 2),
+                                    child: Text(
+                                      "5 GB Storage Plan",
+                                      style: GoogleFonts.poppins(
+                                          textStyle: const TextStyle(
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 12,
+                                              color: Colors.white)),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            onTap: () {
+                              customDialogBox(context);
+                            },
+                          ),
+                        ],
                       ),
                       const Padding(
                         padding: EdgeInsets.only(left: 15, right: 15, top: 5),

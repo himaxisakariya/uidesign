@@ -3,8 +3,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 class Listtilee extends StatelessWidget {
   final Widget? title;
-  final Widget? subtitle;
-
   final Color? color;
   final VoidCallback? onTap;
   final String? text;
@@ -16,7 +14,6 @@ class Listtilee extends StatelessWidget {
   const Listtilee({
     Key? key,
     this.title,
-    this.subtitle,
     this.onTap,
     this.text,
     this.titletext,
@@ -54,13 +51,12 @@ class Listtilee extends StatelessWidget {
           fontWeight: FontWeight.w400,
         )),
       ),
-      subtitle: subtitle,
       trailing: Container(
           margin: const EdgeInsets.only(left: 0,top: 5,bottom: 5,right: 0),
           height: 15, width: 15, child: Image.asset(imgtext!)),
       textColor: color,
       onTap: onTap,
-      iconColor: color,
+
     );
   }
 }

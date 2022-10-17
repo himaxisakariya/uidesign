@@ -10,6 +10,7 @@ import 'package:uidesign/screens/loction/category_page/category_page.dart';
 import 'package:uidesign/screens/login/loginpage.dart';
 import 'package:uidesign/screens/peopleneed/People_Need.dart';
 import 'package:uidesign/screens/postAd/post_ads.dart';
+import 'package:uidesign/screens/profile/ads/ads.dart';
 
 
 
@@ -119,7 +120,12 @@ draweropen(BuildContext context) {
           fontWeight: FontWeight.w400,
           imgtext: Images.barrow,
         ),
-        const Listtilee(
+         Listtilee(
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return ads_page();
+            },));
+          },
           text: Images.drawer2,
           titletext: Stringvalue.drawer3,
           fontSize: 15,

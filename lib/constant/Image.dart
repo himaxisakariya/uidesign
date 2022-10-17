@@ -77,5 +77,7 @@ class Images {
   static const profile3 = 'images/profile3.png';
   static const profile4 = 'images/profile4.png';
   static const profilearrow = 'images/profilearrow.png';
+  static const empty = 'images/empty.png';
+  static const sellfaster = 'images/sellfaster.png';
 }
 
