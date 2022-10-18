@@ -44,7 +44,7 @@ class ElevateButton extends StatelessWidget {
           text!,
           style: GoogleFonts.poppins(
               textStyle: const TextStyle(
-                  fontSize: 20,
+                  fontSize: 18,
                   fontWeight: FontWeight.w400,
                   color: Fixcolors.white)),
         ),

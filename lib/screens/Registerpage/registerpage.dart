@@ -1,14 +1,18 @@
+import 'dart:convert';
+
 import 'package:country_pickers/country.dart';
 import 'package:country_pickers/country_pickers.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:http/http.dart';
 import 'package:uidesign/constant/Fixcolors.dart';
 import 'package:uidesign/constant/Image.dart';
 import 'package:uidesign/constant/String.dart';
 import 'package:uidesign/constant/widget/app_button.dart';
 import 'package:uidesign/constant/widget/divider.dart';
 import 'package:uidesign/constant/widget/ebutton.dart';
+import 'package:uidesign/constant/widget/textfield.dart';
 import 'package:uidesign/screens/Registerpage/widgets.dart';
 import 'package:uidesign/screens/homepage/home_page.dart';
 
@@ -29,6 +33,34 @@ class _RegisterPageState extends State<RegisterPage> {
       statusBarColor: Fixcolors.green,
       systemNavigationBarIconBrightness: Brightness.light,
     ));
+    TextEditingController namecontroller = TextEditingController();
+    TextEditingController emailcontroller = TextEditingController();
+    TextEditingController passwordcontroller  = TextEditingController();
+    void signup(String email, name, password) async {
+      try {
+        Response response = await post(
+            Uri.parse('https://lookprstage.com/admin//api/v1/data/signup'),
+            body: {
+              "email": "finaltest2@popcornfhuihuhly.com",
+              "name": "App",
+              "password": "123",
+              "phoneNumber": "",
+              "countryCode": "",
+              "deviceToken": "fZ2OJ1r3R6Gl0hkfeZcIR7:APA91bGOGwPp6b2u_BrpDosEF-_VH_UtwRpmHEJ5IswlzW92DvcH9FRIzZ1b5aAC4ClylbE0b4VOGKySJrf9xvKvoBLxi_eN2Grf9KGOYxT3dV5QLNYHCEwHk9ahgub-d1QdIDUaRKLN",
+             // "deviceType": 1
+            });
+
+        if (response.statusCode == 200) {
+          var data = jsonDecode(response.body.toString());
+          print(data['message']);
+          print('signup successfully');
+        } else {
+          print('failed');
+        }
+      } catch (e) {
+        print(e.toString());
+      }
+    }
 
     return Scaffold(
       backgroundColor: Fixcolors.green,
@@ -71,9 +103,68 @@ class _RegisterPageState extends State<RegisterPage> {
                     const SizedBox(
                       height: 25,
                     ),
-                    name(),
+                    TextFields(
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'Enter Name';
+                        }
+                        return null;
+                      },
+                      textEditingController: namecontroller,
+                      readonly: false,
+                      filed: false,
+                      prefixIcon: Container(
+                        height: 25,
+                        width: 20,
+                        decoration: BoxDecoration(
+                          color: Fixcolors.green.withOpacity(0.1),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        margin: const EdgeInsets.all(7),
+                        child: Padding(
+                          padding: const EdgeInsets.all(7),
+                          child: Image.asset(
+                            Images.person,
+                          ),
+                        ),
+                      ),
+                      hintText: "Your Name",
+                      hintstyle: GoogleFonts.poppins(
+                          textStyle: const TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 13,
+                      )),
+                    ),
                     sizebox(),
-                    email(),
+                    TextFields(
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'Enter email-ID';
+                        }
+                        return null;
+                      },
+                      readonly: false,
+                      textEditingController: emailcontroller,
+                      prefixIcon: Container(
+                        height: 25,
+                        width: 20,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(8),
+                            color: Fixcolors.green.withOpacity(0.1)),
+                        margin: const EdgeInsets.all(7),
+                        child: Padding(
+                          padding: const EdgeInsets.all(7),
+                          child: Image.asset(Images.email),
+                        ),
+                      ),
+                      hintText: Stringvalue.emailaddress,
+                      hintstyle: GoogleFonts.poppins(
+                          textStyle: const TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 13,
+                      )),
+                      filed: false,
+                    ),
                     sizebox(),
                     Padding(
                       padding: const EdgeInsets.only(
@@ -105,15 +196,51 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                     ),
                     sizebox(),
-                    password(),
+                    TextFields(
+                      validator: (value) {
+                        if (value!.isEmpty) {
+                          return 'Enter password';
+                        }
+                        return null;
+                      },
+                      textEditingController: passwordcontroller,
+                      readonly: false,
+                      prefixIcon: Container(
+                        height: 25,
+                        width: 20,
+                        decoration: BoxDecoration(
+                          color: Fixcolors.green.withOpacity(0.1),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        margin: const EdgeInsets.all(7),
+                        child: Padding(
+                          padding: const EdgeInsets.all(7),
+                          child: Image.asset(
+                            Images.lock,
+                          ),
+                        ),
+                      ),
+                      hintText: Stringvalue.password,
+                      hintstyle: GoogleFonts.poppins(
+                          textStyle: const TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 13,
+                      )),
+                      filed: false,
+                    ),
                     sizebox(),
                     confirmpassword(),
                     sizebox(),
                     ElevateButton(
                       onPressed: () {
-                        if (_form.currentState!.validate()) {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => const HomePage(),));
-                        }
+                        signup(emailcontroller.text.toString(), namecontroller.text.toString(), passwordcontroller.text.toString());
+                        // if (_form.currentState!.validate()) {
+                        //   Navigator.push(
+                        //       context,
+                        //       MaterialPageRoute(
+                        //         builder: (context) => const HomePage(),
+                        //       ));
+                        // }
                       },
                       buttonColor: Fixcolors.green,
                       text: Stringvalue.registerbutton,

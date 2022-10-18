@@ -83,5 +83,6 @@ class Images {
   static const  pr1 = 'images/pr1.jpeg';
   static const  pr2 = 'images/pr2.png';
   static const  pr3 = 'images/pr3.jpeg';
+  static const wallet = 'images/wallet.png';
 }
 

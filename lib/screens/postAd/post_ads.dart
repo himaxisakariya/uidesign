@@ -6,7 +6,7 @@ import 'package:uidesign/constant/Fixcolors.dart';
 import 'package:uidesign/constant/Image.dart';
 import 'package:uidesign/constant/String.dart';
 import 'package:uidesign/constant/widget/ebutton.dart';
-import 'package:uidesign/screens/homepage/home_page.dart';
+import 'package:uidesign/screens/drawerpage/incresedisk.dart';
 import 'package:uidesign/screens/homepage/homepagewidgets.dart';
 import 'package:uidesign/screens/postAd/Ad_Details/ad_details.dart';
 import 'package:uidesign/screens/postAd/post_ad_widget.dart';
@@ -28,24 +28,6 @@ class Post_adsState extends State<Post_ads> {
   ImagePicker picker = ImagePicker();
   late VideoPlayerController controller;
   String thumbnail = '';
-  List<XFile> thumbnailpath = [];
-
-  play() {
-    controller = VideoPlayerController.file(File(videopath))
-      ..initialize().then((_) {
-        setState(() {
-          controller.play();
-        });
-      });
-  }
-
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    play();
-  }
-
   @override
   Widget build(BuildContext context) {
     postAddPageViewModel ?? (postAddPageViewModel = PostAdsViewModel(this));
@@ -59,15 +41,15 @@ class Post_adsState extends State<Post_ads> {
               child: Row(
                 children: [
                   IconButton(
-                      onPressed: () {
-                        Navigator.pop(context);
-                      },
                       icon: const Icon(
                         Icons.arrow_back_ios_new,
                         color: Fixcolors.white,
-                      )),
+                      ),
+                      onPressed: () {
+                        Navigator.pop(context);
+                      }),
                   const SizedBox(
-                    width: 50,
+                    width: 80,
                   ),
                   const textlist(
                     text: Stringvalue.postad,
@@ -101,10 +83,36 @@ class Post_adsState extends State<Post_ads> {
                             fontWeight: FontWeight.w500,
                             color: Fixcolors.black,
                           ),
-                          trailing: SizedBox(
-                            height: 20,
-                            width: 20,
-                            child: Image.asset(Images.i),
+                          trailing: PopupMenuButton(
+                            color: Fixcolors.green,
+                            shape: const RoundedRectangleBorder(
+                                borderRadius: BorderRadius.only(
+                                    topLeft: Radius.circular(5),
+                                    bottomLeft: Radius.circular(5),
+                                    bottomRight: Radius.circular(5))),
+                            position: PopupMenuPosition.under,
+                            offset: const Offset(-3, 8),
+                            child: SizedBox(
+                              height: 20,
+                              width: 20,
+                              child: Image.asset(Images.i),
+                            ),
+                            onSelected: (value) {},
+                            itemBuilder: (BuildContext bc) {
+                              return const [
+                                PopupMenuItem(
+                                  value: 1,
+                                  child: SizedBox(
+                                      height: 33,
+                                      child: textlist(
+                                        text: Stringvalue.popup,
+                                        fontSize: 12,
+                                        color: Fixcolors.white,
+                                        fontWeight: FontWeight.w400,
+                                      )),
+                                ),
+                              ];
+                            },
                           ),
                         ),
                       ),
@@ -140,11 +148,33 @@ class Post_adsState extends State<Post_ads> {
                             scrollDirection: Axis.horizontal,
                             child: Row(
                               children: [
-                                  SizedBox(
-                                    height: 95,
-                                    width: 100,
-                                    child: Image.file(File(thumbnail)),
+                                SizedBox(
+                                  height: 109,
+                                  child: ListView.builder(
+                                    shrinkWrap: true,
+                                    physics:
+                                    const NeverScrollableScrollPhysics(),
+                                    scrollDirection: Axis.horizontal,
+                                    itemCount: imgpath.length,
+                                    itemBuilder: (context, index) {
+                                      return Container(
+                                          alignment: Alignment.topRight,
+                                          height: 109,
+                                          width: 100,
+                                          margin: const EdgeInsets.symmetric(
+                                              horizontal: 3),
+                                          child:
+                                          Image.file(File(thumbnail)),
+                                      );
+                                    },
                                   ),
+                                ),
+
+                                // SizedBox(
+                                //   height: 95,
+                                //   width: 100,
+                                //   child: Image.file(File(thumbnail)),
+                                // ),
                                 DottedBorder(
                                   borderType: BorderType.RRect,
                                   radius: const Radius.circular(6),
@@ -331,7 +361,7 @@ class Post_adsState extends State<Post_ads> {
                 onPressed: () {
                   Navigator.push(context, MaterialPageRoute(
                     builder: (context) {
-                      return const HomePage();
+                      return const DISK_SPACE();
                     },
                   ));
                 },

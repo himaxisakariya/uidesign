@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "324144052006",
-    "project_id": "uidesign-44980",
-    "storage_bucket": "uidesign-44980.appspot.com"
+    "project_number": "944210755998",
+    "project_id": "lookprior-365204",
+    "storage_bucket": "lookprior-365204.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:324144052006:android:6c72969a3ba32b1c0773e7",
+        "mobilesdk_app_id": "1:944210755998:android:0be335c4e200404015d68f",
         "android_client_info": {
           "package_name": "com.example.uidesign"
         }
       },
       "oauth_client": [
         {
-          "client_id": "324144052006-1do87c07irscm01vcm8b4tgmpgfsp7m7.apps.googleusercontent.com",
+          "client_id": "944210755998-cmalmgvfgc9b86cbai87eou2rtv43b0b.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD-X-a9Hm3bKYMzxKP32__ifGgN_N9ghN4"
+          "current_key": "AIzaSyD-_zqp9jAFPunPX8CPqUlgVJACQr5PcCs"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "324144052006-1do87c07irscm01vcm8b4tgmpgfsp7m7.apps.googleusercontent.com",
+              "client_id": "944210755998-cmalmgvfgc9b86cbai87eou2rtv43b0b.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

@@ -12,6 +12,7 @@ class TextFields extends StatelessWidget {
   final Border? border;
   final String? Function(String?)? validator;
   ValueChanged<String>? onFieldSubmitted;
+  ValueChanged<String>? onChanged;
   final TextStyle? hintstyle;
   final int? maxline;
 bool readonly = false;
@@ -28,7 +29,7 @@ final Color? fillcolor;
         this.border,
         int? width,
         this.validator,
-        this.onFieldSubmitted, this.hintstyle,this.maxline,this.suffixIcon,required this.readonly, required this.filed,this.fillcolor
+        this.onFieldSubmitted,this.onChanged, this.hintstyle,this.maxline,this.suffixIcon,required this.readonly, required this.filed,this.fillcolor
       });
 
   @override
@@ -37,6 +38,7 @@ final Color? fillcolor;
       child: Padding(
         padding: const EdgeInsets.only(left: 25, right: 25),
         child: TextFormField(onFieldSubmitted: onFieldSubmitted,
+          onChanged: onChanged,
           keyboardType: textInputType,
           controller: textEditingController,
           validator: validator,

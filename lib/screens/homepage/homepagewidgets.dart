@@ -4,6 +4,7 @@ import 'package:uidesign/constant/Fixcolors.dart';
 import 'package:uidesign/constant/Image.dart';
 import 'package:uidesign/constant/String.dart';
 import 'package:uidesign/constant/widget/listtile.dart';
+import 'package:uidesign/screens/Feedback/feedback.dart';
 import 'package:uidesign/screens/Help/Help_page.dart';
 import 'package:uidesign/screens/drawerpage/incresedisk.dart';
 import 'package:uidesign/screens/loction/category_page/category_page.dart';
@@ -11,6 +12,7 @@ import 'package:uidesign/screens/login/loginpage.dart';
 import 'package:uidesign/screens/peopleneed/People_Need.dart';
 import 'package:uidesign/screens/postAd/post_ads.dart';
 import 'package:uidesign/screens/profile/ads/ads.dart';
+import 'package:uidesign/screens/wallet/wallet.dart';
 
 
 
@@ -132,6 +134,18 @@ draweropen(BuildContext context) {
           fontWeight: FontWeight.w400,
           imgtext: Images.barrow,
         ),
+        Listtilee(
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return Wallet();
+            },));
+          },
+          text: Images.wallet,color: Fixcolors.green,
+          titletext: Stringvalue.wallet,
+          fontSize: 15,
+          fontWeight: FontWeight.w400,
+          imgtext: Images.barrow,
+        ),
          Listtilee(
           onTap: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {
@@ -164,6 +178,18 @@ draweropen(BuildContext context) {
           },
           text: Images.drawer5,
           titletext: Stringvalue.drawer6,
+          fontSize: 15,
+          fontWeight: FontWeight.w400,
+          imgtext: Images.barrow,
+        ),
+        Listtilee(
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return feedback();
+            },));
+            },
+          text: Images.sellfaster,
+          titletext: Stringvalue.feedback,
           fontSize: 15,
           fontWeight: FontWeight.w400,
           imgtext: Images.barrow,

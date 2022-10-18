@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -15,9 +16,14 @@ class SplashScrren extends StatefulWidget {
 }
 
 class _SplashScrrenState extends State<SplashScrren> {
+
   @override
-  void initState() {
-    super.initState();
+  void initState()  {
+   FirebaseMessaging _firebaseMessaging = FirebaseMessaging.instance; // Change here
+    _firebaseMessaging.getToken().then((token){
+     print("token is --->$token");
+
+    });
     screen();
   }
 

@@ -272,5 +272,24 @@ account.""";
   lpsum available, but the majority have suffered""";
   static const String inbox = 'Inbox ';
   static const String typehere = 'Type message here..';
-
+  static const String feedback = 'Feedback';
+  static const String fd1 = 'Help Us Improve LookPrior';
+  static const String fd2 = """We welcome your feedback and suggestions
+       on our products,apps, and software.""";
+  static const String fd3 = 'Your Comments:';
+  static const String fd4 = 'Write your feedback';
+  static const String fd5 = 'Submit Feedback';
+  static const String popup = """Add both videos and images to your ad 
+  or listing to attract more people.""";
+  static const String mywallet = 'My Wallet';
+  static const String lwallet = 'LookPrior Wallet';
+  static const String balance = 'Balance';
+  static const String balance1 = 'Available Wallet Balance \$12.08';
+  static const String balance2 = 'Add Money';
+  static const String balance3 = 'Add Min \$10';
+  static const String proceed = 'Proceed';
+  static const String balance4 = 'Use your wallet to';
+  static const String balance5 = 'Feature your listings';
+  static const String balance6 = 'Add a web link';
+  static const String balance7 = 'Increase space';
 }

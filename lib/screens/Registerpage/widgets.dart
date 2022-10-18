@@ -28,71 +28,77 @@ Widget divider() {
   );
 }
 
-Widget name() {
-  return TextFields(
-    validator: (value) {
-      if (value!.isEmpty) {
-        return 'Enter Name';
-      }
-      return null;
-    },
-    readonly: false,filed: false,
-    prefixIcon: Container(
-      height: 25,
-      width: 20,
-      decoration: BoxDecoration(
-        color: Fixcolors.green.withOpacity(0.1),
-        borderRadius: BorderRadius.circular(8),
-      ),
-      margin: const EdgeInsets.all(7),
-      child: Padding(
-        padding: const EdgeInsets.all(7),
-        child: Image.asset(
-          Images.person,
-        ),
-      ),
-    ),
-    hintText: "Your Name",
-    hintstyle: GoogleFonts.poppins(
-        textStyle: const TextStyle(
-      fontWeight: FontWeight.w400,
-      fontSize: 13,
-    )),
-  );
-}
+// Widget name() {
+//   TextEditingController namecontroller = TextEditingController();
+//   return TextFields(
+//     validator: (value) {
+//       if (value!.isEmpty) {
+//         return 'Enter Name';
+//       }
+//       return null;
+//     },
+//     textEditingController:namecontroller,
+//     readonly: false,filed: false,
+//     prefixIcon: Container(
+//       height: 25,
+//       width: 20,
+//       decoration: BoxDecoration(
+//         color: Fixcolors.green.withOpacity(0.1),
+//         borderRadius: BorderRadius.circular(8),
+//       ),
+//       margin: const EdgeInsets.all(7),
+//       child: Padding(
+//         padding: const EdgeInsets.all(7),
+//         child: Image.asset(
+//           Images.person,
+//         ),
+//       ),
+//     ),
+//     hintText: "Your Name",
+//     hintstyle: GoogleFonts.poppins(
+//         textStyle: const TextStyle(
+//       fontWeight: FontWeight.w400,
+//       fontSize: 13,
+//     )),
+//   );
+// }
 
-Widget email() {
-  return TextFields(
-    validator: (value) {
-      if (value!.isEmpty) {
-        return 'Enter email-ID';
-      }
-      return null;
-    },
-    readonly: false,
-    prefixIcon: Container(
-      height: 25,
-      width: 20,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(8),
-          color: Fixcolors.green.withOpacity(0.1)),
-      margin: const EdgeInsets.all(7),
-      child: Padding(
-        padding: const EdgeInsets.all(7),
-        child: Image.asset(Images.email),
-      ),
-    ),
-    hintText: Stringvalue.emailaddress,
-    hintstyle: GoogleFonts.poppins(
-        textStyle: const TextStyle(
-      fontWeight: FontWeight.w400,
-      fontSize: 13,
-    )),filed: false,
-  );
-}
+// Widget email() {
+//   TextEditingController emailcontroller = TextEditingController();
+//   return TextFields(
+//     validator: (value) {
+//       if (value!.isEmpty) {
+//         return 'Enter email-ID';
+//       }
+//       return null;
+//     },
+//     readonly: false,
+//     textEditingController: emailcontroller,
+//     prefixIcon: Container(
+//       height: 25,
+//       width: 20,
+//       decoration: BoxDecoration(
+//           borderRadius: BorderRadius.circular(8),
+//           color: Fixcolors.green.withOpacity(0.1)),
+//       margin: const EdgeInsets.all(7),
+//       child: Padding(
+//         padding: const EdgeInsets.all(7),
+//         child: Image.asset(Images.email),
+//       ),
+//     ),
+//     hintText: Stringvalue.emailaddress,
+//     hintstyle: GoogleFonts.poppins(
+//         textStyle: const TextStyle(
+//       fontWeight: FontWeight.w400,
+//       fontSize: 13,
+//     )),filed: false,
+//   );
+// }
 
 Widget phonenumber() {
+  TextEditingController phonecontroller = TextEditingController();
   return TextFields(
+    textEditingController: phonecontroller,
     validator: (value) {
       if (value!.isEmpty) {
         return 'Enter phone number';
@@ -154,38 +160,40 @@ Widget confirmpassword() {
   );
 }
 
-Widget password() {
-  return TextFields(
-    validator: (value) {
-      if (value!.isEmpty) {
-        return 'Enter password';
-      }
-      return null;
-    },
-    readonly: false,
-    prefixIcon: Container(
-      height: 25,
-      width: 20,
-      decoration: BoxDecoration(
-        color: Fixcolors.green.withOpacity(0.1),
-        borderRadius: BorderRadius.circular(8),
-      ),
-      margin: const EdgeInsets.all(7),
-      child: Padding(
-        padding: const EdgeInsets.all(7),
-        child: Image.asset(
-          Images.lock,
-        ),
-      ),
-    ),
-    hintText: Stringvalue.password,
-    hintstyle: GoogleFonts.poppins(
-        textStyle: const TextStyle(
-      fontWeight: FontWeight.w400,
-      fontSize: 13,
-    )), filed: false,
-  );
-}
+// Widget password() {
+//   TextEditingController passwordcontroller = TextEditingController();
+//   return TextFields(
+//     validator: (value) {
+//       if (value!.isEmpty) {
+//         return 'Enter password';
+//       }
+//       return null;
+//     },
+//     textEditingController: passwordcontroller,
+//     readonly: false,
+//     prefixIcon: Container(
+//       height: 25,
+//       width: 20,
+//       decoration: BoxDecoration(
+//         color: Fixcolors.green.withOpacity(0.1),
+//         borderRadius: BorderRadius.circular(8),
+//       ),
+//       margin: const EdgeInsets.all(7),
+//       child: Padding(
+//         padding: const EdgeInsets.all(7),
+//         child: Image.asset(
+//           Images.lock,
+//         ),
+//       ),
+//     ),
+//     hintText: Stringvalue.password,
+//     hintstyle: GoogleFonts.poppins(
+//         textStyle: const TextStyle(
+//       fontWeight: FontWeight.w400,
+//       fontSize: 13,
+//     )), filed: false,
+//   );
+// }
 
 Widget sizebox() {
   return const SizedBox(

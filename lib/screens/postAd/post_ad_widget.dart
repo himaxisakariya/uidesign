@@ -96,7 +96,9 @@ class PostAdsViewModel {
     try {
       List<XFile> image = await ImagePicker().pickMultiImage();
       postAddPageState.imgpath.addAll(image);
+
       postAddPageState.setState(() {});
+      print("imagepath --->${postAddPageState.imgpath}");
     } on PlatformException catch (e) {
       if (kDebugMode) {
         print('Failed to pick image: $e');
@@ -177,10 +179,10 @@ class PostAdsViewModel {
       postAddPageState.videopath = video.path;
 
       postAddPageState.thumbnail = await getImage(postAddPageState.videopath);
-      //postAddPageState.thumbnailpath.addAll(video.path);
+
       postAddPageState.setState(() {});
 
-      print("fgvtgbtbhyhnyhnm->${postAddPageState.thumbnail}");
+      print("videopath->${postAddPageState.thumbnail}");
       postAddPageState.setState(() {});
     } on PlatformException catch (e) {
       if (kDebugMode) {

@@ -49,6 +49,10 @@ dependencies:
   path_provider:
   video_thumbnail:
   flutter_switch: ^0.3.2
+  firebase_messaging: ^13.1.0
+  firebase_core: ^1.24.0
+  firebase_auth: ^3.11.2
+  http: ^0.13.5
 
 dev_dependencies:
   flutter_test:

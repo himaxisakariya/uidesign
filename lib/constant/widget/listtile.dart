@@ -40,7 +40,7 @@ class Listtilee extends StatelessWidget {
             child: (text == null)
                 ? const SizedBox()
                 : Image.asset(
-                    text!,
+                    text!,color: color,
                   )),
       ),
       title: Text(
@@ -49,6 +49,7 @@ class Listtilee extends StatelessWidget {
             textStyle: TextStyle(
           fontSize: fontSize!,
           fontWeight: FontWeight.w400,
+              color: Colors.black
         )),
       ),
       trailing: Container(

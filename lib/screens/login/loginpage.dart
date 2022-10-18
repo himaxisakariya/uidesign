@@ -93,9 +93,9 @@ class _loginpageState extends State<loginpage> {
                     ),
                     sizebox(),
                     sizebox(),
-                    email(),
+                 //   email(),
                     sizebox(),
-                    password(),
+                   // password(),
                     sizebox(),
                     Container(
                       alignment: Alignment.centerRight,
