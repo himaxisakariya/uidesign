@@ -1,229 +1,5 @@
-// import 'package:flutter/material.dart';
-// import 'package:flutter/services.dart';
-// import 'package:google_fonts/google_fonts.dart';
-// import 'package:uidesign/constant/Fixcolors.dart';
-// import 'package:uidesign/constant/Image.dart';
-// import 'package:uidesign/constant/String.dart';
-// import 'package:uidesign/constant/widget/textfield.dart';
-//
-// Widget divider() {
-//   return Row(
-//     children: const [
-//       SizedBox(
-//         width: 145,
-//         child: Divider(
-//           color: Fixcolors.grey,
-//         ),
-//       ),
-//       Text(
-//         "or",
-//         style: TextStyle(color: Fixcolors.grey),
-//       ),
-//       SizedBox(
-//         width: 139,
-//         child: Divider(
-//           color: Fixcolors.grey,
-//         ),
-//       ),
-//     ],
-//   );
-// }
-//
-// Widget name(TextEditingController namecontroller) {
-//   return TextFields(
-//     onFieldSubmitted: (value) {
-//       namecontroller.text = value;
-//     },
-//     textInputType: TextInputType.name,
-//     textEditingController: namecontroller,
-//     validator: (value) {
-//       if (value!.isEmpty) {
-//         return 'enter your name.';
-//       }
-//       return null;
-//     },
-//     prefixIcon: Container(
-//       height: 32,
-//       width: 32,
-//       margin: const EdgeInsets.only(top: 7, left: 9, bottom: 8, right: 12),
-//       alignment: Alignment.center,
-//       decoration: BoxDecoration(
-//         color: const Color(0xff2ECC71).withOpacity(0.1),
-//         borderRadius: BorderRadius.circular(5),
-//       ),
-//       child: Padding(
-//         padding: const EdgeInsets.all(7),
-//         child: Image.asset(
-//           Images.person,
-//         ),
-//       ),
-//     ),
-//     hintText: "Your Name",
-//     readonly: false,
-//     filed: false,
-//   );
-// }
-//
-// Widget email(TextEditingController emailcontroller) {
-//   return TextFields(
-//     onFieldSubmitted: (value) {
-//       emailcontroller.text = value;
-//     },
-//     textInputType: TextInputType.emailAddress,
-//     textEditingController: emailcontroller,
-//     validator: (value) {
-//       if (value!.isEmpty ||
-//           !RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
-//               .hasMatch(value)) {
-//         return 'enter your email addresss.';
-//       }
-//       return null;
-//     },
-//     prefixIcon: Container(
-//       height: 32,
-//       width: 32,
-//       margin: const EdgeInsets.only(top: 7, left: 9, bottom: 8, right: 12),
-//       alignment: Alignment.center,
-//       decoration: BoxDecoration(
-//         color: const Color(0xff2ECC71).withOpacity(0.1),
-//         borderRadius: BorderRadius.circular(5),
-//       ),
-//       child: Padding(
-//         padding: const EdgeInsets.all(7),
-//         child: Image.asset(
-//           Images.email,
-//         ),
-//       ),
-//     ),
-//     hintText: Stringtext.emailaddress,
-//     readonly: false,
-//     filed: false,
-//   );
-// }
-//
-// Widget password(TextEditingController passwordcontroller) {
-//   return TextFields(
-//     onFieldSubmitted: (value) {
-//       passwordcontroller.text = value;
-//     },
-//     textInputType: TextInputType.visiblePassword,
-//     textEditingController: passwordcontroller,
-//     validator: (value) {
-//       if (value!.isEmpty) {
-//         return 'enter your Password.';
-//       }
-//       return null;
-//     },
-//     prefixIcon: Container(
-//       height: 32,
-//       width: 32,
-//       margin: const EdgeInsets.only(top: 7, left: 9, bottom: 8, right: 12),
-//       alignment: Alignment.center,
-//       decoration: BoxDecoration(
-//         color: const Color(0xff2ECC71).withOpacity(0.1),
-//         borderRadius: BorderRadius.circular(5),
-//       ),
-//       child: Padding(
-//         padding: const EdgeInsets.all(7),
-//         child: Image.asset(
-//           Images.lock,
-//         ),
-//       ),
-//     ),
-//     hintText: Stringtext.password,
-//     readonly: false,
-//     filed: false,
-//   );
-// }
-//
-// Widget confirmpassword(TextEditingController cpasswordcontroller) {
-//   return TextFields(
-//     onFieldSubmitted: (value) {
-//       cpasswordcontroller.text = value;
-//     },
-//     textInputType: TextInputType.visiblePassword,
-//     textEditingController: cpasswordcontroller,
-//     validator: (value) {
-//       if (value!.isEmpty) {
-//         return 'enter your Confirm Password.';
-//       }
-//       return null;
-//     },
-//     prefixIcon: Container(
-//       height: 32,
-//       width: 32,
-//       margin: const EdgeInsets.only(top: 7, left: 9, bottom: 8, right: 12),
-//       alignment: Alignment.center,
-//       decoration: BoxDecoration(
-//         color: const Color(0xff2ECC71).withOpacity(0.1),
-//         borderRadius: BorderRadius.circular(5),
-//       ),
-//       child: Padding(
-//         padding: const EdgeInsets.all(7),
-//         child: Image.asset(
-//           Images.lock,
-//         ),
-//       ),
-//     ),
-//     hintText: Stringtext.cpassword,
-//     readonly: false,
-//     filed: false,
-//   );
-// }
-//
-// Widget phone(TextEditingController phonecontroller) {
-//   return TextFields(
-//     onFieldSubmitted: (value) {
-//       phonecontroller.text = value;
-//     },
-//     textInputType: TextInputType.phone,
-//     textEditingController: phonecontroller,
-//     validator: (value) {
-//       if (value!.isEmpty) {
-//         return 'enter your PhoneNumber';
-//       }
-//       return null;
-//     },
-//     inputFormatters: [LengthLimitingTextInputFormatter(10)],
-//     prefixIcon: Container(
-//       height: 32,
-//       width: 32,
-//       margin: const EdgeInsets.only(top: 7, left: 9, bottom: 8, right: 12),
-//       alignment: Alignment.center,
-//       decoration: BoxDecoration(
-//         color: const Color(0xff2ECC71).withOpacity(0.1),
-//         borderRadius: BorderRadius.circular(5),
-//       ),
-//       child: Padding(
-//         padding: const EdgeInsets.all(7),
-//         child: Image.asset(Images.call),
-//       ),
-//     ),
-//     hintText: Stringtext.phonenumber,
-//     readonly: false,
-//     filed: false,
-//   );
-// }
-//
-// Widget sizebox() {
-//   return const SizedBox(
-//     height: 13,
-//   );
-// }
-// Widget privacyText(BuildContext context, String name) {
-//   return Text(
-//     name,
-//     style: GoogleFonts.poppins(
-//         textStyle: const TextStyle(
-//           fontSize: 11,
-//           color: Fixcolors.grey,
-//           fontWeight: FontWeight.w500,
-//         )),
-//   );
-// }
 import 'dart:convert';
 import 'dart:io';
-import 'package:country_pickers/country.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -238,14 +14,13 @@ import 'package:uidesign/rest_api/api.dart';
 import 'package:uidesign/screens/Registerpage/registerpage.dart';
 import 'package:uidesign/screens/homepage/home_page.dart';
 
-
-
 class RegisterPageViewModel {
   final RegisterPageState registerPageState;
 
   RegisterPageViewModel(this.registerPageState);
 
-  ShredPreference shredPreference = ShredPreference();
+  Sharedpre Sharedprefrence = Sharedpre();
+
   //
   // signUpMethod(
   //     BuildContext context,
@@ -302,13 +77,13 @@ class RegisterPageViewModel {
     Navigator.of(context).pop(true);
   }
 
-  googleSignMethod(
-      BuildContext context,
-      String id,
-      String email,
-      String? displayName,
-      bool status,
-      ) async {
+  googleMethod(
+    BuildContext context,
+    String id,
+    String email,
+    String? displayName,
+    bool status,
+  ) async {
     try {
       registerPageState.setState(() {
         status = true;
@@ -330,19 +105,21 @@ class RegisterPageViewModel {
           endpoints: RestService.googleApi, bodyParam: googleLoginMap);
       if (googleUserResponse != null && googleUserResponse.isNotEmpty) {
         Map<String, dynamic> googleUserResponseMap =
-        jsonDecode(googleUserResponse);
+            jsonDecode(googleUserResponse);
         if (googleUserResponseMap.containsKey('Success') &&
             googleUserResponseMap['Success']) {
           LoginModel loginModel = loginModelFromJson(googleUserResponse);
           print('Loginmmodel --> ${loginModel.toJson()}');
 
-          await shredPreference.setPrefStringValue(shredPreference.store,
+          await Sharedprefrence.setPrefStringValue(Sharedprefrence.store,
               "${googleUserResponseMap['access_token']}");
 
           snackbar(context, text: "${googleUserResponseMap['Message']}");
-        Navigator.push(context, MaterialPageRoute(builder: (context) {
-          return HomePage();
-        },));
+          Navigator.push(context, MaterialPageRoute(
+            builder: (context) {
+              return HomePage();
+            },
+          ));
         } else {
           registerPageState.status = false;
           registerPageState.setState(() {
@@ -358,9 +135,68 @@ class RegisterPageViewModel {
       });
     }
   }
+  // LoginResult? result = await authService.facebookLogin();
+  // if(result!=null)
+  // {}
+  facebookmethod(
+      BuildContext context,
+      String id,
+      String email,
+      String? displayName,
+      bool status,
+      ) async {
+    try {
+      registerPageState.setState(() {
+        status = true;
+      });
+
+      Map<String, dynamic> facebookLoginMap = {
+        'devicetoken': await FirebaseMessaging.instance.getToken(),
+        "devicetype": 1,
+        "email": email,
+        "fbId": id,
+        "userName": displayName,
+        "facebookProfileUrl": "",
+        "mobileVersion": "Android",
+        "osVersion": "10.11",
+        "ViaSocial": 2
+      };
+      print('LoginMap --> $facebookLoginMap');
+      String? facebookUserResponse = await RestService.postRestMethods(
+          endpoints: RestService.facbookApi, bodyParam: facebookLoginMap);
+      if (facebookUserResponse != null && facebookUserResponse.isNotEmpty) {
+        Map<String, dynamic> facebookUserResponseMap =
+        jsonDecode(facebookUserResponse);
+        if (facebookUserResponseMap.containsKey('Success') &&
+            facebookUserResponseMap['Success']) {
+          LoginModel loginModel = loginModelFromJson(facebookUserResponse);
+          print('Loginmmodel --> ${loginModel.toJson()}');
+
+          await Sharedprefrence.setPrefStringValue(Sharedprefrence.store,
+              "${facebookUserResponseMap['access_token']}");
+
+          snackbar(context, text: "${facebookUserResponseMap['Message']}");
+          Navigator.push(context, MaterialPageRoute(
+            builder: (context) {
+              return HomePage();
+            },
+          ));
+        } else {
+          registerPageState.status = false;
+          registerPageState.setState(() {
+            snackbar(context, text: "${facebookUserResponseMap['Message']}");
+          });
+        }
+      }
+    } on SocketException catch (e) {
+      logs("error in facebooksignup --> ${e.message}");
+      logs(e.message);
+      registerPageState.setState(() {
+        status = true;
+      });
+    }
+  }
 }
-
-
 
 Widget name(TextEditingController userName) {
   return TextFields(
@@ -372,7 +208,7 @@ Widget name(TextEditingController userName) {
       }
       return null;
     },
-    prefixIcon:  Container(
+    prefixIcon: Container(
       height: 32,
       width: 32,
       margin: const EdgeInsets.only(top: 7, left: 9, bottom: 8, right: 12),
@@ -388,13 +224,16 @@ Widget name(TextEditingController userName) {
         ),
       ),
     ),
-    hintText: Stringtext.name, filed: false,readonly: false,
+    hintText: Stringtext.name,
+    filed: false,
+    readonly: false,
   );
 }
-Widget emailt(TextEditingController email) {
+
+Widget emailt(TextEditingController emailc) {
   return TextFields(
     textInputType: TextInputType.emailAddress,
-    textEditingController: email,
+    textEditingController: emailc,
     validator: (value) {
       if (value!.isEmpty ||
           !RegExp(r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
@@ -419,7 +258,9 @@ Widget emailt(TextEditingController email) {
         ),
       ),
     ),
-    hintText: Stringtext.emailaddress,filed: false,readonly: false,
+    hintText: Stringtext.emailaddress,
+    filed: false,
+    readonly: false,
   );
 }
 
@@ -429,16 +270,18 @@ Widget sizebox() {
   );
 }
 
-Widget cpassword(TextEditingController confiPassword) {
+Widget cpassword(TextEditingController confirmpassword) {
   return TextFields(
     textInputType: TextInputType.visiblePassword,
-    textEditingController: confiPassword,
+    textEditingController: confirmpassword,
     validator: (value) {
       if (value!.isEmpty) {
         return 'Enter your Confirm Password.';
       }
       return null;
-    },filed: false,readonly: false,
+    },
+    filed: false,
+    readonly: false,
     prefixIcon: Container(
       height: 32,
       width: 32,
@@ -459,10 +302,10 @@ Widget cpassword(TextEditingController confiPassword) {
   );
 }
 
-Widget passwordt(TextEditingController password) {
+Widget passwordt(TextEditingController passwordc) {
   return TextFields(
     textInputType: TextInputType.visiblePassword,
-    textEditingController: password,
+    textEditingController: passwordc,
     validator: (value) {
       if (value!.isEmpty) {
         return 'Please enter Password.';
@@ -485,7 +328,9 @@ Widget passwordt(TextEditingController password) {
         ),
       ),
     ),
-    hintText: Stringtext.password,filed: false,readonly: false,
+    hintText: Stringtext.password,
+    filed: false,
+    readonly: false,
   );
 }
 
@@ -498,7 +343,9 @@ Widget phone(TextEditingController phoneNumber) {
         return 'Please enter PhoneNumber';
       }
       return null;
-    },filed: false,readonly: false,
+    },
+    filed: false,
+    readonly: false,
     prefixIcon: Container(
       height: 32,
       width: 32,
@@ -519,16 +366,14 @@ Widget phone(TextEditingController phoneNumber) {
   );
 }
 
-
-
 Widget privacyText(BuildContext context, String name) {
   return Text(
     name,
     style: GoogleFonts.poppins(
         textStyle: const TextStyle(
-          fontSize: 11,
-          color: Fixcolors.grey,
-          fontWeight: FontWeight.w500,
-        )),
+      fontSize: 11,
+      color: Fixcolors.grey,
+      fontWeight: FontWeight.w500,
+    )),
   );
 }

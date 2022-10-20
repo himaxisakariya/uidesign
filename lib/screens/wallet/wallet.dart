@@ -222,7 +222,7 @@ class _WalletState extends State<Wallet> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => DISK_SPACE(),
+                        builder: (context) => const DISK_SPACE(),
                       ));
                 },
               )

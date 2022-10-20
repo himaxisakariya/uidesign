@@ -7,10 +7,9 @@ class AuthService {
     try {
       GoogleSignIn googleSignIn = GoogleSignIn();
       var result = await googleSignIn.signIn();
-      logs("Google -->$result");
       return result;
-    } catch (e) {
-      logs("error of google sign-->$e");
+    } catch (message) {
+      logs("error google sign-->$message");
       return null;
     }
   }
@@ -18,10 +17,9 @@ class AuthService {
   Future<LoginResult?> facebookLogin() async {
     try {
       final value =
-      //     await FacebookAuth.login(permissions: ['public_profile', 'email']);
+   //  await FacebookAuth.login(permissions: ['public_profile', 'email']);
       await FacebookAuth.instance.login();
-      logs("values-->${value.status}");
-      logs("LoginStatus-->${LoginStatus.success}");
+      logs("values-->${value.message}");
       if (value.status == LoginStatus.success) {
         final userData = await FacebookAuth.instance.getUserData();
         logs('facebook_login_data:-$userData');

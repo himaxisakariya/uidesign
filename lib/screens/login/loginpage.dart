@@ -144,7 +144,7 @@ class LoginPageState extends State<LoginPage> {
                               buttonIcon: Images.appleimage,
                               text: Stringtext.applelogin,
                             ),
-                            SizedBox(),
+                            const SizedBox(),
                             Padding(
                               padding: const EdgeInsets.only(left: 70),
                               child: Row(
@@ -153,7 +153,7 @@ class LoginPageState extends State<LoginPage> {
                                       context, """Didn’t have an account?"""),
                                   TextButton(
                                       onPressed: () {
-                                        Navigator.pushReplacement(context,
+                                        Navigator.push(context,
                                             MaterialPageRoute(
                                               builder: (context) {
                                                 return const RegisterPage();

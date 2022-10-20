@@ -1,17 +1,20 @@
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
 
+logs(String message) {
+  if (kDebugMode) {
+    print(message);
+  }
+}
 class RestService {
   static String baseUrl = "https://lookprstage.com/admin/";
-
-  static String token = "";
-
   static String signApi = "/api/v1/data/signup";
   static String loginApi = "/api/v1/data/signin";
   static String googleApi = "/api/v1/data/signin";
+  static String facbookApi = '/api/v1/data/signin';
+  static String token = "";
 
   static Map<String, String> headers = {'Content-Type': 'application/json'};
 
@@ -29,14 +32,8 @@ class RestService {
         return response.body;
       }
     } catch (e) {
-      logs('catch exception in post $endpoints --> $e');
+      logs('post exception$endpoints --> $e');
       return null;
     }
-  }
-}
-
-logs(String message) {
-  if (kDebugMode) {
-    print(message);
   }
 }
