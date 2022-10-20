@@ -3,9 +3,10 @@ import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:uidesign/constant/Fixcolors.dart';
 import 'package:uidesign/constant/Image.dart';
-import 'package:uidesign/constant/String.dart';
 import 'package:uidesign/screens/Registerpage/widgets.dart';
 import 'package:uidesign/screens/homepage/homepagewidgets.dart';
+
+import '../../constant/String.dart';
 
 class Chat_Screen extends StatefulWidget {
   const Chat_Screen({Key? key}) : super(key: key);
@@ -44,7 +45,7 @@ class _Chat_ScreenState extends State<Chat_Screen> {
                       width: 115,
                     ),
                     const textlist(
-                      text: Stringvalue.inbox,
+                      text: Stringtext.inbox,
                       color: Fixcolors.white,
                       fontWeight: FontWeight.w500,
                       fontSize: 20,
@@ -88,7 +89,7 @@ class _Chat_ScreenState extends State<Chat_Screen> {
                 ),
                 const Center(
                   child: textlist(
-                    text: Stringvalue.person1,
+                    text: Stringtext.person1,
                     fontWeight: FontWeight.w500,
                     fontSize: 14,
                   ),
@@ -131,7 +132,7 @@ class _Chat_ScreenState extends State<Chat_Screen> {
                               topLeft: Radius.circular(10),
                               bottomRight: Radius.circular(10))),
                       child: const textlist(
-                        text: Stringvalue.chat,
+                        text: Stringtext.chat,
                         fontWeight: FontWeight.w400,
                         fontSize: 10,
                         color: Fixcolors.black,
@@ -152,7 +153,7 @@ class _Chat_ScreenState extends State<Chat_Screen> {
                           bottomLeft: Radius.circular(10))),
                   child: const Center(
                     child: textlist(
-                      text: Stringvalue.chat,
+                      text: Stringtext.chat,
                       fontWeight: FontWeight.w400,
                       fontSize: 10,
                       color: Fixcolors.white,
@@ -184,7 +185,7 @@ class _Chat_ScreenState extends State<Chat_Screen> {
                               topLeft: Radius.circular(10),
                               bottomRight: Radius.circular(10))),
                       child: const textlist(
-                        text: Stringvalue.chat,
+                        text: Stringtext.chat,
                         fontWeight: FontWeight.w400,
                         fontSize: 10,
                         color: Fixcolors.black,
@@ -205,7 +206,7 @@ class _Chat_ScreenState extends State<Chat_Screen> {
                           bottomLeft: Radius.circular(10))),
                   child: const Center(
                     child: textlist(
-                      text: Stringvalue.chat,
+                      text: Stringtext.chat,
                       fontWeight: FontWeight.w400,
                       fontSize: 10,
                       color: Fixcolors.white,

@@ -67,7 +67,7 @@ draweropen(BuildContext context) {
                     onTap: () {
                       Navigator.push(context, MaterialPageRoute(
                         builder: (context) {
-                          return const loginpage();
+                          return const LoginPage();
                         },
                       ));
                     },
@@ -76,7 +76,7 @@ draweropen(BuildContext context) {
                         Container(
                           margin: const EdgeInsets.only(top: 30),
                           child: const textlist(
-                              text: Stringvalue.drawername,
+                              text: Stringtext.drawername,
                               fontSize: 15,
                               color: Fixcolors.white,
                               fontWeight: FontWeight.w500),
@@ -105,7 +105,7 @@ draweropen(BuildContext context) {
              },));
            },
           text: Images.drawer1,
-          titletext: Stringvalue.drawer1,
+          titletext: Stringtext.drawer1,
           fontSize: 15,
           fontWeight: FontWeight.w400,
           imgtext: Images.barrow,
@@ -117,7 +117,7 @@ draweropen(BuildContext context) {
             },));
           },
           text: Images.fourimage,
-          titletext: Stringvalue.drawer2,
+          titletext: Stringtext.drawer2,
           fontSize: 15,
           fontWeight: FontWeight.w400,
           imgtext: Images.barrow,
@@ -129,7 +129,7 @@ draweropen(BuildContext context) {
             },));
           },
           text: Images.drawer2,
-          titletext: Stringvalue.drawer3,
+          titletext: Stringtext.drawer3,
           fontSize: 15,
           fontWeight: FontWeight.w400,
           imgtext: Images.barrow,
@@ -137,11 +137,11 @@ draweropen(BuildContext context) {
         Listtilee(
           onTap: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return Wallet();
+              return const Wallet();
             },));
           },
           text: Images.wallet,color: Fixcolors.green,
-          titletext: Stringvalue.wallet,
+          titletext: Stringtext.wallet,
           fontSize: 15,
           fontWeight: FontWeight.w400,
           imgtext: Images.barrow,
@@ -153,7 +153,7 @@ draweropen(BuildContext context) {
             },));
           },
           text: Images.drawer3,
-          titletext: Stringvalue.drawer4,
+          titletext: Stringtext.drawer4,
           fontSize: 15,
           fontWeight: FontWeight.w400,
           imgtext: Images.barrow,
@@ -165,7 +165,7 @@ draweropen(BuildContext context) {
             },));
           },
           text: Images.drawer4,
-          titletext: Stringvalue.drawer5,
+          titletext: Stringtext.drawer5,
           fontSize: 15,
           fontWeight: FontWeight.w400,
           imgtext: Images.barrow,
@@ -177,7 +177,7 @@ draweropen(BuildContext context) {
             },));
           },
           text: Images.drawer5,
-          titletext: Stringvalue.drawer6,
+          titletext: Stringtext.drawer6,
           fontSize: 15,
           fontWeight: FontWeight.w400,
           imgtext: Images.barrow,
@@ -185,11 +185,11 @@ draweropen(BuildContext context) {
         Listtilee(
           onTap: () {
             Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return feedback();
+              return const feedback();
             },));
             },
           text: Images.sellfaster,
-          titletext: Stringvalue.feedback,
+          titletext: Stringtext.feedback,
           fontSize: 15,
           fontWeight: FontWeight.w400,
           imgtext: Images.barrow,
@@ -208,17 +208,17 @@ List bottomimage = [(Images.home),(Images.heart),(Images.email2),(Images.person2
 
 List productimage = [(Images.thirdimage), (Images.fourimages), (Images.fiveimage), (Images.fiveimages), (Images.watch), (Images.iphoneimage)];
 
-List icon = [(Stringvalue.hotel), (Stringvalue.car), (Stringvalue.phone), (Stringvalue.more)];
+List icon = [(Stringtext.hotel), (Stringtext.car), (Stringtext.phone), (Stringtext.more)];
 
 List iconname = [(Images.realstate), (Images.carimage), (Images.phoneimage), (Images.fourimage)];
 
 List image = [(Images.firstimage), (Images.secondimage), (Images.iphoneimage), (Images.secondimage)];
 
-List price = [(Stringvalue.prize), (Stringvalue.prize2), (Stringvalue.prize), (Stringvalue.prize2), (Stringvalue.watchprice), (Stringvalue.iphoneprice)
+List price = [(Stringtext.prize), (Stringtext.prize2), (Stringtext.prize), (Stringtext.prize2), (Stringtext.watchprice), (Stringtext.iphoneprice)
 ];
 
-List productname = [(Stringvalue.bmw2021), (Stringvalue.imaccomputer), (Stringvalue.iphone), (Stringvalue.imaccomputer)
+List productname = [(Stringtext.bmw2021), (Stringtext.imaccomputer), (Stringtext.iphone), (Stringtext.imaccomputer)
 ];
-List product2name = [(Stringvalue.canonlens), (Stringvalue.microwave), (Stringvalue.wallet), (Stringvalue.ring), (Stringvalue.watch), (Stringvalue.iphone)];
+List product2name = [(Stringtext.canonlens), (Stringtext.microwave), (Stringtext.wallet), (Stringtext.ring), (Stringtext.watch), (Stringtext.iphone)];
 
 

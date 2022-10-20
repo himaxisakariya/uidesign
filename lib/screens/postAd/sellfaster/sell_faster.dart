@@ -49,7 +49,7 @@ class _Sell_fasterState extends State<Sell_faster> {
                     width: 50,
                   ),
                   const textlist(
-                    text: Stringvalue.postad,
+                    text: Stringtext.postad,
                     color: Fixcolors.white,
                     fontWeight: FontWeight.w500,
                     fontSize: 20,
@@ -59,6 +59,7 @@ class _Sell_fasterState extends State<Sell_faster> {
         ),
         Expanded(
           child: Container(
+
             decoration: const BoxDecoration(
                 color: Fixcolors.white,
                 borderRadius: BorderRadius.only(
@@ -75,7 +76,7 @@ class _Sell_fasterState extends State<Sell_faster> {
                       const Card(
                         child: ListTile(
                           leading: textlist(
-                            text: Stringvalue.sellfaster,
+                            text: Stringtext.sellfaster,
                             fontSize: 18,
                             fontWeight: FontWeight.w500,
                             color: Fixcolors.black,
@@ -85,7 +86,7 @@ class _Sell_fasterState extends State<Sell_faster> {
                       const Padding(
                         padding: EdgeInsets.only(left: 15, right: 15, top: 5),
                         child: textlist(
-                          text: Stringvalue.sell1,
+                          text: Stringtext.sell1,
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
                           color: Fixcolors.green,
@@ -356,7 +357,7 @@ class _Sell_fasterState extends State<Sell_faster> {
                       const Padding(
                         padding: EdgeInsets.only(left: 15, right: 15, top: 5),
                         child: textlist(
-                          text: Stringvalue.sell2,
+                          text: Stringtext.sell2,
                           fontSize: 13,
                           fontWeight: FontWeight.w400,
                         ),
@@ -395,7 +396,7 @@ class _Sell_fasterState extends State<Sell_faster> {
               Container(
                 margin: const EdgeInsets.all(10),
                 child: const textlist(
-                  text: Stringvalue.sell3,
+                  text: Stringtext.sell3,
                   fontWeight: FontWeight.w500,
                   fontSize: 12,
                   color: Colors.black54,
@@ -414,7 +415,7 @@ class _Sell_fasterState extends State<Sell_faster> {
                 },
                 buttonColor: Fixcolors.green,
                 textSize: 16,
-                text: Stringvalue.next,
+                text: Stringtext.next,
               ),
               const SizedBox(
                 height: 10,

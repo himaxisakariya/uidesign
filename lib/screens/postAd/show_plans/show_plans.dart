@@ -35,7 +35,7 @@ class _Show_PlanState extends State<Show_Plan> {
                     width: 50,
                   ),
                   const textlist(
-                    text: Stringvalue.postad,
+                    text: Stringtext.postad,
                     color: Fixcolors.white,
                     fontWeight: FontWeight.w500,
                     fontSize: 20,
@@ -59,7 +59,7 @@ class _Show_PlanState extends State<Show_Plan> {
                     const Card(
                       child: ListTile(
                           leading: textlist(
-                            text: Stringvalue.showplan,
+                            text: Stringtext.showplan,
                             fontSize: 18,
                             fontWeight: FontWeight.w500,
                             color: Fixcolors.black,
@@ -70,7 +70,7 @@ class _Show_PlanState extends State<Show_Plan> {
                       child: Container(
                         margin: const EdgeInsets.all(10),
                         child: const textlist(
-                          text: Stringvalue.showplan1,
+                          text: Stringtext.showplan1,
                           fontSize: 13,
                           fontWeight: FontWeight.w400,
                         ),
@@ -80,7 +80,7 @@ class _Show_PlanState extends State<Show_Plan> {
                       child: Container(
                         margin: const EdgeInsets.all(10),
                         child: const textlist(
-                          text: Stringvalue.showplan2,
+                          text: Stringtext.showplan2,
                           fontSize: 13,
                           fontWeight: FontWeight.w500,
                         ),
@@ -91,7 +91,7 @@ class _Show_PlanState extends State<Show_Plan> {
                           Container(
                             margin: const EdgeInsets.all(10),
                             child: const textlist(
-                              text: Stringvalue.showplan3,
+                              text: Stringtext.showplan3,
                               fontSize: 13,
                               fontWeight: FontWeight.w400,
                             ),
@@ -107,7 +107,7 @@ class _Show_PlanState extends State<Show_Plan> {
                                   child: const Padding(
                                     padding: EdgeInsets.only(left: 15,top: 20,right: 30,bottom: 7),
                                     child: textlist(
-                                      text: Stringvalue.showplan4,
+                                      text: Stringtext.showplan4,
                                       fontSize: 13,
                                       fontWeight: FontWeight.w500,
                                     )
@@ -119,7 +119,7 @@ class _Show_PlanState extends State<Show_Plan> {
                           Container(
                             margin: const EdgeInsets.all(10),
                             child: const textlist(
-                              text: Stringvalue.showplan5,
+                              text: Stringtext.showplan5,
                               fontSize: 13,
                               fontWeight: FontWeight.w400,
                             ),

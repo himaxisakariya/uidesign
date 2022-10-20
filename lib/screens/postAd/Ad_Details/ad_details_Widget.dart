@@ -12,7 +12,7 @@ Widget title() {
       return null;
     },
     readonly:  false,
-    hintText: Stringvalue.title,
+    hintText: Stringtext.title,
     hintstyle: GoogleFonts.poppins(
         textStyle: const TextStyle(
           fontWeight: FontWeight.w400,
@@ -30,7 +30,7 @@ Widget amount() {
       return null;
     },
     readonly: false,
-    hintText: Stringvalue.amount,
+    hintText: Stringtext.amount,
     hintstyle: GoogleFonts.poppins(
         textStyle: const TextStyle(
           fontWeight: FontWeight.w400,
@@ -40,7 +40,7 @@ Widget amount() {
 }
 Widget description() {
   return TextFields(
-    hintText: Stringvalue.description,
+    hintText: Stringtext.description,
     maxline: 7,
     readonly: false,
     hintstyle: GoogleFonts.poppins(

@@ -13,9 +13,9 @@ class Notificationpage extends StatefulWidget {
 
 class _NotificationpageState extends State<Notificationpage> {
   List<String> notifications = [
-    (Stringvalue.notification1),
-    (Stringvalue.notification2),
-    (Stringvalue.notification2)
+    (Stringtext.notification1),
+    (Stringtext.notification2),
+    (Stringtext.notification2)
   ];
 
   @override
@@ -41,7 +41,7 @@ class _NotificationpageState extends State<Notificationpage> {
                     width: 70,
                   ),
                   const textlist(
-                    text: Stringvalue.notification,
+                    text: Stringtext.notification,
                     color: Fixcolors.white,
                     fontWeight: FontWeight.w500,
                     fontSize: 20,
@@ -61,7 +61,7 @@ class _NotificationpageState extends State<Notificationpage> {
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: textlist(
-                  text: Stringvalue.time,
+                  text: Stringtext.time,
                   color: Fixcolors.grey,
                   fontWeight: FontWeight.w400,
                   fontSize: 12,
@@ -80,12 +80,12 @@ class _NotificationpageState extends State<Notificationpage> {
                             scale: 1.8)),
                   ),
                   title: const textlist(
-                      text: Stringvalue.notification1,
+                      text: Stringtext.notification1,
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                       color: Fixcolors.black),
                   subtitle: const textlist(
-                      text: Stringvalue.mtime,
+                      text: Stringtext.mtime,
                       fontSize: 11,
                       fontWeight: FontWeight.w400,
                       color: Fixcolors.grey),
@@ -111,12 +111,12 @@ class _NotificationpageState extends State<Notificationpage> {
                             image: AssetImage(Images.registerlogo), scale: 1.8)),
                   ),
                   title: const textlist(
-                      text: Stringvalue.notification2,
+                      text: Stringtext.notification2,
                       fontSize: 12,
                       fontWeight: FontWeight.w500,
                       color: Fixcolors.black),
                   subtitle: const textlist(
-                      text: Stringvalue.mtime,
+                      text: Stringtext.mtime,
                       fontSize: 11,
                       fontWeight: FontWeight.w400,
                       color: Fixcolors.grey),
@@ -136,7 +136,7 @@ class _NotificationpageState extends State<Notificationpage> {
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: textlist(
-                  text: Stringvalue.time1,
+                  text: Stringtext.time1,
                   color: Fixcolors.grey,
                   fontWeight: FontWeight.w400,
                   fontSize: 12,
@@ -165,7 +165,7 @@ class _NotificationpageState extends State<Notificationpage> {
                             fontWeight: FontWeight.w500,
                             color: Fixcolors.black),
                         subtitle: const textlist(
-                            text: Stringvalue.mtime1,
+                            text: Stringtext.mtime1,
                             fontSize: 11,
                             fontWeight: FontWeight.w400,
                             color: Fixcolors.grey),

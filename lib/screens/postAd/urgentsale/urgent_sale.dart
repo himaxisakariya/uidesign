@@ -48,7 +48,7 @@ TextEditingController city = TextEditingController();
                     width: 50,
                   ),
                   const textlist(
-                    text: Stringvalue.postad,
+                    text: Stringtext.postad,
                     color: Fixcolors.white,
                     fontWeight: FontWeight.w500,
                     fontSize: 20,
@@ -74,7 +74,7 @@ TextEditingController city = TextEditingController();
                     Card(
                       child: ListTile(
                           leading: const textlist(
-                            text: Stringvalue.usale,
+                            text: Stringtext.usale,
                             fontSize: 18,
                             fontWeight: FontWeight.w500,
                             color: Fixcolors.black,
@@ -97,7 +97,7 @@ TextEditingController city = TextEditingController();
                       child: Container(
                         margin: const EdgeInsets.all(10),
                         child: const textlist(
-                          text: Stringvalue.usale1,
+                          text: Stringtext.usale1,
                           fontSize: 13,
                           fontWeight: FontWeight.w400,
                         ),
@@ -108,7 +108,7 @@ TextEditingController city = TextEditingController();
                       margin: const EdgeInsets.symmetric(
                           horizontal: 25, vertical: 10),
                       child: const textlist(
-                        text: Stringvalue.usale3,
+                        text: Stringtext.usale3,
                         color: Fixcolors.grey,
                         fontSize: 13,
                         fontWeight: FontWeight.w400,
@@ -118,7 +118,7 @@ TextEditingController city = TextEditingController();
                       margin: const EdgeInsets.symmetric(
                           horizontal: 25, vertical: 10),
                       child: const textlist(
-                        text: Stringvalue.usale4,
+                        text: Stringtext.usale4,
                         color: Fixcolors.grey,
                         fontSize: 13,
                         fontWeight: FontWeight.w400,
@@ -152,7 +152,7 @@ TextEditingController city = TextEditingController();
                       margin: const EdgeInsets.symmetric(
                           horizontal: 25, vertical: 10),
                       child: const textlist(
-                        text: Stringvalue.selectcate,
+                        text: Stringtext.selectcate,
                         color: Fixcolors.grey,
                         fontSize: 13,
                         fontWeight: FontWeight.w400,
@@ -180,7 +180,7 @@ TextEditingController city = TextEditingController();
                                     Icons.arrow_drop_down_rounded,
                                     size: 35,
                                   )),
-                              hintText: Stringvalue.selectcate,
+                              hintText: Stringtext.selectcate,
                               hintstyle: GoogleFonts.poppins(
                                   textStyle: const TextStyle(
                                     fontWeight: FontWeight.w400,
@@ -206,7 +206,7 @@ TextEditingController city = TextEditingController();
                       margin: const EdgeInsets.symmetric(
                           horizontal: 25, vertical: 10),
                       child: const textlist(
-                        text: Stringvalue.subcate,
+                        text: Stringtext.subcate,
                         color: Fixcolors.grey,
                         fontSize: 13,
                         fontWeight: FontWeight.w400,
@@ -234,7 +234,7 @@ TextEditingController city = TextEditingController();
                                     Icons.arrow_drop_down_rounded,
                                     size: 35,
                                   )),
-                              hintText: Stringvalue.subcate,
+                              hintText: Stringtext.subcate,
                               hintstyle: GoogleFonts.poppins(
                                   textStyle: const TextStyle(
                                     fontWeight: FontWeight.w400,
@@ -260,7 +260,7 @@ TextEditingController city = TextEditingController();
                       margin: const EdgeInsets.symmetric(
                           horizontal: 25, vertical: 10),
                       child: const textlist(
-                        text: Stringvalue.usale5,
+                        text: Stringtext.usale5,
                         color: Fixcolors.grey,
                         fontSize: 13,
                         fontWeight: FontWeight.w400,
@@ -288,7 +288,7 @@ TextEditingController city = TextEditingController();
                                     Icons.arrow_drop_down_rounded,
                                     size: 35,
                                   )),
-                              hintText: Stringvalue.usale5,
+                              hintText: Stringtext.usale5,
                               hintstyle: GoogleFonts.poppins(
                                   textStyle: const TextStyle(
                                     fontWeight: FontWeight.w400,
@@ -314,7 +314,7 @@ TextEditingController city = TextEditingController();
                       margin: const EdgeInsets.symmetric(
                           horizontal: 25, vertical: 10),
                       child: const textlist(
-                        text: Stringvalue.usale9,
+                        text: Stringtext.usale9,
                         color: Fixcolors.grey,
                         fontSize: 13,
                         fontWeight: FontWeight.w400,
@@ -337,7 +337,7 @@ TextEditingController city = TextEditingController();
                                     Icons.arrow_drop_down_rounded,
                                     size: 35,
                                   ), onPressed: () {  },),
-                              hintText: Stringvalue.usale9,
+                              hintText: Stringtext.usale9,
                               hintstyle: GoogleFonts.poppins(
                                   textStyle: const TextStyle(
                                     fontWeight: FontWeight.w400,
@@ -363,7 +363,7 @@ TextEditingController city = TextEditingController();
                       margin: const EdgeInsets.symmetric(
                           horizontal: 25, vertical: 10),
                       child: const textlist(
-                        text: Stringvalue.usale6,
+                        text: Stringtext.usale6,
                         color: Fixcolors.grey,
                         fontSize: 13,
                         fontWeight: FontWeight.w400,
@@ -392,7 +392,7 @@ TextEditingController city = TextEditingController();
                                     Icons.arrow_drop_down_rounded,
                                     size: 35,
                                   )),
-                              hintText: Stringvalue.usale6,
+                              hintText: Stringtext.usale6,
                               hintstyle: GoogleFonts.poppins(
                                   textStyle: const TextStyle(
                                     fontWeight: FontWeight.w400,
@@ -418,7 +418,7 @@ TextEditingController city = TextEditingController();
                       margin: const EdgeInsets.symmetric(
                           horizontal: 25, vertical: 10),
                       child: const textlist(
-                        text: Stringvalue.usale7,
+                        text: Stringtext.usale7,
                         color: Fixcolors.grey,
                         fontSize: 13,
                         fontWeight: FontWeight.w400,
@@ -447,7 +447,7 @@ TextEditingController city = TextEditingController();
                                     Icons.arrow_drop_down_rounded,
                                     size: 35,
                                   )),
-                              hintText: Stringvalue.usale7,
+                              hintText: Stringtext.usale7,
                               hintstyle: GoogleFonts.poppins(
                                   textStyle: const TextStyle(
                                     fontWeight: FontWeight.w400,
@@ -475,7 +475,7 @@ TextEditingController city = TextEditingController();
                         onPressed: () {
                           Navigator.pop(context);
                         },
-                        text: Stringvalue.usale8,
+                        text: Stringtext.usale8,
                         buttonColor: Fixcolors.green,
                         textColor: Fixcolors.white,
                       ),

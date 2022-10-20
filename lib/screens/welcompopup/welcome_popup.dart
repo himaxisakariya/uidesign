@@ -17,7 +17,7 @@ Future<void> welcomePopup(BuildContext context) async {
             children: [
               Center(
                 child: Text(
-                  Stringvalue.welcome,
+                  Stringtext.welcome,
                   style: GoogleFonts.poppins(
                       textStyle: const TextStyle(
                         fontSize: 24,
@@ -28,7 +28,7 @@ Future<void> welcomePopup(BuildContext context) async {
               Center(
                 child: Text(
                   textAlign: TextAlign.center,
-                  Stringvalue.welcomedocument,
+                  Stringtext.welcomedocument,
                   style: GoogleFonts.poppins(
                       textStyle: const TextStyle(
                         fontSize: 13,

@@ -95,7 +95,7 @@ class _loction_pageState extends State<loction_page> {
                       Container(
                         margin: const EdgeInsets.only(top: 5),
                         child: const textlist(
-                          text: Stringvalue.selectcate,
+                          text: Stringtext.selectcate,
                           color: Fixcolors.white,
                           fontWeight: FontWeight.w500,
                           fontSize: 20,
@@ -116,7 +116,7 @@ class _loction_pageState extends State<loction_page> {
                     const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 20),
                       child: textlist(
-                        text: Stringvalue.cate,
+                        text: Stringtext.cate,
                         color: Fixcolors.grey,
                         fontWeight: FontWeight.w400,
                         fontSize: 14,
@@ -131,7 +131,7 @@ class _loction_pageState extends State<loction_page> {
                             border: Border.all(color: Colors.grey, width: 0.4)),
                         child: const Listtilee(
                           text: Images.fourimage,
-                          titletext: Stringvalue.selectcate,
+                          titletext: Stringtext.selectcate,
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
                           imgtext: Images.barrow,
@@ -149,7 +149,7 @@ class _loction_pageState extends State<loction_page> {
                     const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 20),
                       child: textlist(
-                        text: Stringvalue.loction,
+                        text: Stringtext.loction,
                         color: Fixcolors.grey,
                         fontWeight: FontWeight.w400,
                         fontSize: 14,
@@ -163,7 +163,7 @@ class _loction_pageState extends State<loction_page> {
                           border: Border.all(color: Colors.grey, width: 0.4)),
                       child: const Listtilee(
                         text: Images.loction2,
-                        titletext: Stringvalue.place,
+                        titletext: Stringtext.place,
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
                         imgtext: Images.loctionedit,
@@ -174,7 +174,7 @@ class _loction_pageState extends State<loction_page> {
                       padding:
                           EdgeInsets.symmetric(horizontal: 20, vertical: 5),
                       child: textlist(
-                        text: Stringvalue.distance,
+                        text: Stringtext.distance,
                         color: Fixcolors.grey,
                         fontWeight: FontWeight.w400,
                         fontSize: 14,
@@ -316,7 +316,7 @@ class _loction_pageState extends State<loction_page> {
                         },
                         buttonColor: Fixcolors.green,
                         textSize: 16,
-                        text: Stringvalue.apply,
+                        text: Stringtext.apply,
                         textColor: Fixcolors.white,
                       ),
                     ),

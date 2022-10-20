@@ -56,7 +56,7 @@ class _Profile_PageState extends State<Profile_Page> {
                           Container(
                             margin: const EdgeInsets.only(left: 80),
                             child: const textlist(
-                              text: Stringvalue.profile,
+                              text: Stringtext.profile,
                               color: Fixcolors.white,
                               fontWeight: FontWeight.w500,
                               fontSize: 20,
@@ -110,7 +110,7 @@ class _Profile_PageState extends State<Profile_Page> {
                   margin: const EdgeInsets.only(top: 40),
                   child: const Center(
                     child: textlist(
-                      text: Stringvalue.profilename,
+                      text: Stringtext.profilename,
                       fontWeight: FontWeight.w500,
                       fontSize: 17,
                     ),
@@ -131,7 +131,7 @@ class _Profile_PageState extends State<Profile_Page> {
                   margin: const EdgeInsets.only(top: 5),
                   child: const Center(
                     child: textlist(
-                      text: Stringvalue.profilestorage,
+                      text: Stringtext.profilestorage,
                       fontWeight: FontWeight.w500,
                       fontSize: 16,
                     ),
@@ -145,7 +145,7 @@ class _Profile_PageState extends State<Profile_Page> {
                       height: 20,
                       margin: const EdgeInsets.all(10),
                       child: const Text(
-                        Stringvalue.myads,
+                        Stringtext.myads,
                         style:
                             TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                       ),
@@ -166,7 +166,7 @@ class _Profile_PageState extends State<Profile_Page> {
                         width: double.infinity,
                         margin: const EdgeInsets.all(10),
                         child: const textlist(
-                          text: Stringvalue.profile1,
+                          text: Stringtext.profile1,
                           fontWeight: FontWeight.w500,
                           fontSize: 16,
                         ),
@@ -176,7 +176,7 @@ class _Profile_PageState extends State<Profile_Page> {
                           children: [
                             roundimage(),
                             const textlist(
-                              text: Stringvalue.profile2,
+                              text: Stringtext.profile2,
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
                             ),
@@ -184,7 +184,7 @@ class _Profile_PageState extends State<Profile_Page> {
                             arrow(),
                             roundimage1(),
                             const textlist(
-                              text: Stringvalue.profile3,
+                              text: Stringtext.profile3,
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
                             ),
@@ -192,7 +192,7 @@ class _Profile_PageState extends State<Profile_Page> {
                             arrow(),
                             roundimage3(),
                             const textlist(
-                              text: Stringvalue.profile4,
+                              text: Stringtext.profile4,
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
                             ),
@@ -200,7 +200,7 @@ class _Profile_PageState extends State<Profile_Page> {
                             arrow(),
                             roundimage4(),
                             const textlist(
-                              text: Stringvalue.profile5,
+                              text: Stringtext.profile5,
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
                             ),

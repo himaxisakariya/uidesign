@@ -44,7 +44,7 @@ class _Category_PageState extends State<Category_Page> {
                     width: 50,
                   ),
                   const textlist(
-                    text: Stringvalue.selectcate,
+                    text: Stringtext.selectcate,
                     color: Fixcolors.white,
                     fontWeight: FontWeight.w500,
                     fontSize: 20,
@@ -145,6 +145,10 @@ class _Category_PageState extends State<Category_Page> {
                                         ElevatedButton(
                                           onPressed: () {
                                             Navigator.pop(context);
+                                            setState(() {
+                                              s[index] = !s[index];
+                                            });
+
                                           },
                                           style: const ButtonStyle(
                                               backgroundColor:

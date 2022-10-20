@@ -3,9 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:uidesign/constant/Fixcolors.dart';
 import 'package:uidesign/constant/String.dart';
 import 'package:uidesign/constant/widget/textfield.dart';
-import 'package:uidesign/screens/Registerpage/widgets.dart';
 import 'package:uidesign/screens/homepage/homepagewidgets.dart';
-import 'package:uidesign/screens/postAd/Ad_Details/ad_details_Widget.dart';
 
 import '../../constant/widget/ebutton.dart';
 
@@ -18,6 +16,8 @@ class feedback extends StatefulWidget {
 
 class _feedbackState extends State<feedback> {
   final _form = GlobalKey<FormState>();
+  final form = GlobalKey<FormState>();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -41,7 +41,7 @@ class _feedbackState extends State<feedback> {
                     width: 90,
                   ),
                   const textlist(
-                    text: Stringvalue.feedback,
+                    text: Stringtext.feedback,
                     color: Fixcolors.white,
                     fontWeight: FontWeight.w500,
                     fontSize: 20,
@@ -66,9 +66,9 @@ class _feedbackState extends State<feedback> {
                   ),
                   const Center(
                     child: textlist(
-                      text: Stringvalue.fd1,
-                      fontWeight: FontWeight.w500,
+                      text: Stringtext.fd1,
                       fontSize: 18,
+                      fontWeight: FontWeight.w500,
                       color: Fixcolors.green,
                     ),
                   ),
@@ -77,36 +77,35 @@ class _feedbackState extends State<feedback> {
                   ),
                   const Center(
                     child: textlist(
-                      text: Stringvalue.fd2,
-                      color: Fixcolors.black,
+                      text: Stringtext.fd2,
                       fontWeight: FontWeight.w400,
                       fontSize: 14,
                     ),
                   ),
-
-                  const SizedBox(height: 15,),
+                  const SizedBox(
+                    height: 15,
+                  ),
                   Container(
                     margin: const EdgeInsets.only(left: 28, bottom: 5),
                     child: const textlist(
-                      text: Stringvalue.fd3,
-                      color: Fixcolors.black,
-                      fontWeight: FontWeight.w400,
+                      text: Stringtext.fd3,
                       fontSize: 14,
+                      fontWeight: FontWeight.w400,
                     ),
                   ),
-
-                 feedbacks(),
-                  const SizedBox(height: 10,),
+                  feedbacks(),
+                  const SizedBox(
+                    height: 15,
+                  ),
                   Container(
-                    width: 60,
+                    height: 35,
                     alignment: Alignment.centerRight,
                     child: const ElevateButton(
                       buttonColor: Fixcolors.green,
-                      text: Stringvalue.fd5,
+                      text: Stringtext.fd5,
                       textColor: Fixcolors.white,
                     ),
-                  ),
-                  sizebox(),
+                  )
                 ],
               ),
             ),
@@ -116,16 +115,15 @@ class _feedbackState extends State<feedback> {
     );
   }
 }
+
 Widget feedbacks() {
   return TextFields(
-    hintText: Stringvalue.fd4,
+    hintText: Stringtext.fd4,
     maxline: 5,
     readonly: false,
     hintstyle: GoogleFonts.poppins(
         textStyle: const TextStyle(
-          fontWeight: FontWeight.w400,
-          fontSize: 13,
-          color: Fixcolors.black
-        )),filed: false,
+            fontWeight: FontWeight.w400, fontSize: 13, color: Fixcolors.black)),
+    filed: false,
   );
 }

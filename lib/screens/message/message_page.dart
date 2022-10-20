@@ -52,7 +52,7 @@ class _MessagepageState extends State<Messagepage> {
                       width: 80,
                     ),
                     const textlist(
-                      text: Stringvalue.message,
+                      text: Stringtext.message,
                       color: Fixcolors.white,
                       fontWeight: FontWeight.w500,
                       fontSize: 20,
@@ -156,7 +156,7 @@ Widget _tabSections(BuildContext context) {
                                 fontSize: 16,
                               ),
                               subtitle: const textlist(
-                                text: Stringvalue.chat,
+                                text: Stringtext.chat,
                                 fontWeight: FontWeight.w400,
                                 fontSize: 10,
                                 color: Fixcolors.grey,
@@ -184,7 +184,7 @@ Widget _tabSections(BuildContext context) {
                     Container(
                       margin: const EdgeInsets.all(10),
                       child: const textlist(
-                        text: Stringvalue.emptytext1,
+                        text: Stringtext.emptytext1,
                         fontSize: 15,
                         fontWeight: FontWeight.w400,
                       ),
@@ -199,12 +199,12 @@ Widget _tabSections(BuildContext context) {
 }
 
 List<String> name = [
-  (Stringvalue.person),
-  (Stringvalue.person1),
-  (Stringvalue.person2),
-  (Stringvalue.person3),
-  (Stringvalue.person4),
-  (Stringvalue.person5)
+  (Stringtext.person),
+  (Stringtext.person1),
+  (Stringtext.person2),
+  (Stringtext.person3),
+  (Stringtext.person4),
+  (Stringtext.person5)
 ];
 List primage = [
   (Images.pr),

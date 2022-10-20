@@ -12,7 +12,7 @@ Widget urlusale() {
       return null;
     },
     readonly:  false,
-    hintText: Stringvalue.usale4,
+    hintText: Stringtext.usale4,
     textInputType: TextInputType.url,
     hintstyle: GoogleFonts.poppins(
         textStyle: const TextStyle(

@@ -39,7 +39,7 @@ class _DISK_SPACEState extends State<DISK_SPACE> {
                     width: 50,
                   ),
                   const textlist(
-                    text: Stringvalue.diskspace,
+                    text: Stringtext.diskspace,
                     color: Fixcolors.white,
                     fontWeight: FontWeight.w500,
                     fontSize: 20,
@@ -65,7 +65,7 @@ class _DISK_SPACEState extends State<DISK_SPACE> {
                       const Card(
                         child: ListTile(
                           leading: textlist(
-                            text: Stringvalue.ds1,
+                            text: Stringtext.ds1,
                             fontSize: 18,
                             fontWeight: FontWeight.w500,
                             color: Fixcolors.black,
@@ -75,7 +75,7 @@ class _DISK_SPACEState extends State<DISK_SPACE> {
                       const Padding(
                         padding: EdgeInsets.only(left: 15, right: 15, top: 5),
                         child: textlist(
-                          text: Stringvalue.ds2,
+                          text: Stringtext.ds2,
                           fontSize: 16,
                           fontWeight: FontWeight.w500,
                         ),
@@ -83,7 +83,7 @@ class _DISK_SPACEState extends State<DISK_SPACE> {
                       const Padding(
                         padding: EdgeInsets.only(left: 15, right: 15, top: 5),
                         child: textlist(
-                          text: Stringvalue.ds3,
+                          text: Stringtext.ds3,
                           fontSize: 13,
                           fontWeight: FontWeight.w400,
                         ),
@@ -363,7 +363,7 @@ class _DISK_SPACEState extends State<DISK_SPACE> {
                   },
                   buttonColor: Fixcolors.green,
                   textSize: 16,
-                  text: Stringvalue.ds4,
+                  text: Stringtext.ds4,
                 ),
               ),
               const SizedBox(
@@ -388,7 +388,7 @@ Future<void> payment(BuildContext context) async {
             children: [
               Center(
                 child: Text(
-                  Stringvalue.pay,
+                  Stringtext.pay,
                   style: GoogleFonts.poppins(
                       textStyle: const TextStyle(
                     fontSize: 15,
@@ -400,7 +400,7 @@ Future<void> payment(BuildContext context) async {
                 margin: const EdgeInsets.only(top: 5, bottom: 5),
                 child: TextFields(
                   prefixIcon: const Icon(Icons.add_card_outlined),
-                  hintText: Stringvalue.cardnumber,
+                  hintText: Stringtext.cardnumber,
                   textInputType: TextInputType.number,
                   hintstyle: GoogleFonts.poppins(
                       textStyle: const TextStyle(
@@ -415,7 +415,7 @@ Future<void> payment(BuildContext context) async {
               Container(
                 margin: const EdgeInsets.only(top: 5, bottom: 5),
                 child: TextFields(
-                  hintText: Stringvalue.pay1,
+                  hintText: Stringtext.pay1,
                   textInputType: TextInputType.number,
                   hintstyle: GoogleFonts.poppins(
                       textStyle: const TextStyle(
@@ -430,7 +430,7 @@ Future<void> payment(BuildContext context) async {
               Container(
                 margin: const EdgeInsets.only(top: 5, bottom: 5),
                 child: TextFields(
-                  hintText: Stringvalue.pay2,
+                  hintText: Stringtext.pay2,
                   textInputType: TextInputType.number,
                   hintstyle: GoogleFonts.poppins(
                       textStyle: const TextStyle(
@@ -496,7 +496,7 @@ customDialogBox(BuildContext context) {
                       ),
                       Center(
                         child: Text(
-                          Stringvalue.pay,
+                          Stringtext.pay,
                           style: GoogleFonts.poppins(
                               textStyle: const TextStyle(
                             fontSize: 15,
@@ -508,7 +508,7 @@ customDialogBox(BuildContext context) {
                         margin: const EdgeInsets.only(top: 5, bottom: 5),
                         child: TextFields(
                           prefixIcon: const Icon(Icons.add_card_outlined),
-                          hintText: Stringvalue.cardnumber,
+                          hintText: Stringtext.cardnumber,
                           textInputType: TextInputType.number,
                           hintstyle: GoogleFonts.poppins(
                               textStyle: const TextStyle(
@@ -527,7 +527,7 @@ customDialogBox(BuildContext context) {
                               width: 30,
                               margin: const EdgeInsets.only(top: 5, bottom: 5),
                               child: TextFields(
-                                hintText: Stringvalue.pay1,
+                                hintText: Stringtext.pay1,
                                 textInputType: TextInputType.datetime,
                                 hintstyle: GoogleFonts.poppins(
                                     textStyle: const TextStyle(
@@ -545,7 +545,7 @@ customDialogBox(BuildContext context) {
                               width: 30,
                               margin: const EdgeInsets.only(top: 5, bottom: 5),
                               child: TextFields(
-                                hintText: Stringvalue.pay2,
+                                hintText: Stringtext.pay2,
                                 textInputType: TextInputType.number,
                                 hintstyle: GoogleFonts.poppins(
                                     textStyle: const TextStyle(
@@ -570,7 +570,7 @@ customDialogBox(BuildContext context) {
                           },
                           buttonColor: Fixcolors.green,
                           textSize: 13,
-                          text: Stringvalue.submit,
+                          text: Stringtext.submit,
                         ),
                       ),
                     ],

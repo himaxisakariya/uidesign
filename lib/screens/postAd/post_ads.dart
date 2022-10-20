@@ -52,7 +52,7 @@ class Post_adsState extends State<Post_ads> {
                     width: 80,
                   ),
                   const textlist(
-                    text: Stringvalue.postad,
+                    text: Stringtext.postad,
                     color: Fixcolors.white,
                     fontWeight: FontWeight.w500,
                     fontSize: 20,
@@ -78,7 +78,7 @@ class Post_adsState extends State<Post_ads> {
                       Card(
                         child: ListTile(
                           leading: const textlist(
-                            text: Stringvalue.media,
+                            text: Stringtext.media,
                             fontSize: 18,
                             fontWeight: FontWeight.w500,
                             color: Fixcolors.black,
@@ -105,7 +105,7 @@ class Post_adsState extends State<Post_ads> {
                                   child: SizedBox(
                                       height: 33,
                                       child: textlist(
-                                        text: Stringvalue.popup,
+                                        text: Stringtext.popup,
                                         fontSize: 12,
                                         color: Fixcolors.white,
                                         fontWeight: FontWeight.w400,
@@ -120,7 +120,7 @@ class Post_adsState extends State<Post_ads> {
                         padding:
                             EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                         child: textlist(
-                          text: Stringvalue.media1,
+                          text: Stringtext.media1,
                           fontSize: 12,
                           fontWeight: FontWeight.w400,
                           color: Fixcolors.black,
@@ -130,7 +130,7 @@ class Post_adsState extends State<Post_ads> {
                         padding:
                             EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                         child: textlist(
-                          text: Stringvalue.media2,
+                          text: Stringtext.media2,
                           fontSize: 11,
                           fontWeight: FontWeight.w400,
                           color: Fixcolors.grey,
@@ -201,7 +201,7 @@ class Post_adsState extends State<Post_ads> {
                                           padding: EdgeInsets.only(
                                               left: 20, top: 65),
                                           child: textlist(
-                                            text: Stringvalue.addvideo,
+                                            text: Stringtext.addvideo,
                                             color: Fixcolors.green,
                                             fontSize: 13,
                                             fontWeight: FontWeight.w500,
@@ -234,7 +234,7 @@ class Post_adsState extends State<Post_ads> {
                         padding:
                             EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                         child: textlist(
-                          text: Stringvalue.media3,
+                          text: Stringtext.media3,
                           fontSize: 12,
                           fontWeight: FontWeight.w400,
                           color: Fixcolors.black,
@@ -244,7 +244,7 @@ class Post_adsState extends State<Post_ads> {
                         padding:
                             EdgeInsets.symmetric(horizontal: 15, vertical: 5),
                         child: textlist(
-                          text: Stringvalue.media4,
+                          text: Stringtext.media4,
                           fontSize: 11,
                           fontWeight: FontWeight.w400,
                           color: Fixcolors.grey,
@@ -322,7 +322,7 @@ class Post_adsState extends State<Post_ads> {
                                           padding: EdgeInsets.only(
                                               left: 20, top: 65),
                                           child: textlist(
-                                            text: Stringvalue.addimage,
+                                            text: Stringtext.addimage,
                                             color: Fixcolors.green,
                                             fontSize: 13,
                                             fontWeight: FontWeight.w500,
@@ -348,7 +348,7 @@ class Post_adsState extends State<Post_ads> {
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 15),
                 child: textlist(
-                  text: Stringvalue.media5,
+                  text: Stringtext.media5,
                   color: Fixcolors.black,
                   fontSize: 11,
                   fontWeight: FontWeight.w400,
@@ -369,7 +369,7 @@ class Post_adsState extends State<Post_ads> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     const textlist(
-                      text: Stringvalue.media6,
+                      text: Stringtext.media6,
                       fontSize: 13,
                       color: Fixcolors.green,
                       fontWeight: FontWeight.w500,
@@ -392,7 +392,7 @@ class Post_adsState extends State<Post_ads> {
                 },
                 buttonColor: Fixcolors.green,
                 textSize: 16,
-                text: Stringvalue.next,
+                text: Stringtext.next,
               ),
               const SizedBox(
                 height: 10,

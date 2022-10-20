@@ -35,7 +35,7 @@ class _LikepageState extends State<Likepage> {
             Container(
               margin: const EdgeInsets.all(10),
               child: const textlist(
-                text: Stringvalue.emptytext1,
+                text: Stringtext.emptytext1,
                 fontSize: 16,
                 fontWeight: FontWeight.w500,
               ),

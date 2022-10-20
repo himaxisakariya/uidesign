@@ -26,6 +26,7 @@ class _Profile_EditState extends State<Profile_Edit> {
   bool isSwitched = false;
   bool switched = true;
   final ImagePicker picker = ImagePicker();
+  TextEditingController phonecontroller = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +58,7 @@ class _Profile_EditState extends State<Profile_Edit> {
                           width: 100,
                         ),
                         const textlist(
-                          text: Stringvalue.profile,
+                          text: Stringtext.profile,
                           color: Fixcolors.white,
                           fontWeight: FontWeight.w500,
                           fontSize: 20,
@@ -107,13 +108,13 @@ class _Profile_EditState extends State<Profile_Edit> {
                   children: const [
                     Expanded(
                       child: textlist(
-                        text: Stringvalue.edit1,
+                        text: Stringtext.edit1,
                         color: Fixcolors.grey,
                       ),
                     ),
                     Expanded(
                       child: textlist(
-                        text: Stringvalue.edit2,
+                        text: Stringtext.edit2,
                         color: Fixcolors.grey,
                       ),
                     )
@@ -126,7 +127,7 @@ class _Profile_EditState extends State<Profile_Edit> {
                   children: [
                     Expanded(
                       child: TextFields(
-                        hintText: Stringvalue.edit1,
+                        hintText: Stringtext.edit1,
                         hintstyle: GoogleFonts.poppins(
                             textStyle: const TextStyle(
                                 fontWeight: FontWeight.w400,
@@ -139,7 +140,7 @@ class _Profile_EditState extends State<Profile_Edit> {
                     ),
                     Expanded(
                       child: TextFields(
-                        hintText: Stringvalue.edit2,
+                        hintText: Stringtext.edit2,
                         hintstyle: GoogleFonts.poppins(
                             textStyle: const TextStyle(
                           fontWeight: FontWeight.w400,
@@ -162,7 +163,7 @@ class _Profile_EditState extends State<Profile_Edit> {
                   ),
                   onPressed: () {},
                 ),
-                hintText: Stringvalue.edit3,
+                hintText: Stringtext.edit3,
                 readonly: true,
                 hintstyle: GoogleFonts.poppins(
                     textStyle: const TextStyle(
@@ -175,7 +176,7 @@ class _Profile_EditState extends State<Profile_Edit> {
               Container(
                 margin: const EdgeInsets.only(left: 10, bottom: 5, right: 250),
                 child: const textlist(
-                  text: Stringvalue.address,
+                  text: Stringtext.address,
                   color: Fixcolors.grey,
                   fontWeight: FontWeight.w400,
                   fontSize: 14,
@@ -187,7 +188,7 @@ class _Profile_EditState extends State<Profile_Edit> {
                   child: IconButton(
                       onPressed: () {}, icon: const Icon(Icons.location_on)),
                 ),
-                hintText: Stringvalue.edit4,
+                hintText: Stringtext.edit4,
                 readonly: true,
                 hintstyle: GoogleFonts.poppins(
                     textStyle: const TextStyle(
@@ -200,14 +201,14 @@ class _Profile_EditState extends State<Profile_Edit> {
               Container(
                 margin: const EdgeInsets.only(left: 10, bottom: 5, right: 210),
                 child: const textlist(
-                  text: Stringvalue.emailaddress,
+                  text: Stringtext.emailaddress,
                   color: Fixcolors.grey,
                   fontWeight: FontWeight.w400,
                   fontSize: 14,
                 ),
               ),
               TextFields(
-                hintText: Stringvalue.emailex,
+                hintText: Stringtext.emailex,
                 readonly: false,
                 hintstyle: GoogleFonts.poppins(
                     textStyle: const TextStyle(
@@ -220,7 +221,7 @@ class _Profile_EditState extends State<Profile_Edit> {
               Container(
                 margin: const EdgeInsets.only(left: 15, bottom: 5, right: 30),
                 child: const textlist(
-                  text: Stringvalue.edit5,
+                  text: Stringtext.edit5,
                   color: Fixcolors.grey,
                   fontWeight: FontWeight.w400,
                   fontSize: 12,
@@ -239,7 +240,7 @@ class _Profile_EditState extends State<Profile_Edit> {
                   child: const Padding(
                       padding: EdgeInsets.all(7),
                       child: textlist(
-                        text: Stringvalue.payactive,
+                        text: Stringtext.payactive,
                         fontSize: 11,
                         fontWeight: FontWeight.w500,
                         color: Fixcolors.green,
@@ -253,14 +254,14 @@ class _Profile_EditState extends State<Profile_Edit> {
               Container(
                 margin: const EdgeInsets.only(left: 10, bottom: 5, right: 250),
                 child: const textlist(
-                  text: Stringvalue.edit6,
+                  text: Stringtext.edit6,
                   color: Fixcolors.grey,
                   fontWeight: FontWeight.w400,
                   fontSize: 14,
                 ),
               ),
               TextFields(
-                hintText: Stringvalue.edit7,
+                hintText: Stringtext.edit7,
                 readonly: false,
                 hintstyle: GoogleFonts.poppins(
                     textStyle: const TextStyle(
@@ -294,7 +295,7 @@ class _Profile_EditState extends State<Profile_Edit> {
                     ),
                     Expanded(
                       flex: 2,
-                      child: phonenumber(),
+                      child: phone(phonecontroller),
                     ),
                   ],
                 ),
@@ -306,7 +307,7 @@ class _Profile_EditState extends State<Profile_Edit> {
                     child: Container(
                       margin: const EdgeInsets.only(left: 25),
                       child: const textlist(
-                        text: Stringvalue.edit8,
+                        text: Stringtext.edit8,
                         fontSize: 14,
                         fontWeight: FontWeight.w500,
                       ),
@@ -334,7 +335,7 @@ class _Profile_EditState extends State<Profile_Edit> {
                     child: Container(
                       margin: const EdgeInsets.only(left: 25),
                       child: const textlist(
-                        text: Stringvalue.edit8,
+                        text: Stringtext.edit8,
                         fontSize: 14,
                         fontWeight: FontWeight.w500,
                       ),
@@ -361,14 +362,14 @@ class _Profile_EditState extends State<Profile_Edit> {
                   Expanded(
                     child: ElevateButton(
                       buttonColor: Color(0xffE1DED5),
-                      text: Stringvalue.cancel,
+                      text: Stringtext.cancel,
                       textColor: Fixcolors.black,
                     ),
                   ),
                   Expanded(
                     child: ElevateButton(
                       buttonColor: Fixcolors.green,
-                      text: Stringvalue.save,
+                      text: Stringtext.save,
                       textColor: Fixcolors.white,
                     ),
                   ),
@@ -420,7 +421,7 @@ class _Profile_EditState extends State<Profile_Edit> {
 }
 
 imageoption(BuildContext context) {
-  final ImagePicker _picker = ImagePicker();
+  final ImagePicker picker = ImagePicker();
 
   return showModalBottomSheet(
     shape: const RoundedRectangleBorder(
@@ -441,10 +442,10 @@ imageoption(BuildContext context) {
                   InkWell(
                     onTap: () async {
                       Navigator.pop(context);
-                      await _picker.pickImage(source: ImageSource.camera);
+                      await picker.pickImage(source: ImageSource.camera);
                     },
                     child: const textlist(
-                      text: Stringvalue.imagetake,
+                      text: Stringtext.imagetake,
                       fontSize: 18,
                       fontWeight: FontWeight.w400,
                       color: Fixcolors.black,
@@ -454,10 +455,10 @@ imageoption(BuildContext context) {
                   InkWell(
                     onTap: () async {
                       Navigator.pop(context);
-                      await _picker.pickImage(source: ImageSource.gallery);
+                      await picker.pickImage(source: ImageSource.gallery);
                     },
                     child: const textlist(
-                      text: Stringvalue.imagefile,
+                      text: Stringtext.imagefile,
                       fontSize: 18,
                       fontWeight: FontWeight.w400,
                       color: Colors.black,
@@ -466,7 +467,7 @@ imageoption(BuildContext context) {
                   const Divider(),
                   InkWell(
                     child: const textlist(
-                      text: Stringvalue.cancel,
+                      text: Stringtext.cancel,
                       fontSize: 18,
                       fontWeight: FontWeight.w400,
                       color: Colors.red,

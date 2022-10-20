@@ -69,7 +69,7 @@ class Images {
   static const sellfastplan = 'images/dataplan.png';
   static const selllocation = 'images/selllocation.png';
   static const plus = 'images/plus.png';
-  static const watch  = 'images/watch.jpeg';
+  static const watch = 'images/watch.jpeg';
   static const menu = 'images/menu.png';
   static const profileedit = 'images/profileedit.png';
   static const profile1 = 'images/profile1.png';
@@ -79,10 +79,9 @@ class Images {
   static const profilearrow = 'images/profilearrow.png';
   static const empty = 'images/empty.png';
   static const sellfaster = 'images/sellfaster.png';
-  static const  pr = 'images/pr.jpeg';
-  static const  pr1 = 'images/pr1.jpeg';
-  static const  pr2 = 'images/pr2.png';
-  static const  pr3 = 'images/pr3.jpeg';
+  static const pr = 'images/pr.jpeg';
+  static const pr1 = 'images/pr1.jpeg';
+  static const pr2 = 'images/pr2.png';
+  static const pr3 = 'images/pr3.jpeg';
   static const wallet = 'images/wallet.png';
 }
-

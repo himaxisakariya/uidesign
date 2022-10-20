@@ -44,7 +44,7 @@ class _ads_pageState extends State<ads_page> {
                     width: 100,
                   ),
                   const textlist(
-                    text: Stringvalue.myads,
+                    text: Stringtext.myads,
                     color: Fixcolors.white,
                     fontWeight: FontWeight.w500,
                     fontSize: 20,
@@ -115,7 +115,7 @@ Widget _tabSection(BuildContext context) {
                 ),
               ),
               const textlist(
-                text: Stringvalue.sf,
+                text: Stringtext.sf,
                 color: Fixcolors.green,
                 fontSize: 15,
                 fontWeight: FontWeight.w400,
@@ -206,7 +206,7 @@ Widget _tabSection(BuildContext context) {
                                   children: const [
                                     Icon(Icons.location_on_sharp),
                                     textlist(
-                                      text: Stringvalue.rlocation,
+                                      text: Stringtext.rlocation,
                                       fontSize: 10,
                                       fontWeight: FontWeight.w400,
                                       color: Fixcolors.grey,
@@ -242,7 +242,7 @@ Widget _tabSection(BuildContext context) {
                                                 padding: const EdgeInsets.only(
                                                     right: 7),
                                                 child: const textlist(
-                                                  text: Stringvalue.approved,
+                                                  text: Stringtext.approved,
                                                   fontSize: 6,
                                                   fontWeight: FontWeight.w400,
                                                   color: Colors.white,
@@ -319,7 +319,7 @@ Widget _tabSection(BuildContext context) {
                     Container(
                       margin: const EdgeInsets.all(10),
                       child: const textlist(
-                        text: Stringvalue.emptytext,
+                        text: Stringtext.emptytext,
                         fontSize: 15,
                         fontWeight: FontWeight.w400,
                       ),
@@ -337,7 +337,7 @@ Widget _tabSection(BuildContext context) {
                     Container(
                       margin: const EdgeInsets.all(10),
                       child: const textlist(
-                        text: Stringvalue.emptytext,
+                        text: Stringtext.emptytext,
                         fontSize: 15,
                         fontWeight: FontWeight.w400,
                       ),
@@ -359,19 +359,19 @@ Widget _tabSection(BuildContext context) {
 }
 
 List<String> sellproduct = [
-  (Stringvalue.rads1),
-  (Stringvalue.rads2),
-  (Stringvalue.rads3),
-  (Stringvalue.rads4),
-  (Stringvalue.rads5),
-  (Stringvalue.rads6)
+  (Stringtext.rads1),
+  (Stringtext.rads2),
+  (Stringtext.rads3),
+  (Stringtext.rads4),
+  (Stringtext.rads5),
+  (Stringtext.rads6)
 ];
 
 List<String> productprice = [
-  (Stringvalue.rprice),
-  (Stringvalue.rprice1),
-  (Stringvalue.rprice2),
-  (Stringvalue.rprice),
-  (Stringvalue.rprice1),
-  (Stringvalue.rprice2)
+  (Stringtext.rprice),
+  (Stringtext.rprice1),
+  (Stringtext.rprice2),
+  (Stringtext.rprice),
+  (Stringtext.rprice1),
+  (Stringtext.rprice2)
 ];

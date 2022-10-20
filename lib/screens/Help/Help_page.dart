@@ -13,9 +13,9 @@ class Help_Page extends StatefulWidget {
 
 class _Help_PageState extends State<Help_Page> {
   List<String> notifications = [
-    (Stringvalue.notification1),
-    (Stringvalue.notification2),
-    (Stringvalue.notification2)
+    (Stringtext.notification1),
+    (Stringtext.notification2),
+    (Stringtext.notification2)
   ];
 
   @override
@@ -41,7 +41,7 @@ class _Help_PageState extends State<Help_Page> {
                     width: 100,
                   ),
                   const textlist(
-                    text: Stringvalue.drawer6,
+                    text: Stringtext.drawer6,
                     color: Fixcolors.white,
                     fontWeight: FontWeight.w500,
                     fontSize: 20,
@@ -61,7 +61,7 @@ class _Help_PageState extends State<Help_Page> {
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: textlist(
-                  text: Stringvalue.help1,
+                  text: Stringtext.help1,
                   fontWeight: FontWeight.w500,
                   fontSize: 18,
                 ),
@@ -72,12 +72,12 @@ class _Help_PageState extends State<Help_Page> {
               Card(
                 child: ListTile(
                   title: textlist(
-                      text: Stringvalue.help2,
+                      text: Stringtext.help2,
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
                       color: Fixcolors.black),
                   subtitle: textlist(
-                      text: Stringvalue.help3,
+                      text: Stringtext.help3,
                       fontSize: 13,
                       fontWeight: FontWeight.w400,
                       color: Fixcolors.grey),
@@ -89,12 +89,12 @@ class _Help_PageState extends State<Help_Page> {
               Card(
                 child: ListTile(
                   title: textlist(
-                      text: Stringvalue.help2,
+                      text: Stringtext.help2,
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
                       color: Fixcolors.black),
                   subtitle: textlist(
-                      text: Stringvalue.help3,
+                      text: Stringtext.help3,
                       fontSize: 13,
                       fontWeight: FontWeight.w400,
                       color: Fixcolors.grey),
@@ -105,12 +105,12 @@ class _Help_PageState extends State<Help_Page> {
               Card(
                 child: ListTile(
                   title: textlist(
-                      text: Stringvalue.help2,
+                      text: Stringtext.help2,
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
                       color: Fixcolors.black),
                   subtitle: textlist(
-                      text: Stringvalue.help3,
+                      text: Stringtext.help3,
                       fontSize: 13,
                       fontWeight: FontWeight.w400,
                       color: Fixcolors.grey),
@@ -121,12 +121,12 @@ class _Help_PageState extends State<Help_Page> {
               Card(
                 child: ListTile(
                   title: textlist(
-                      text: Stringvalue.help2,
+                      text: Stringtext.help2,
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
                       color: Fixcolors.black),
                   subtitle: textlist(
-                      text: Stringvalue.help3,
+                      text: Stringtext.help3,
                       fontSize: 13,
                       fontWeight: FontWeight.w400,
                       color: Fixcolors.grey),
@@ -137,12 +137,12 @@ class _Help_PageState extends State<Help_Page> {
               Card(
                 child: ListTile(
                   title: textlist(
-                      text: Stringvalue.help2,
+                      text: Stringtext.help2,
                       fontSize: 15,
                       fontWeight: FontWeight.w500,
                       color: Fixcolors.black),
                   subtitle: textlist(
-                      text: Stringvalue.help3,
+                      text: Stringtext.help3,
                       fontSize: 13,
                       fontWeight: FontWeight.w400,
                       color: Fixcolors.grey),

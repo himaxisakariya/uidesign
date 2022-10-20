@@ -44,7 +44,7 @@ class _select_categoryState extends State<select_category> {
                       width: 70,
                     ),
                     const textlist(
-                      text: Stringvalue.postad,
+                      text: Stringtext.postad,
                       color: Colors.white54,
                       fontWeight: FontWeight.w500,
                       fontSize: 20,

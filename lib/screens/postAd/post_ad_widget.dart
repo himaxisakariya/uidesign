@@ -37,7 +37,7 @@ class PostAdsViewModel {
                         Navigator.pop(context);
                       },
                       child: const textlist(
-                        text: Stringvalue.imagetake,
+                        text: Stringtext.imagetake,
                         fontSize: 18,
                         fontWeight: FontWeight.w400,
                         color: Fixcolors.black,
@@ -50,7 +50,7 @@ class PostAdsViewModel {
                         Navigator.pop(context);
                       },
                       child: const textlist(
-                        text: Stringvalue.imagefile,
+                        text: Stringtext.imagefile,
                         fontSize: 18,
                         fontWeight: FontWeight.w400,
                         color: Colors.black,
@@ -59,7 +59,7 @@ class PostAdsViewModel {
                     const Divider(),
                     InkWell(
                       child: const textlist(
-                        text: Stringvalue.cancel,
+                        text: Stringtext.cancel,
                         fontSize: 18,
                         fontWeight: FontWeight.w400,
                         color: Colors.red,
@@ -129,7 +129,7 @@ class PostAdsViewModel {
                         Navigator.pop(context);
                       },
                       child: const textlist(
-                        text: Stringvalue.video,
+                        text: Stringtext.video,
                         fontSize: 18,
                         fontWeight: FontWeight.w400,
                         color: Fixcolors.black,
@@ -142,7 +142,7 @@ class PostAdsViewModel {
                         Navigator.pop(context);
                       },
                       child: const textlist(
-                        text: Stringvalue.imagefile,
+                        text: Stringtext.imagefile,
                         fontSize: 18,
                         fontWeight: FontWeight.w400,
                         color: Fixcolors.black,
@@ -151,7 +151,7 @@ class PostAdsViewModel {
                     const Divider(),
                     InkWell(
                       child: const textlist(
-                        text: Stringvalue.cancel,
+                        text: Stringtext.cancel,
                         fontSize: 18,
                         fontWeight: FontWeight.w400,
                         color: Colors.red,

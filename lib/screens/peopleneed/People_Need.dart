@@ -34,7 +34,7 @@ class _people_NeedState extends State<people_Need> {
                     width: 60,
                   ),
                   const textlist(
-                    text: Stringvalue.wpn,
+                    text: Stringtext.wpn,
                     color: Fixcolors.white,
                     fontWeight: FontWeight.w500,
                     fontSize: 20,
@@ -190,7 +190,7 @@ Widget _tabSection(BuildContext context) {
                 Container(
                   margin: const EdgeInsets.all(10),
                   child: const textlist(
-                    text: Stringvalue.emptytext,
+                    text: Stringtext.emptytext,
                     fontSize: 15,
                     fontWeight: FontWeight.w400,
                   ),
@@ -208,7 +208,7 @@ Widget _tabSection(BuildContext context) {
                 Container(
                   margin: const EdgeInsets.all(10),
                   child: const textlist(
-                    text: Stringvalue.emptytext,
+                    text: Stringtext.emptytext,
                     fontSize: 15,
                     fontWeight: FontWeight.w400,
                   ),

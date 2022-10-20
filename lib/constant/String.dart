@@ -1,4 +1,4 @@
-class Stringvalue {
+class Stringtext {
   static const String splashTitle = "Hey, It’s good to see you again!";
   static const String Register = "Register";
   static const String name = "Your Name";
@@ -12,6 +12,7 @@ class Stringvalue {
   static const String logintitlesecondname = "Login to get going";
   static const String forgotpassword = "Forgot password?";
   static const String forgotpasswordtitle = "FORGOT PASSWORD";
+  static const String Or = 'Or';
   static const String login = "LOGIN";
   static const String serach = "Serach here";
   static const String welcome = "Welcome";

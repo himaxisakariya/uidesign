@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class TextFields extends StatelessWidget {
@@ -15,6 +16,8 @@ class TextFields extends StatelessWidget {
   ValueChanged<String>? onChanged;
   final TextStyle? hintstyle;
   final int? maxline;
+  final int? maxlength;
+  final List<TextInputFormatter>? inputFormatters;
 bool readonly = false;
 bool filed  = false;
 final Color? fillcolor;
@@ -28,8 +31,9 @@ final Color? fillcolor;
         this.hintText,
         this.border,
         int? width,
+        this.maxlength,
         this.validator,
-        this.onFieldSubmitted,this.onChanged, this.hintstyle,this.maxline,this.suffixIcon,required this.readonly, required this.filed,this.fillcolor
+        this.onFieldSubmitted,this.inputFormatters,this.onChanged, this.hintstyle,this.maxline,this.suffixIcon,required this.readonly, required this.filed,this.fillcolor
       });
 
   @override
@@ -44,6 +48,8 @@ final Color? fillcolor;
           validator: validator,
           maxLines: maxline,
           readOnly:  readonly,
+          maxLength: maxlength,
+      inputFormatters: inputFormatters,
           decoration: InputDecoration(
             filled: filed,
             fillColor: fillcolor,

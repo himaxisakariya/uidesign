@@ -54,14 +54,14 @@ class Applebutton extends StatelessWidget {
     );
   }
 }
-class facebookAppButton extends StatelessWidget {
+class facebookButton extends StatelessWidget {
   FontWeight? fontWeight;
   Function()? onTap;
   Color? buttonColor;
   String? text;
   String? buttonIcon;
 
-  facebookAppButton(
+  facebookButton(
       {super.key,
       this.text,
       this.onTap,

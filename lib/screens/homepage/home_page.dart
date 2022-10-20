@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:uidesign/constant/Fixcolors.dart';
 import 'package:uidesign/constant/Image.dart';
+import 'package:uidesign/constant/String.dart';
 import 'package:uidesign/constant/widget/searchtext.dart';
 import 'package:uidesign/screens/homepage/homepagewidgets.dart';
 import 'package:uidesign/screens/loction/loction_page.dart';
 import 'package:uidesign/screens/notification/notification_page.dart';
 import 'package:uidesign/screens/postAd/post_ads.dart';
-import '../../constant/String.dart';
 import '../../constant/widget/floatingactionbutton.dart';
 import '../welcompopup/welcome_popup.dart';
 
@@ -108,7 +108,7 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.only(left: 15, right: 6),
                     child: SearchTextField(
                       icon: Images.searchimage,
-                      hintText: Stringvalue.serach,
+                      hintText: Stringtext.serach,
                       fontSize: 14,
                     ),
                   ),
@@ -200,7 +200,7 @@ class _HomePageState extends State<HomePage> {
                     const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 20),
                         child: textlist(
-                          text: Stringvalue.category,
+                          text: Stringtext.category,
                           fontSize: 18,
                           fontWeight: FontWeight.w500,
                         )),
@@ -250,14 +250,14 @@ class _HomePageState extends State<HomePage> {
                         const Padding(
                             padding: EdgeInsets.only(left: 20),
                             child: textlist(
-                              text: Stringvalue.topads,
+                              text: Stringtext.topads,
                               fontSize: 18,
                               fontWeight: FontWeight.w400,
                             )),
                         const Padding(
                             padding: EdgeInsets.only(left: 190),
                             child: textlist(
-                              text: Stringvalue.seeall,
+                              text: Stringtext.seeall,
                               fontSize: 14,
                               color: Fixcolors.green,
                               fontWeight: FontWeight.w500,
@@ -414,7 +414,7 @@ class _HomePageState extends State<HomePage> {
                     const Padding(
                         padding: EdgeInsets.only(left: 20, top: 15),
                         child: textlist(
-                          text: Stringvalue.nearyou,
+                          text: Stringtext.nearyou,
                           fontSize: 18,
                           fontWeight: FontWeight.w400,
                         )),

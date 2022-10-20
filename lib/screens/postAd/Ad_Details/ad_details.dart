@@ -68,7 +68,7 @@ class _ad_detailsState extends State<ad_details> {
                     width: 70,
                   ),
                   const textlist(
-                    text: Stringvalue.postad,
+                    text: Stringtext.postad,
                     color: Fixcolors.white,
                     fontWeight: FontWeight.w500,
                     fontSize: 20,
@@ -95,7 +95,7 @@ class _ad_detailsState extends State<ad_details> {
                   Container(
                     margin: const EdgeInsets.only(left: 25, bottom: 15),
                     child: const textlist(
-                      text: Stringvalue.addetails,
+                      text: Stringtext.addetails,
                       fontWeight: FontWeight.w500,
                       fontSize: 18,
                     ),
@@ -103,7 +103,7 @@ class _ad_detailsState extends State<ad_details> {
                   Container(
                     margin: const EdgeInsets.only(left: 28, bottom: 5),
                     child: const textlist(
-                      text: Stringvalue.title,
+                      text: Stringtext.title,
                       color: Fixcolors.grey,
                       fontWeight: FontWeight.w400,
                       fontSize: 14,
@@ -114,7 +114,7 @@ class _ad_detailsState extends State<ad_details> {
                   Container(
                     margin: const EdgeInsets.only(left: 28, bottom: 5),
                     child: const textlist(
-                      text: Stringvalue.amount,
+                      text: Stringtext.amount,
                       color: Fixcolors.grey,
                       fontWeight: FontWeight.w400,
                       fontSize: 14,
@@ -125,7 +125,7 @@ class _ad_detailsState extends State<ad_details> {
                   Container(
                     margin: const EdgeInsets.only(left: 28, bottom: 5),
                     child: const textlist(
-                      text: Stringvalue.description,
+                      text: Stringtext.description,
                       color: Fixcolors.grey,
                       fontWeight: FontWeight.w400,
                       fontSize: 14,
@@ -136,7 +136,7 @@ class _ad_detailsState extends State<ad_details> {
                   Container(
                     margin: const EdgeInsets.only(left: 28, bottom: 5),
                     child: const textlist(
-                      text: Stringvalue.adtype,
+                      text: Stringtext.adtype,
                       color: Fixcolors.grey,
                       fontWeight: FontWeight.w400,
                       fontSize: 14,
@@ -185,7 +185,7 @@ class _ad_detailsState extends State<ad_details> {
                   Container(
                     margin: const EdgeInsets.only(left: 28, bottom: 5),
                     child: const textlist(
-                      text: Stringvalue.selectcate,
+                      text: Stringtext.selectcate,
                       color: Fixcolors.grey,
                       fontWeight: FontWeight.w400,
                       fontSize: 14,
@@ -204,7 +204,7 @@ class _ad_detailsState extends State<ad_details> {
                           Icons.arrow_drop_down_rounded,
                           size: 35,
                         )),
-                    hintText: Stringvalue.selectcate,
+                    hintText: Stringtext.selectcate,
                     hintstyle: GoogleFonts.poppins(
                         textStyle: const TextStyle(
                       fontWeight: FontWeight.w400,
@@ -216,7 +216,7 @@ class _ad_detailsState extends State<ad_details> {
                   Container(
                     margin: const EdgeInsets.only(left: 28, bottom: 5),
                     child: const textlist(
-                      text: Stringvalue.subcate,
+                      text: Stringtext.subcate,
                       color: Fixcolors.grey,
                       fontWeight: FontWeight.w400,
                       fontSize: 14,
@@ -235,7 +235,7 @@ class _ad_detailsState extends State<ad_details> {
                           Icons.arrow_drop_down_rounded,
                           size: 35,
                         )),
-                    hintText: Stringvalue.subcate,
+                    hintText: Stringtext.subcate,
                     readonly: true,
                     hintstyle: GoogleFonts.poppins(
                         textStyle: const TextStyle(
@@ -247,7 +247,7 @@ class _ad_detailsState extends State<ad_details> {
                   Container(
                     margin: const EdgeInsets.only(left: 28, bottom: 5),
                     child: const textlist(
-                      text: Stringvalue.slocation,
+                      text: Stringtext.slocation,
                       color: Fixcolors.grey,
                       fontWeight: FontWeight.w400,
                       fontSize: 14,
@@ -263,7 +263,7 @@ class _ad_detailsState extends State<ad_details> {
                           ));
                         },
                         icon: const Icon(Icons.mode_edit_outline)),
-                    hintText: Stringvalue.slocation,
+                    hintText: Stringtext.slocation,
                     readonly: true,
                     hintstyle: GoogleFonts.poppins(
                         textStyle: const TextStyle(
@@ -283,7 +283,7 @@ class _ad_detailsState extends State<ad_details> {
                       ));
                     },
                     buttonColor: Fixcolors.green,
-                    text: Stringvalue.next,
+                    text: Stringtext.next,
                     textColor: Fixcolors.white,
                   ),
                   sizebox(),

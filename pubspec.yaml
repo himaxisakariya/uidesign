@@ -54,6 +54,8 @@ dependencies:
   firebase_auth: ^3.11.2
   http: ^0.13.5
   shared_preferences: ^2.0.15
+  google_sign_in: ^5.4.2
+  flutter_facebook_auth: '^3.5.0'
 
 dev_dependencies:
   flutter_test:
