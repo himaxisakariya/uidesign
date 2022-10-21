@@ -100,7 +100,7 @@ class RegisterPageViewModel {
         "osVersion": "10.11",
         "ViaSocial": 2
       };
-      print('LoginMap --> $googleLoginMap');
+      logs('LoginMap --> $googleLoginMap');
       String? googleUserResponse = await RestService.postRestMethods(
           endpoints: RestService.googleApi, bodyParam: googleLoginMap);
       if (googleUserResponse != null && googleUserResponse.isNotEmpty) {
@@ -109,7 +109,7 @@ class RegisterPageViewModel {
         if (googleUserResponseMap.containsKey('Success') &&
             googleUserResponseMap['Success']) {
           LoginModel loginModel = loginModelFromJson(googleUserResponse);
-          print('Loginmmodel --> ${loginModel.toJson()}');
+          logs('Loginmmodel --> ${loginModel.toJson()}');
 
           await Sharedprefrence.setPrefStringValue(Sharedprefrence.store,
               "${googleUserResponseMap['access_token']}");
@@ -117,7 +117,7 @@ class RegisterPageViewModel {
           snackbar(context, text: "${googleUserResponseMap['Message']}");
           Navigator.push(context, MaterialPageRoute(
             builder: (context) {
-              return HomePage();
+              return const HomePage();
             },
           ));
         } else {
@@ -161,7 +161,7 @@ class RegisterPageViewModel {
         "osVersion": "10.11",
         "ViaSocial": 2
       };
-      print('LoginMap --> $facebookLoginMap');
+      logs('LoginMap --> $facebookLoginMap');
       String? facebookUserResponse = await RestService.postRestMethods(
           endpoints: RestService.facbookApi, bodyParam: facebookLoginMap);
       if (facebookUserResponse != null && facebookUserResponse.isNotEmpty) {
@@ -170,7 +170,7 @@ class RegisterPageViewModel {
         if (facebookUserResponseMap.containsKey('Success') &&
             facebookUserResponseMap['Success']) {
           LoginModel loginModel = loginModelFromJson(facebookUserResponse);
-          print('Loginmmodel --> ${loginModel.toJson()}');
+          logs('Loginmmodel --> ${loginModel.toJson()}');
 
           await Sharedprefrence.setPrefStringValue(Sharedprefrence.store,
               "${facebookUserResponseMap['access_token']}");
@@ -178,7 +178,7 @@ class RegisterPageViewModel {
           snackbar(context, text: "${facebookUserResponseMap['Message']}");
           Navigator.push(context, MaterialPageRoute(
             builder: (context) {
-              return HomePage();
+              return  const HomePage();
             },
           ));
         } else {
@@ -220,7 +220,7 @@ Widget name(TextEditingController userName) {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Image.asset(
-          Images.person,
+          LookPriorImage.person,
         ),
       ),
     ),
@@ -254,7 +254,7 @@ Widget emailt(TextEditingController emailc) {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Image.asset(
-          Images.email,
+          LookPriorImage.email,
         ),
       ),
     ),
@@ -294,7 +294,7 @@ Widget cpassword(TextEditingController confirmpassword) {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Image.asset(
-          Images.lock,
+          LookPriorImage.lock,
         ),
       ),
     ),
@@ -324,7 +324,7 @@ Widget passwordt(TextEditingController passwordc) {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Image.asset(
-          Images.lock,
+          LookPriorImage.lock,
         ),
       ),
     ),
@@ -358,7 +358,7 @@ Widget phone(TextEditingController phoneNumber) {
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Image.asset(
-          Images.phoneimage,
+          LookPriorImage.phoneimage,
         ),
       ),
     ),

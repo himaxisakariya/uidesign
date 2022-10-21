@@ -116,7 +116,7 @@ Widget _tabSection(BuildContext context) {
                                   height: 20,
                                   width: 20,
                                   padding: const EdgeInsets.all(3),
-                                  child: Image.asset(Images.likeimage),
+                                  child: Image.asset(LookPriorImage.likeimage),
                                 )
                               ],
                             )),
@@ -154,7 +154,7 @@ Widget _tabSection(BuildContext context) {
                                       padding: const EdgeInsets.only(
                                           left: 0, bottom: 9, top: 9),
                                       child: Image.asset(
-                                        Images.shareimage,
+                                        LookPriorImage.shareimage,
                                       ),
                                     ),
                                   ),
@@ -185,7 +185,7 @@ Widget _tabSection(BuildContext context) {
                   height: 100,
                   width: 100,
                   margin: const EdgeInsets.only(top: 100),
-                  child: Image.asset(Images.empty),
+                  child: Image.asset(LookPriorImage.empty),
                 ),
                 Container(
                   margin: const EdgeInsets.all(10),
@@ -203,7 +203,7 @@ Widget _tabSection(BuildContext context) {
                   height: 100,
                   width: 100,
                   margin: const EdgeInsets.only(top: 100),
-                  child: Image.asset(Images.empty),
+                  child: Image.asset(LookPriorImage.empty),
                 ),
                 Container(
                   margin: const EdgeInsets.all(10),

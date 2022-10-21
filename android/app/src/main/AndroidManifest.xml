@@ -44,7 +44,7 @@
             android:name="flutterEmbedding"
             android:value="2" />
         <meta-data android:name="com.google.android.geo.API_KEY"
-           android:value="AIzaSyAATZrMiynfzXbMyOXzAAzfOEti_rQlpSE"/>
+           android:value="AIzaSyAY9pF5jSqfXYV3n3nRDVSUwsYuu7PaDb8"/>
         <meta-data
            android:name="firebase_messaging_auto_init_enabled"
            android:value="false" />

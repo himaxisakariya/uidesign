@@ -5,6 +5,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:uidesign/constant/Fixcolors.dart';
 import 'package:uidesign/constant/String.dart';
+import 'package:uidesign/rest_api/api.dart';
 import 'package:uidesign/screens/homepage/homepagewidgets.dart';
 import 'package:uidesign/screens/postAd/post_ads.dart';
 import 'package:video_thumbnail/video_thumbnail.dart';
@@ -98,10 +99,10 @@ class PostAdsViewModel {
       postAddPageState.imgpath.addAll(image);
 
       postAddPageState.setState(() {});
-      print("imagepath --->${postAddPageState.imgpath}");
+      logs("imagepath --->${postAddPageState.imgpath}");
     } on PlatformException catch (e) {
       if (kDebugMode) {
-        print('Failed to pick image: $e');
+        logs('Failed to pick image: $e');
       }
     }
   }
@@ -182,11 +183,11 @@ class PostAdsViewModel {
 
       postAddPageState.setState(() {});
 
-      print("videopath->${postAddPageState.thumbnail}");
+      logs("videopath->${postAddPageState.thumbnail}");
       postAddPageState.setState(() {});
     } on PlatformException catch (e) {
       if (kDebugMode) {
-        print('Failed to pick image: $e');
+        logs('Failed to pick image: $e');
       }
     }
   }

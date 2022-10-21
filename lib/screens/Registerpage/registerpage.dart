@@ -19,6 +19,7 @@ import 'package:uidesign/rest_api/api.dart';
 import 'package:uidesign/screens/Registerpage/widgets.dart';
 import 'package:uidesign/screens/homepage/home_page.dart';
 import 'package:uidesign/screens/login/loginpage.dart';
+import 'package:uidesign/screens/postAd/Ad_Details/ad_details_Widget.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({Key? key}) : super(key: key);
@@ -29,7 +30,7 @@ class RegisterPage extends StatefulWidget {
 
 class RegisterPageState extends State<RegisterPage> {
   Country _selectedDialogCountry =
-      CountryPickerUtils.getCountryByPhoneCode('91');
+  CountryPickerUtils.getCountryByPhoneCode('91');
   final formGlobalKey = GlobalKey<FormState>();
   AuthService authService = AuthService();
   TextEditingController userName = TextEditingController();
@@ -73,10 +74,10 @@ class RegisterPageState extends State<RegisterPage> {
               "phoneNumber": phoneNumber.text,
               "countryCode": "",
               "deviceToken":
-                  "dqNVHOKXRYOQsj-pArHar5:APA91bELERcQ9UCDkZiyn4X7dpCfs9ij1-0ehCQXEaY-MqvMQ7DvMaKspC1JHH8gTAuvHSbiCeTZS_Kw5Ni8gwxrT9htSRTUrld0uJ4nAZSAvDy1MTCeqxZPGDoR1k5ugueNvaswseWz",
+              "dqNVHOKXRYOQsj-pArHar5:APA91bELERcQ9UCDkZiyn4X7dpCfs9ij1-0ehCQXEaY-MqvMQ7DvMaKspC1JHH8gTAuvHSbiCeTZS_Kw5Ni8gwxrT9htSRTUrld0uJ4nAZSAvDy1MTCeqxZPGDoR1k5ugueNvaswseWz",
               "deviceType": "1",
             });
-        print("statuscode ---> ${response.statusCode}");
+        logs("statuscode ---> ${response.statusCode}");
         if (response.statusCode == 200) {
           var data = jsonDecode(response.body.toString());
           if (data['Success'] == 'true') {
@@ -91,14 +92,14 @@ class RegisterPageState extends State<RegisterPage> {
               text: "${data['Message']}",
             );
           }
-          print(data['Success']);
-          print(data['Message']);
-          print('signup successfully');
+          logs(data['Success']);
+          logs(data['Message']);
+          logs('signup successfully');
         } else {
-          print('failed');
+          logs('failed');
         }
       } catch (e) {
-        print(e.toString());
+        logs(e.toString());
       }
     }
 
@@ -120,7 +121,7 @@ class RegisterPageState extends State<RegisterPage> {
                       height: 70,
                       width: 87,
                       child: Image.asset(
-                        Images.registerlogo,
+                        LookPriorImage.registerlogo,
                       )),
                 ),
                 Text(
@@ -166,7 +167,7 @@ class RegisterPageState extends State<RegisterPage> {
                                       height: 45,
                                       decoration: BoxDecoration(
                                           borderRadius:
-                                              BorderRadius.circular(10),
+                                          BorderRadius.circular(10),
                                           border: Border.all(
                                               color: Fixcolors.grey)),
                                       child: ListTile(
@@ -196,7 +197,11 @@ class RegisterPageState extends State<RegisterPage> {
                                   userName.text.toString(),
                                   passwordc.text.toString());
                               if (formGlobalKey.currentState!.validate()) {
-                                Navigator.push(context, MaterialPageRoute(builder: (context) => LoginPage(),));
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (context) => LoginPage(),
+                                    ));
                               }
                             },
                             buttonColor: Fixcolors.green,
@@ -206,15 +211,15 @@ class RegisterPageState extends State<RegisterPage> {
                           sizebox(),
                           Padding(
                               padding:
-                                  const EdgeInsets.only(left: 30, right: 30),
+                              const EdgeInsets.only(left: 30, right: 30),
                               child: divideror()),
                           sizebox(),
                           facebookButton(
                             onTap: () async {
                               LoginResult? result =
-                                  await authService.facebookLogin();
+                              await authService.facebookLogin();
                               if (result != null) {
-                                print(
+                                logs(
                                     "result for facebook -->${result.message}");
                               }
                               // await registerPageViewModel!.facebookmethod(
@@ -232,7 +237,7 @@ class RegisterPageState extends State<RegisterPage> {
                               // });
                             },
                             buttonColor: Fixcolors.blue,
-                            buttonIcon: Images.facebook,
+                            buttonIcon: LookPriorImage.facebook,
                             text: Stringtext.facebooklogin,
                           ),
                           sizebox(),
@@ -255,7 +260,7 @@ class RegisterPageState extends State<RegisterPage> {
                               });
                             },
                             buttonColor: Fixcolors.black,
-                            buttonIcon: Images.appleimage,
+                            buttonIcon: LookPriorImage.appleimage,
                             text: Stringtext.applelogin,
                           ),
                           privacyText(context,
@@ -267,68 +272,70 @@ class RegisterPageState extends State<RegisterPage> {
                     status == false
                         ? const SizedBox()
                         : Center(
-                            child: Container(
-                              height: double.infinity,
-                              width: double.infinity,
-                              decoration: const BoxDecoration(
-                                  color: Colors.black26,
-                                  borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(30),
-                                    topRight: Radius.circular(30),
-                                  )),
-                              child: const Center(
-                                  child: SizedBox(
-                                      height: 40,
-                                      width: 40,
-                                      child: CircularProgressIndicator())),
-                            ),
-                          ),
+                      child: Container(
+                        height: double.infinity,
+                        width: double.infinity,
+                        decoration: const BoxDecoration(
+                            color: Colors.black26,
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(30),
+                              topRight: Radius.circular(30),
+                            )),
+                        child: const Center(
+                            child: SizedBox(
+                                height: 40,
+                                width: 40,
+                                child: CircularProgressIndicator())),
+                      ),
+                    ),
                   ])),
             ),
           ])),
     );
   }
 
-  Widget _buildDialogItem(Country country) => Padding(
+  Widget _buildDialogItem(Country country) =>
+      Padding(
         padding: const EdgeInsets.only(bottom: 13),
         child: Row(
           children: <Widget>[
             CountryPickerUtils.getDefaultFlagImage(country),
             Flexible(
                 child: Text(
-              "(${country.name})+${country.phoneCode}",
-              overflow: TextOverflow.ellipsis,
-              style: GoogleFonts.poppins(
-                  textStyle: const TextStyle(
-                fontSize: 13,
-                fontWeight: FontWeight.w400,
-              )),
-            )),
+                  "(${country.name})+${country.phoneCode}",
+                  overflow: TextOverflow.ellipsis,
+                  style: GoogleFonts.poppins(
+                      textStyle: const TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w400,
+                      )),
+                )),
           ],
         ),
       );
-
-  void openCountryPickerDialog() => showDialog(
+  void openCountryPickerDialog() =>
+      showDialog(
         context: context,
-        builder: (context) => Theme(
-          data: Theme.of(context).copyWith(primaryColor: Colors.pink),
-          child: CountryPickerDialog(
-            titlePadding: const EdgeInsets.all(8.0),
-            searchCursorColor: Colors.pinkAccent,
-            searchInputDecoration: const InputDecoration(hintText: 'Search...'),
-            isSearchable: true,
-            title: const Text('Select your phone code'),
-            onValuePicked: (Country country) =>
-                setState(() => _selectedDialogCountry = country),
-            itemBuilder: _buildDialogItem,
-            priorityList: [
-              CountryPickerUtils.getCountryByIsoCode('TR'),
-              CountryPickerUtils.getCountryByIsoCode('US'),
-            ],
-          ),
-        ),
+        builder: (context) =>
+            Theme(
+              data: Theme.of(context).copyWith(primaryColor: Colors.pink),
+              child: CountryPickerDialog(
+                titlePadding: const EdgeInsets.all(8.0),
+                searchCursorColor: Colors.pinkAccent,
+                searchInputDecoration: const InputDecoration(
+                    hintText: 'Search...'),
+                isSearchable: true,
+                title: const Text('Select your phone code'),
+                onValuePicked: (Country country) =>
+                    setState(() => _selectedDialogCountry = country),
+                itemBuilder: _buildDialogItem,
+                priorityList: [
+                  CountryPickerUtils.getCountryByIsoCode('TR'),
+                  CountryPickerUtils.getCountryByIsoCode('US'),
+                ],
+              ),
+            ),
       );
-
 // submit() async {
 //   final isValid = formGlobalKey.currentState?.validate();
 //   if (isValid!) {

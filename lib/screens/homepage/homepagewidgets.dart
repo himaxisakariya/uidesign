@@ -60,7 +60,7 @@ draweropen(BuildContext context) {
                   height: 70,
                   width: 80,
                   child: Image.asset(
-                    Images.loginperson,
+                    LookPriorImage.loginperson,
                   ),
                 ),
                 InkWell(
@@ -87,7 +87,7 @@ draweropen(BuildContext context) {
                             height: 20,
                             width: 20,
                             child: Image.asset(
-                              Images.loginarrow,
+                              LookPriorImage.loginarrow,
                             ),
                           ),
                         ),
@@ -104,11 +104,11 @@ draweropen(BuildContext context) {
                return const Post_ads();
              },));
            },
-          text: Images.drawer1,
+          text: LookPriorImage.drawer1,
           titletext: Stringtext.drawer1,
           fontSize: 15,
           fontWeight: FontWeight.w400,
-          imgtext: Images.barrow,
+          imgtext: LookPriorImage.barrow,
         ),
          Listtilee(
           onTap: () {
@@ -116,11 +116,11 @@ draweropen(BuildContext context) {
               return const Category_Page();
             },));
           },
-          text: Images.fourimage,
+          text: LookPriorImage.fourimage,
           titletext: Stringtext.drawer2,
           fontSize: 15,
           fontWeight: FontWeight.w400,
-          imgtext: Images.barrow,
+          imgtext: LookPriorImage.barrow,
         ),
          Listtilee(
           onTap: () {
@@ -128,11 +128,11 @@ draweropen(BuildContext context) {
               return ads_page();
             },));
           },
-          text: Images.drawer2,
+          text: LookPriorImage.drawer2,
           titletext: Stringtext.drawer3,
           fontSize: 15,
           fontWeight: FontWeight.w400,
-          imgtext: Images.barrow,
+          imgtext: LookPriorImage.barrow,
         ),
         Listtilee(
           onTap: () {
@@ -140,11 +140,11 @@ draweropen(BuildContext context) {
               return const Wallet();
             },));
           },
-          text: Images.wallet,color: Fixcolors.green,
+          text: LookPriorImage.wallet,color: Fixcolors.green,
           titletext: Stringtext.wallet,
           fontSize: 15,
           fontWeight: FontWeight.w400,
-          imgtext: Images.barrow,
+          imgtext: LookPriorImage.barrow,
         ),
          Listtilee(
           onTap: () {
@@ -152,11 +152,11 @@ draweropen(BuildContext context) {
               return const DISK_SPACE();
             },));
           },
-          text: Images.drawer3,
+          text: LookPriorImage.drawer3,
           titletext: Stringtext.drawer4,
           fontSize: 15,
           fontWeight: FontWeight.w400,
-          imgtext: Images.barrow,
+          imgtext: LookPriorImage.barrow,
         ),
         Listtilee(
           onTap: () {
@@ -164,11 +164,11 @@ draweropen(BuildContext context) {
               return people_Need();
             },));
           },
-          text: Images.drawer4,
+          text: LookPriorImage.drawer4,
           titletext: Stringtext.drawer5,
           fontSize: 15,
           fontWeight: FontWeight.w400,
-          imgtext: Images.barrow,
+          imgtext: LookPriorImage.barrow,
         ),
          Listtilee(
           onTap: () {
@@ -176,11 +176,11 @@ draweropen(BuildContext context) {
               return const Help_Page();
             },));
           },
-          text: Images.drawer5,
+          text: LookPriorImage.drawer5,
           titletext: Stringtext.drawer6,
           fontSize: 15,
           fontWeight: FontWeight.w400,
-          imgtext: Images.barrow,
+          imgtext: LookPriorImage.barrow,
         ),
         Listtilee(
           onTap: () {
@@ -188,31 +188,31 @@ draweropen(BuildContext context) {
               return const feedback();
             },));
             },
-          text: Images.sellfaster,
+          text: LookPriorImage.sellfaster,
           titletext: Stringtext.feedback,
           fontSize: 15,
           fontWeight: FontWeight.w400,
-          imgtext: Images.barrow,
+          imgtext: LookPriorImage.barrow,
         ),
         Container(
           height: 50,
           width: 50,
          margin: const EdgeInsets.only(left: 20,top: 80),
          alignment: Alignment.bottomLeft,
-         child: Image.asset(Images.splashscreen),
+         child: Image.asset(LookPriorImage.splashscreen),
         )
 
       ]));
 }
-List bottomimage = [(Images.home),(Images.heart),(Images.email2),(Images.person2)];
+List bottomimage = [(LookPriorImage.home),(LookPriorImage.heart),(LookPriorImage.email2),(LookPriorImage.person2)];
 
-List productimage = [(Images.thirdimage), (Images.fourimages), (Images.fiveimage), (Images.fiveimages), (Images.watch), (Images.iphoneimage)];
+List productimage = [(LookPriorImage.thirdimage), (LookPriorImage.fourimages), (LookPriorImage.fiveimage), (LookPriorImage.fiveimages), (LookPriorImage.watch), (LookPriorImage.iphoneimage)];
 
 List icon = [(Stringtext.hotel), (Stringtext.car), (Stringtext.phone), (Stringtext.more)];
 
-List iconname = [(Images.realstate), (Images.carimage), (Images.phoneimage), (Images.fourimage)];
+List iconname = [(LookPriorImage.realstate), (LookPriorImage.carimage), (LookPriorImage.phoneimage), (LookPriorImage.fourimage)];
 
-List image = [(Images.firstimage), (Images.secondimage), (Images.iphoneimage), (Images.secondimage)];
+List image = [(LookPriorImage.firstimage), (LookPriorImage.secondimage), (LookPriorImage.iphoneimage), (LookPriorImage.secondimage)];
 
 List price = [(Stringtext.prize), (Stringtext.prize2), (Stringtext.prize), (Stringtext.prize2), (Stringtext.watchprice), (Stringtext.iphoneprice)
 ];

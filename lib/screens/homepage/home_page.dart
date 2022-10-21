@@ -64,13 +64,13 @@ class _HomePageState extends State<HomePage> {
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         height: 20,
                         child: Image.asset(
-                          Images.addimage,
+                          LookPriorImage.addimage,
                         )),
                   ),
                   SizedBox(
                       height: 47,
                       child: Image.asset(
-                        Images.registerlogo,
+                        LookPriorImage.registerlogo,
                       )),
                   InkWell(
                     child: Container(
@@ -84,7 +84,7 @@ class _HomePageState extends State<HomePage> {
                       child: Padding(
                         padding: const EdgeInsets.all(10),
                         child: Image.asset(
-                          Images.bellimage,
+                          LookPriorImage.bellimage,
                         ),
                       ),
                     ),
@@ -107,7 +107,7 @@ class _HomePageState extends State<HomePage> {
                   Padding(
                     padding: const EdgeInsets.only(left: 15, right: 6),
                     child: SearchTextField(
-                      icon: Images.searchimage,
+                      icon: LookPriorImage.searchimage,
                       hintText: Stringtext.serach,
                       fontSize: 14,
                     ),
@@ -131,7 +131,7 @@ class _HomePageState extends State<HomePage> {
                       child: Padding(
                         padding: const EdgeInsets.all(10),
                         child: Image.asset(
-                          Images.squarimage,
+                          LookPriorImage.squarimage,
                         ),
                       ),
                     ),
@@ -165,7 +165,7 @@ class _HomePageState extends State<HomePage> {
                       child: Padding(
                         padding: const EdgeInsets.all(10),
                         child: Image.asset(
-                          Images.loctionimage,
+                          LookPriorImage.loctionimage,
                         ),
                       ),
                     ),
@@ -267,7 +267,7 @@ class _HomePageState extends State<HomePage> {
                           width: 15,
                           margin: const EdgeInsets.all(7),
                           child: Image.asset(
-                            Images.arrowimage,
+                            LookPriorImage.arrowimage,
                             color: Fixcolors.green,
                           ),
                         ),
@@ -303,11 +303,11 @@ class _HomePageState extends State<HomePage> {
                                             padding: const EdgeInsets.all(3),
                                             child: like == false
                                                 ? Image.asset(
-                                                    Images.likeimage,
+                                              LookPriorImage.likeimage,
                                                     color: Colors.red,
                                                   )
                                                 : Image.asset(
-                                                    Images.likeimage,
+                                              LookPriorImage.likeimage,
                                                     color: Colors.grey,
                                                   ),
                                           ),
@@ -367,7 +367,7 @@ class _HomePageState extends State<HomePage> {
                                               padding: const EdgeInsets.only(
                                                   left: 0, bottom: 9, top: 9),
                                               child: Image.asset(
-                                                Images.shareimage,
+                                                LookPriorImage.shareimage,
                                               ),
                                             ),
                                           ),
@@ -399,7 +399,7 @@ class _HomePageState extends State<HomePage> {
                                       child: Padding(
                                         padding: const EdgeInsets.all(6),
                                         child: Image.asset(
-                                          Images.modelimage,
+                                          LookPriorImage.modelimage,
                                         ),
                                       ),
                                     ),
@@ -449,7 +449,7 @@ class _HomePageState extends State<HomePage> {
                                           height: 20,
                                           width: 20,
                                           padding: const EdgeInsets.all(3),
-                                          child: Image.asset(Images.likeimage),
+                                          child: Image.asset(LookPriorImage.likeimage),
                                         )
                                       ],
                                     )),
@@ -491,7 +491,7 @@ class _HomePageState extends State<HomePage> {
                                               padding: const EdgeInsets.only(
                                                   left: 0, bottom: 9, top: 9),
                                               child: Image.asset(
-                                                Images.shareimage,
+                                                LookPriorImage.shareimage,
                                               ),
                                             ),
                                           ),

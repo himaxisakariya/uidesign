@@ -1,4 +1,4 @@
-class Images {
+class LookPriorImage {
   static const splashscreen = 'images/splash.png';
   static const registerlogo = 'images/registerlogo.png';
   static const person = 'images/person.png';

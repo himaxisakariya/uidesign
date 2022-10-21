@@ -76,7 +76,7 @@ class _NotificationpageState extends State<Notificationpage> {
                         color: Fixcolors.green,
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            image: AssetImage(Images.registerlogo),
+                            image: AssetImage(LookPriorImage.registerlogo),
                             scale: 1.8)),
                   ),
                   title: const textlist(
@@ -108,7 +108,7 @@ class _NotificationpageState extends State<Notificationpage> {
                         color: Fixcolors.green,
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            image: AssetImage(Images.registerlogo), scale: 1.8)),
+                            image: AssetImage(LookPriorImage.registerlogo), scale: 1.8)),
                   ),
                   title: const textlist(
                       text: Stringtext.notification2,
@@ -156,7 +156,7 @@ class _NotificationpageState extends State<Notificationpage> {
                               color: Fixcolors.green,
                               shape: BoxShape.circle,
                               image: DecorationImage(
-                                  image: AssetImage(Images.registerlogo),
+                                  image: AssetImage(LookPriorImage.registerlogo),
                                   scale: 1.8)),
                         ),
                         title: textlist(

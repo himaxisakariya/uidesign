@@ -7,16 +7,17 @@ import 'package:uidesign/constant/Image.dart';
 import 'package:uidesign/constant/String.dart';
 import 'package:uidesign/screens/homepage/home_page.dart';
 
-class SplashScrren extends StatefulWidget {
-  const SplashScrren({Key? key}) : super(key: key);
+class Splashscreen extends StatefulWidget {
+  const Splashscreen({Key? key}) : super(key: key);
 
   @override
-  State<SplashScrren> createState() => _SplashScrrenState();
+  State<Splashscreen> createState() => _SplashScreenState();
 }
 
-class _SplashScrrenState extends State<SplashScrren> {
+class _SplashScreenState extends State<Splashscreen> {
   @override
   void initState() {
+    super.initState();
     screen();
   }
 
@@ -44,7 +45,7 @@ class _SplashScrrenState extends State<SplashScrren> {
           child: Column(
             children: [
               Image.asset(
-                Images.splashscreen,
+                LookPriorImage.splashscreen,
                 width: 90,
                 height: 80,
                 fit: BoxFit.fill,

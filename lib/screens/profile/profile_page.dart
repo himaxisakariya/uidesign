@@ -50,7 +50,7 @@ class _Profile_PageState extends State<Profile_Page> {
                                     const EdgeInsets.symmetric(horizontal: 20),
                                 height: 20,
                                 child: Image.asset(
-                                  Images.addimage,
+                                  LookPriorImage.addimage,
                                 )),
                           ),
                           Container(
@@ -67,7 +67,7 @@ class _Profile_PageState extends State<Profile_Page> {
                                 padding: const EdgeInsets.only(left: 80),
                                 height: 20,
                                 child: Image.asset(
-                                  Images.profileedit,
+                                  LookPriorImage.profileedit,
                                 )),
                             onTap: () {
                               Navigator.push(context, MaterialPageRoute(
@@ -81,7 +81,7 @@ class _Profile_PageState extends State<Profile_Page> {
                               padding: const EdgeInsets.only(left: 10),
                               height: 20,
                               child: Image.asset(
-                                Images.menu,
+                                LookPriorImage.menu,
                               )),
                         ],
                       ),
@@ -288,7 +288,7 @@ Widget roundimage1() {
                     child: Container(
                       padding: const EdgeInsets.all(15),
                       child: Image.asset(
-                        Images.profile2,
+                        LookPriorImage.profile2,
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -321,7 +321,7 @@ Widget roundimage3() {
                     child: Container(
                       padding: const EdgeInsets.all(15),
                       child: Image.asset(
-                        Images.profile3,
+                        LookPriorImage.profile3,
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -354,7 +354,7 @@ Widget roundimage4() {
                     child: Container(
                       padding: const EdgeInsets.all(15),
                       child: Image.asset(
-                        Images.profile4,
+                        LookPriorImage.profile4,
                         fit: BoxFit.cover,
                       ),
                     ),
@@ -366,10 +366,10 @@ Widget roundimage4() {
 }
 
 List<String> profileimage = [
-  (Images.phoneimage),
-  (Images.profile2),
-  (Images.profile3),
-  (Images.profile4)
+  (LookPriorImage.phoneimage),
+  (LookPriorImage.profile2),
+  (LookPriorImage.profile3),
+  (LookPriorImage.profile4)
 ];
 
 Widget divider() {
@@ -395,6 +395,6 @@ Widget verticaldivider() {
 Widget arrow() {
   return SizedBox(
     height: 30,
-    child: Image.asset(Images.profilearrow),
+    child: Image.asset(LookPriorImage.profilearrow),
   );
 }

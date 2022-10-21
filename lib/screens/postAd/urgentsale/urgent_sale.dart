@@ -142,7 +142,7 @@ TextEditingController city = TextEditingController();
                                 color: Fixcolors.greenacccet.withOpacity(0.1)),
                             child: Padding(
                               padding: const EdgeInsets.all(10),
-                              child: Image.asset(Images.plus),
+                              child: Image.asset(LookPriorImage.plus),
                             ),
                           ),
                         ],
@@ -196,7 +196,7 @@ TextEditingController city = TextEditingController();
                                 color: Fixcolors.greenacccet.withOpacity(0.1)),
                             child: Padding(
                               padding: const EdgeInsets.all(10),
-                              child: Image.asset(Images.plus),
+                              child: Image.asset(LookPriorImage.plus),
                             ),
                           ),
                         ],
@@ -250,7 +250,7 @@ TextEditingController city = TextEditingController();
                                 color: Fixcolors.greenacccet.withOpacity(0.1)),
                             child: Padding(
                               padding: const EdgeInsets.all(10),
-                              child: Image.asset(Images.plus),
+                              child: Image.asset(LookPriorImage.plus),
                             ),
                           ),
                         ],
@@ -304,7 +304,7 @@ TextEditingController city = TextEditingController();
                                 color: Fixcolors.greenacccet.withOpacity(0.1)),
                             child: Padding(
                               padding: const EdgeInsets.all(10),
-                              child: Image.asset(Images.plus),
+                              child: Image.asset(LookPriorImage.plus),
                             ),
                           ),
                         ],
@@ -353,7 +353,7 @@ TextEditingController city = TextEditingController();
                                 color: Fixcolors.greenacccet.withOpacity(0.1)),
                             child: Padding(
                               padding: const EdgeInsets.all(10),
-                              child: Image.asset(Images.plus),
+                              child: Image.asset(LookPriorImage.plus),
                             ),
                           ),
                         ],
@@ -408,7 +408,7 @@ TextEditingController city = TextEditingController();
                                 color: Fixcolors.greenacccet.withOpacity(0.1)),
                             child: Padding(
                               padding: const EdgeInsets.all(10),
-                              child: Image.asset(Images.plus),
+                              child: Image.asset(LookPriorImage.plus),
                             ),
                           ),
                         ],
@@ -463,7 +463,7 @@ TextEditingController city = TextEditingController();
                                 color: Fixcolors.greenacccet.withOpacity(0.1)),
                             child: Padding(
                               padding: const EdgeInsets.all(10),
-                              child: Image.asset(Images.plus),
+                              child: Image.asset(LookPriorImage.plus),
                             ),
                           ),
                         ],

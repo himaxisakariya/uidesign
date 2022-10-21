@@ -11,7 +11,7 @@ Future<void> welcomePopup(BuildContext context) async {
     barrierDismissible: false,
     builder: (BuildContext context) {
       return AlertDialog(
-        icon: Image.asset(Images.welcome),
+        icon: Image.asset(LookPriorImage.welcome),
         content: SingleChildScrollView(
           child: ListBody(
             children: [

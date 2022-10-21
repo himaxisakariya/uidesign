@@ -55,7 +55,7 @@ class LoginPageState extends State<LoginPage> {
                         height: 56,
                         width: 90,
                         child: Image.asset(
-                          Images.registerlogo,
+                          LookPriorImage.registerlogo,
                         )),
                   ),
                   Text(
@@ -135,13 +135,13 @@ class LoginPageState extends State<LoginPage> {
                             sizebox(),
                             facebookButton(
                               buttonColor: Fixcolors.blue,
-                              buttonIcon: Images.facebook,
+                              buttonIcon: LookPriorImage.facebook,
                               text: Stringtext.facebooklogin,
                             ),
                             sizebox(),
                             Applebutton(
                               buttonColor: Fixcolors.black,
-                              buttonIcon: Images.appleimage,
+                              buttonIcon: LookPriorImage.appleimage,
                               text: Stringtext.applelogin,
                             ),
                             const SizedBox(),
@@ -149,6 +149,7 @@ class LoginPageState extends State<LoginPage> {
                               padding: const EdgeInsets.only(left: 70),
                               child: Row(
                                 children: [
+
                                   privacyText(
                                       context, """Didn’t have an account?"""),
                                   TextButton(

@@ -57,7 +57,7 @@ class _Chat_ScreenState extends State<Chat_Screen> {
                         padding: const EdgeInsets.only(left: 10),
                         height: 20,
                         child: Image.asset(
-                          Images.menu,
+                          LookPriorImage.menu,
                         )),
                   ],
                 )),
@@ -81,7 +81,7 @@ class _Chat_ScreenState extends State<Chat_Screen> {
                     color: Colors.grey,
                     shape: BoxShape.circle,
                     image: DecorationImage(
-                        image: AssetImage(Images.pr1), fit: BoxFit.fill),
+                        image: AssetImage(LookPriorImage.pr1), fit: BoxFit.fill),
                   ),
                 ),
                 const SizedBox(
@@ -118,7 +118,7 @@ class _Chat_ScreenState extends State<Chat_Screen> {
                         color: Colors.grey,
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            image: AssetImage(Images.pr1), fit: BoxFit.fill),
+                            image: AssetImage(LookPriorImage.pr1), fit: BoxFit.fill),
                       ),
                     ),
                     Container(
@@ -171,7 +171,7 @@ class _Chat_ScreenState extends State<Chat_Screen> {
                         color: Colors.grey,
                         shape: BoxShape.circle,
                         image: DecorationImage(
-                            image: AssetImage(Images.pr1), fit: BoxFit.fill),
+                            image: AssetImage(LookPriorImage.pr1), fit: BoxFit.fill),
                       ),
                     ),
                     Container(

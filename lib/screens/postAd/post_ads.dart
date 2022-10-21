@@ -95,7 +95,7 @@ class Post_adsState extends State<Post_ads> {
                             child: SizedBox(
                               height: 20,
                               width: 20,
-                              child: Image.asset(Images.i),
+                              child: Image.asset(LookPriorImage.i),
                             ),
                             onSelected: (value) {},
                             itemBuilder: (BuildContext bc) {
@@ -194,7 +194,7 @@ class Post_adsState extends State<Post_ads> {
                                                 top: 20,
                                                 right: 30,
                                                 bottom: 7),
-                                            child: Image.asset(Images.video),
+                                            child: Image.asset(LookPriorImage.video),
                                           ),
                                         ),
                                         const Padding(
@@ -292,7 +292,7 @@ class Post_adsState extends State<Post_ads> {
                                                 });
                                               },
                                               icon:
-                                                  Image.asset(Images.delete)));
+                                                  Image.asset(LookPriorImage.delete)));
                                     },
                                   ),
                                 ),
@@ -315,7 +315,7 @@ class Post_adsState extends State<Post_ads> {
                                                 top: 20,
                                                 right: 30,
                                                 bottom: 7),
-                                            child: Image.asset(Images.gallery),
+                                            child: Image.asset(LookPriorImage.gallery),
                                           ),
                                         ),
                                         const Padding(
@@ -375,7 +375,7 @@ class Post_adsState extends State<Post_ads> {
                       fontWeight: FontWeight.w500,
                     ),
                     Image.asset(
-                      Images.postarrow,
+                      LookPriorImage.postarrow,
                       height: 10,
                       width: 10,
                     ),

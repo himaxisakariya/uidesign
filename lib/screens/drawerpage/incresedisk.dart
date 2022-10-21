@@ -99,7 +99,7 @@ class _DISK_SPACEState extends State<DISK_SPACE> {
                               decoration: BoxDecoration(
                                 gradient: const LinearGradient(
                                     colors: [
-                                      Color(0xff50A0FD),
+                                      Color(0xff50B0FD),
                                       Colors.lightBlueAccent,
                                       Color(0xff50A0FD)
                                     ],
@@ -123,7 +123,8 @@ class _DISK_SPACEState extends State<DISK_SPACE> {
                                     ),
                                   ),
                                   Container(
-                                    margin: const EdgeInsets.only(top: 15, bottom: 2),
+                                    margin: const EdgeInsets.only(
+                                        top: 15, bottom: 2),
                                     child: Text(
                                       "1 GB Storage Plan",
                                       style: GoogleFonts.poppins(
@@ -172,7 +173,8 @@ class _DISK_SPACEState extends State<DISK_SPACE> {
                                     ),
                                   ),
                                   Container(
-                                    margin: const EdgeInsets.only(top: 15, bottom: 2),
+                                    margin: const EdgeInsets.only(
+                                        top: 15, bottom: 2),
                                     child: Text(
                                       "2 GB Storage Plan",
                                       style: GoogleFonts.poppins(
@@ -225,7 +227,8 @@ class _DISK_SPACEState extends State<DISK_SPACE> {
                                     ),
                                   ),
                                   Container(
-                                    margin: const EdgeInsets.only(top: 15, bottom: 2),
+                                    margin: const EdgeInsets.only(
+                                        top: 15, bottom: 2),
                                     child: Text(
                                       "3 GB Storage Plan",
                                       style: GoogleFonts.poppins(
@@ -273,7 +276,8 @@ class _DISK_SPACEState extends State<DISK_SPACE> {
                                     ),
                                   ),
                                   Container(
-                                    margin: const EdgeInsets.only(top: 15, bottom: 2),
+                                    margin: const EdgeInsets.only(
+                                        top: 15, bottom: 2),
                                     child: Text(
                                       "4 GB Storage Plan",
                                       style: GoogleFonts.poppins(
@@ -326,7 +330,8 @@ class _DISK_SPACEState extends State<DISK_SPACE> {
                                     ),
                                   ),
                                   Container(
-                                    margin: const EdgeInsets.only(top: 15, bottom: 2),
+                                    margin: const EdgeInsets.only(
+                                        top: 15, bottom: 2),
                                     child: Text(
                                       "5 GB Storage Plan",
                                       style: GoogleFonts.poppins(
@@ -596,7 +601,7 @@ customDialogBox(BuildContext context) {
                         height: 13,
                         width: 13,
                         child: Image.asset(
-                          Images.delete,
+                          LookPriorImage.delete,
                           color: Colors.black,
                         ),
                       ),

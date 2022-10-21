@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 import 'package:http/http.dart';
+import 'package:uidesign/rest_api/api.dart';
 
 class rest_constant{
   static const baseurl = 'https://lookprstage.com/admin/';
@@ -12,16 +13,16 @@ class rest_service{
     static dynamic PostRestApi(@required String? endponits, @required Map<String, dynamic>? bodyParam) async {
       try {
         String Url = '${rest_constant.baseurl},${rest_constant.signup}';
-        print('Url --> $Url');
+        logs('Url --> $Url');
         Response response = await post(Uri.parse(Url),
             headers: headers, body: jsonEncode(bodyParam));
-        print('Response statusCode --> ${response.statusCode}');
+        logs('Response statusCode --> ${response.statusCode}');
         if (response.statusCode == 200 || response.statusCode == 201) {
-          print('Response body --> ${response.body}');
+          logs('Response body --> ${response.body}');
           return response.body;
         }
       } catch (message) {
-        print('exception in post ${rest_constant.signup} --> $message');
+        logs('exception in post ${rest_constant.signup} --> $message');
         return null;
       }
 
@@ -29,16 +30,16 @@ class rest_service{
     static dynamic GetRestApi() async {
       try{
         String Url = rest_constant.baseurl;
-        print('Url -->$Url');
+        logs('Url -->$Url');
         Response response = await get(Uri.parse(Url),headers: headers);
-        print('Response statusCode --> ${response.statusCode}');
+        logs('Response statusCode --> ${response.statusCode}');
         if(response.statusCode == 200 || response.statusCode == 201)
           {
-            print('Response body --> ${response.body}');
+            logs('Response body --> ${response.body}');
           }
       }
       catch(message){
-        print('exception in get --> $message');
+        logs('exception in get --> $message');
       }
     }
 }

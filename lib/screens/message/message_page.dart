@@ -45,7 +45,7 @@ class _MessagepageState extends State<Messagepage> {
                           padding: const EdgeInsets.symmetric(horizontal: 20),
                           height: 20,
                           child: Image.asset(
-                            Images.addimage,
+                            LookPriorImage.addimage,
                           )),
                     ),
                     const SizedBox(
@@ -179,7 +179,7 @@ Widget _tabSections(BuildContext context) {
                       height: 100,
                       width: 100,
                       margin: const EdgeInsets.only(top: 100),
-                      child: Image.asset(Images.empty),
+                      child: Image.asset(LookPriorImage.empty),
                     ),
                     Container(
                       margin: const EdgeInsets.all(10),
@@ -207,10 +207,10 @@ List<String> name = [
   (Stringtext.person5)
 ];
 List primage = [
-  (Images.pr),
-  (Images.pr1),
-  (Images.pr2),
-  (Images.pr3),
-  (Images.pr),
-  (Images.pr2)
+  (LookPriorImage.pr),
+  (LookPriorImage.pr1),
+  (LookPriorImage.pr2),
+  (LookPriorImage.pr3),
+  (LookPriorImage.pr),
+  (LookPriorImage.pr2)
 ];

@@ -128,7 +128,7 @@ class _Category_PageState extends State<Category_Page> {
                                                     height: 18,
                                                     width: 18,
                                                     child: Image.asset(
-                                                      Images.categorytrue,
+                                                      LookPriorImage.categorytrue,
                                                       color: s[index]
                                                           ? Fixcolors.green
                                                           : Fixcolors.grey,

@@ -37,7 +37,7 @@ class _ads_pageState extends State<ads_page> {
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         height: 20,
                         child: Image.asset(
-                          Images.addimage,
+                          LookPriorImage.addimage,
                         )),
                   ),
                   const SizedBox(
@@ -110,7 +110,7 @@ Widget _tabSection(BuildContext context) {
                 child: Padding(
                   padding: const EdgeInsets.all(17),
                   child: Image.asset(
-                    Images.sellfaster,
+                    LookPriorImage.sellfaster,
                   ),
                 ),
               ),
@@ -277,7 +277,7 @@ Widget _tabSection(BuildContext context) {
                                                           bottom: 5,
                                                           top: 5),
                                                   child: Image.asset(
-                                                    Images.shareimage,
+                                                    LookPriorImage.shareimage,
                                                   ),
                                                 ),
                                               ),
@@ -314,7 +314,7 @@ Widget _tabSection(BuildContext context) {
                       height: 100,
                       width: 100,
                       margin: const EdgeInsets.only(top: 100),
-                      child: Image.asset(Images.empty),
+                      child: Image.asset(LookPriorImage.empty),
                     ),
                     Container(
                       margin: const EdgeInsets.all(10),
@@ -332,7 +332,7 @@ Widget _tabSection(BuildContext context) {
                       height: 100,
                       width: 100,
                       margin: const EdgeInsets.only(top: 100),
-                      child: Image.asset(Images.empty),
+                      child: Image.asset(LookPriorImage.empty),
                     ),
                     Container(
                       margin: const EdgeInsets.all(10),

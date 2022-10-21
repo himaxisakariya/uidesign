@@ -30,7 +30,7 @@ class _LikepageState extends State<Likepage> {
               height: 100,
               width: 100,
               margin: const EdgeInsets.only(top: 100),
-              child: Image.asset(Images.empty),
+              child: Image.asset(LookPriorImage.empty),
             ),
             Container(
               margin: const EdgeInsets.all(10),

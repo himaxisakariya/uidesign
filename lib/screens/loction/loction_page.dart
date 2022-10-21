@@ -130,11 +130,11 @@ class _loction_pageState extends State<loction_page> {
                                 const BorderRadius.all(Radius.circular(8)),
                             border: Border.all(color: Colors.grey, width: 0.4)),
                         child: const Listtilee(
-                          text: Images.fourimage,
+                          text: LookPriorImage.fourimage,
                           titletext: Stringtext.selectcate,
                           fontSize: 16,
                           fontWeight: FontWeight.w400,
-                          imgtext: Images.barrow,
+                          imgtext: LookPriorImage.barrow,
                         ),
                       ),
                       onTap: () {
@@ -162,11 +162,11 @@ class _loction_pageState extends State<loction_page> {
                               const BorderRadius.all(Radius.circular(8)),
                           border: Border.all(color: Colors.grey, width: 0.4)),
                       child: const Listtilee(
-                        text: Images.loction2,
+                        text: LookPriorImage.loction2,
                         titletext: Stringtext.place,
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
-                        imgtext: Images.loctionedit,
+                        imgtext: LookPriorImage.loctionedit,
                       ),
                     ),
                     sizebox(),

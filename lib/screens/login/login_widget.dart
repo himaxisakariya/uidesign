@@ -40,7 +40,7 @@ class LoginPageViewModel {
         "mobileVersion": Platform.isAndroid ? 'Android' : 'IOS',
         "osVersion": "10.11"
       };
-      print('LoginMap --> $loginMap');
+      logs('LoginMap --> $loginMap');
       String? loginUserResponse = await RestService.postRestMethods(
           endpoints: RestService.loginApi, bodyParam: loginMap);
       if (loginUserResponse != null && loginUserResponse.isNotEmpty) {
@@ -49,7 +49,7 @@ class LoginPageViewModel {
         if (loginUserResponseMap.containsKey('Success') &&
             loginUserResponseMap['Success']) {
           LoginModel loginModel = loginModelFromJson(loginUserResponse);
-          print('Loginmmodel --> ${loginModel.toJson()}');
+          logs('Loginmodel --> ${loginModel.toJson()}');
 
           // await shredPreference.setPrefStringValue(
           //     shredPreference.store, "${loginUserResponseMap['access_token']}");
@@ -66,8 +66,8 @@ class LoginPageViewModel {
         }
       }
     } on SocketException catch (e) {
-      print("Catch socket in loginUPMethod --> ${e.message}");
-      print(e.message);
+      logs("Catch socket in loginUPMethod --> ${e.message}");
+      logs(e.message);
       loginPageState.setState(() {
         status = false;
       });
@@ -102,7 +102,7 @@ Widget email(TextEditingController emailcontroller) {
       child: Padding(
         padding: const EdgeInsets.all(7),
         child: Image.asset(
-          Images.email,
+          LookPriorImage.email,
         ),
       ),
     ),
